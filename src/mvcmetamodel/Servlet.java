@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link mvcmetamodel.Servlet#getName <em>Name</em>}</li>
  *   <li>{@link mvcmetamodel.Servlet#getClass_ <em>Class</em>}</li>
- *   <li>{@link mvcmetamodel.Servlet#getContains <em>Contains</em>}</li>
  *   <li>{@link mvcmetamodel.Servlet#getLoadOnStartup <em>Load On Startup</em>}</li>
  *   <li>{@link mvcmetamodel.Servlet#getInitParam <em>Init Param</em>}</li>
  * </ul>
@@ -80,32 +79,6 @@ public interface Servlet extends EObject {
 	 * @generated
 	 */
 	void setClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Contains</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Contains</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contains</em>' containment reference.
-	 * @see #setContains(InitParam)
-	 * @see mvcmetamodel.MvcmetamodelPackage#getServlet_Contains()
-	 * @model containment="true"
-	 * @generated
-	 */
-	InitParam getContains();
-
-	/**
-	 * Sets the value of the '{@link mvcmetamodel.Servlet#getContains <em>Contains</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Contains</em>' containment reference.
-	 * @see #getContains()
-	 * @generated
-	 */
-	void setContains(InitParam value);
 
 	/**
 	 * Returns the value of the '<em><b>Load On Startup</b></em>' attribute.

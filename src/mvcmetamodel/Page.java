@@ -19,11 +19,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link mvcmetamodel.Page#getContains <em>Contains</em>}</li>
- *   <li>{@link mvcmetamodel.Page#getComponents <em>Components</em>}</li>
+ *   <li>{@link mvcmetamodel.Page#getForms <em>Forms</em>}</li>
  *   <li>{@link mvcmetamodel.Page#getName <em>Name</em>}</li>
  *   <li>{@link mvcmetamodel.Page#getType <em>Type</em>}</li>
  *   <li>{@link mvcmetamodel.Page#getTitle <em>Title</em>}</li>
- *   <li>{@link mvcmetamodel.Page#getComponent <em>Component</em>}</li>
+ *   <li>{@link mvcmetamodel.Page#getComponents <em>Components</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,8 +49,24 @@ public interface Page extends EObject {
 	EList getContains();
 
 	/**
-	 * Returns the value of the '<em><b>Components</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Forms</b></em>' containment reference list.
 	 * The list contents are of type {@link mvcmetamodel.Form}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Forms</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Forms</em>' containment reference list.
+	 * @see mvcmetamodel.MvcmetamodelPackage#getPage_Forms()
+	 * @model type="mvcmetamodel.Form" containment="true"
+	 * @generated
+	 */
+	EList getForms();
+
+	/**
+	 * Returns the value of the '<em><b>Components</b></em>' containment reference list.
+	 * The list contents are of type {@link mvcmetamodel.Component}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Components</em>' containment reference list isn't clear,
@@ -59,7 +75,7 @@ public interface Page extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Components</em>' containment reference list.
 	 * @see mvcmetamodel.MvcmetamodelPackage#getPage_Components()
-	 * @model type="mvcmetamodel.Form" containment="true"
+	 * @model type="mvcmetamodel.Component" containment="true"
 	 * @generated
 	 */
 	EList getComponents();
@@ -141,21 +157,11 @@ public interface Page extends EObject {
 	 * @generated
 	 */
 	void setTitle(String value);
-
+	
 	/**
-	 * Returns the value of the '<em><b>Component</b></em>' containment reference list.
-	 * The list contents are of type {@link mvcmetamodel.Component}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Component</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Component</em>' containment reference list.
-	 * @see mvcmetamodel.MvcmetamodelPackage#getPage_Component()
-	 * @model type="mvcmetamodel.Component" containment="true"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList getComponent();
+	public String accept(Visitor visitor);
+		return vi
 
 } // Page

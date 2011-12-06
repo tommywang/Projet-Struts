@@ -17,6 +17,7 @@ package mvcmetamodel;
  * <ul>
  *   <li>{@link mvcmetamodel.Link#getUrl <em>Url</em>}</li>
  *   <li>{@link mvcmetamodel.Link#getText <em>Text</em>}</li>
+ *   <li>{@link mvcmetamodel.Link#getSize <em>Size</em>}</li>
  * </ul>
  * </p>
  *
@@ -76,5 +77,34 @@ public interface Link extends Component {
 	 * @generated
 	 */
 	void setText(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Size</b></em>' attribute.
+	 * The literals are from the enumeration {@link mvcmetamodel.SizeHTML}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Size</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Size</em>' attribute.
+	 * @see mvcmetamodel.SizeHTML
+	 * @see #setSize(SizeHTML)
+	 * @see mvcmetamodel.MvcmetamodelPackage#getLink_Size()
+	 * @model
+	 * @generated
+	 */
+	SizeHTML getSize();
+
+	/**
+	 * Sets the value of the '{@link mvcmetamodel.Link#getSize <em>Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Size</em>' attribute.
+	 * @see mvcmetamodel.SizeHTML
+	 * @see #getSize()
+	 * @generated
+	 */
+	void setSize(SizeHTML value);
 
 } // Link

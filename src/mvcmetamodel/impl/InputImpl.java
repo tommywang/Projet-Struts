@@ -9,6 +9,7 @@ package mvcmetamodel.impl;
 import mvcmetamodel.Input;
 import mvcmetamodel.MvcmetamodelPackage;
 
+import mvcmetamodel.SizeHTML;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -26,6 +27,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link mvcmetamodel.impl.InputImpl#getType <em>Type</em>}</li>
  *   <li>{@link mvcmetamodel.impl.InputImpl#getName <em>Name</em>}</li>
  *   <li>{@link mvcmetamodel.impl.InputImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link mvcmetamodel.impl.InputImpl#getSize <em>Size</em>}</li>
  * </ul>
  * </p>
  *
@@ -91,6 +93,26 @@ public class InputImpl extends EObjectImpl implements Input {
 	 * @ordered
 	 */
 	protected String value = VALUE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final SizeHTML SIZE_EDEFAULT = SizeHTML.BIG_LITERAL;
+
+	/**
+	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
+	 * @generated
+	 * @ordered
+	 */
+	protected SizeHTML size = SIZE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -178,6 +200,27 @@ public class InputImpl extends EObjectImpl implements Input {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public SizeHTML getSize() {
+		return size;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSize(SizeHTML newSize) {
+		SizeHTML oldSize = size;
+		size = newSize == null ? SIZE_EDEFAULT : newSize;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.INPUT__SIZE, oldSize, size));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case MvcmetamodelPackage.INPUT__TYPE:
@@ -186,6 +229,8 @@ public class InputImpl extends EObjectImpl implements Input {
 				return getName();
 			case MvcmetamodelPackage.INPUT__VALUE:
 				return getValue();
+			case MvcmetamodelPackage.INPUT__SIZE:
+				return getSize();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -205,6 +250,9 @@ public class InputImpl extends EObjectImpl implements Input {
 				return;
 			case MvcmetamodelPackage.INPUT__VALUE:
 				setValue((String)newValue);
+				return;
+			case MvcmetamodelPackage.INPUT__SIZE:
+				setSize((SizeHTML)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -226,6 +274,9 @@ public class InputImpl extends EObjectImpl implements Input {
 			case MvcmetamodelPackage.INPUT__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
+			case MvcmetamodelPackage.INPUT__SIZE:
+				setSize(SIZE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -243,6 +294,8 @@ public class InputImpl extends EObjectImpl implements Input {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case MvcmetamodelPackage.INPUT__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+			case MvcmetamodelPackage.INPUT__SIZE:
+				return size != SIZE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -262,6 +315,8 @@ public class InputImpl extends EObjectImpl implements Input {
 		result.append(name);
 		result.append(", value: ");
 		result.append(value);
+		result.append(", size: ");
+		result.append(size);
 		result.append(')');
 		return result.toString();
 	}

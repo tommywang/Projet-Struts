@@ -1,9 +1,15 @@
 package mvcmetamodel.tools;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Map;
 import mvcmetamodel.Application;
 import mvcmetamodel.MvcmetamodelPackage;
+import mvcmetamodel.WebXML;
 import mvcmetamodel.impl.MvcmetamodelFactoryImpl;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -32,11 +38,38 @@ public class Main {
 		return null;
 	}
 	
+    //écrit le résultat des trie
+    public static void ecrireFichier(File file, String content){
+      try{
+        PrintWriter out  = new PrintWriter(new FileWriter(file));
+        out.println(content);
+        out.close();
+      }
+      catch(Exception e){
+    	System.out.println("BUG!!!!!!!!!!!");
+        e.printStackTrace();
+      }
+    }
+	
 	public static void main(String[] args) { 
 		File f = new File("model/Application.xmi");
 		Application appli=load(f);	
 		MvcmetamodelFactoryImpl fac=new MvcmetamodelFactoryImpl();
 		System.out.println(appli.getName());
+		WebXML webxml = appli.getWebxml();
+		String result= new WebXMLVisitor().visit(webxml);
+		File monFichier;
+		try
+		{
+			monFichier = new File("test/web.xml");
+			monFichier.createNewFile();
+			Main.ecrireFichier(monFichier, result);
+			System.out.println("tout va bien");
+		}
+		catch (IOException e)
+		{
+			System.out.println("Impossible de créer le fichier");
+		}
 	}
 	
 }

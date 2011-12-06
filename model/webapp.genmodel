@@ -6,15 +6,20 @@
     copyrightFields="false">
   <foreignModel>mvcmetamodel.ecore</foreignModel>
   <genPackages prefix="Mvcmetamodel" disposableProviderFactory="true" ecorePackage="mvcmetamodel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mvcmetamodel.ecore#//SizeHTML">
+      <genEnumLiterals ecoreEnumLiteral="mvcmetamodel.ecore#//SizeHTML/BIG"/>
+      <genEnumLiterals ecoreEnumLiteral="mvcmetamodel.ecore#//SizeHTML/NORMAL"/>
+      <genEnumLiterals ecoreEnumLiteral="mvcmetamodel.ecore#//SizeHTML/SMALL"/>
+      <genEnumLiterals ecoreEnumLiteral="mvcmetamodel.ecore#//SizeHTML/TINY"/>
+      <genEnumLiterals ecoreEnumLiteral="mvcmetamodel.ecore#//SizeHTML/HUGE"/>
+    </genEnums>
     <genClasses ecoreClass="mvcmetamodel.ecore#//ServletMapping">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//ServletMapping/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//ServletMapping/urlPattern"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//ServletMapping/servlet"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Servlet">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Servlet/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Servlet/class"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Servlet/contains"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Servlet/loadOnStartup"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Servlet/initParam"/>
     </genClasses>
@@ -22,20 +27,21 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Form/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Form/method"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Form/action"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Form/component"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Form/buttonForm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Form/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Form/inputs"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Form/servlet"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Page">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Page/contains"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Page/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Page/forms"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Page/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Page/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Page/title"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Page/component"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Page/components"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Label">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Label/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Label/size"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//TextField">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//TextField/text"/>
@@ -73,12 +79,14 @@
     <genClasses ecoreClass="mvcmetamodel.ecore#//Link">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Link/url"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Link/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Link/size"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Component"/>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Input">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Input/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Input/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Input/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Input/size"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Resources">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Resources/name"/>

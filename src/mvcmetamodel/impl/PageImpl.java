@@ -35,11 +35,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link mvcmetamodel.impl.PageImpl#getContains <em>Contains</em>}</li>
- *   <li>{@link mvcmetamodel.impl.PageImpl#getComponents <em>Components</em>}</li>
+ *   <li>{@link mvcmetamodel.impl.PageImpl#getForms <em>Forms</em>}</li>
  *   <li>{@link mvcmetamodel.impl.PageImpl#getName <em>Name</em>}</li>
  *   <li>{@link mvcmetamodel.impl.PageImpl#getType <em>Type</em>}</li>
  *   <li>{@link mvcmetamodel.impl.PageImpl#getTitle <em>Title</em>}</li>
- *   <li>{@link mvcmetamodel.impl.PageImpl#getComponent <em>Component</em>}</li>
+ *   <li>{@link mvcmetamodel.impl.PageImpl#getComponents <em>Components</em>}</li>
  * </ul>
  * </p>
  *
@@ -57,14 +57,14 @@ public class PageImpl extends EObjectImpl implements Page {
 	protected EList contains;
 
 	/**
-	 * The cached value of the '{@link #getComponents() <em>Components</em>}' containment reference list.
+	 * The cached value of the '{@link #getForms() <em>Forms</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getComponents()
+	 * @see #getForms()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList components;
+	protected EList forms;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -127,14 +127,14 @@ public class PageImpl extends EObjectImpl implements Page {
 	protected String title = TITLE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getComponent() <em>Component</em>}' containment reference list.
+	 * The cached value of the '{@link #getComponents() <em>Components</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getComponent()
+	 * @see #getComponents()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList component;
+	protected EList components;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -171,9 +171,21 @@ public class PageImpl extends EObjectImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList getForms() {
+		if (forms == null) {
+			forms = new EObjectContainmentEList(Form.class, this, MvcmetamodelPackage.PAGE__FORMS);
+		}
+		return forms;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList getComponents() {
 		if (components == null) {
-			components = new EObjectContainmentEList(Form.class, this, MvcmetamodelPackage.PAGE__COMPONENTS);
+			components = new EObjectContainmentEList(Component.class, this, MvcmetamodelPackage.PAGE__COMPONENTS);
 		}
 		return components;
 	}
@@ -246,26 +258,14 @@ public class PageImpl extends EObjectImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList getComponent() {
-		if (component == null) {
-			component = new EObjectContainmentEList(Component.class, this, MvcmetamodelPackage.PAGE__COMPONENT);
-		}
-		return component;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case MvcmetamodelPackage.PAGE__CONTAINS:
 				return ((InternalEList)getContains()).basicRemove(otherEnd, msgs);
+			case MvcmetamodelPackage.PAGE__FORMS:
+				return ((InternalEList)getForms()).basicRemove(otherEnd, msgs);
 			case MvcmetamodelPackage.PAGE__COMPONENTS:
 				return ((InternalEList)getComponents()).basicRemove(otherEnd, msgs);
-			case MvcmetamodelPackage.PAGE__COMPONENT:
-				return ((InternalEList)getComponent()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -279,16 +279,16 @@ public class PageImpl extends EObjectImpl implements Page {
 		switch (featureID) {
 			case MvcmetamodelPackage.PAGE__CONTAINS:
 				return getContains();
-			case MvcmetamodelPackage.PAGE__COMPONENTS:
-				return getComponents();
+			case MvcmetamodelPackage.PAGE__FORMS:
+				return getForms();
 			case MvcmetamodelPackage.PAGE__NAME:
 				return getName();
 			case MvcmetamodelPackage.PAGE__TYPE:
 				return getType();
 			case MvcmetamodelPackage.PAGE__TITLE:
 				return getTitle();
-			case MvcmetamodelPackage.PAGE__COMPONENT:
-				return getComponent();
+			case MvcmetamodelPackage.PAGE__COMPONENTS:
+				return getComponents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -304,9 +304,9 @@ public class PageImpl extends EObjectImpl implements Page {
 				getContains().clear();
 				getContains().addAll((Collection)newValue);
 				return;
-			case MvcmetamodelPackage.PAGE__COMPONENTS:
-				getComponents().clear();
-				getComponents().addAll((Collection)newValue);
+			case MvcmetamodelPackage.PAGE__FORMS:
+				getForms().clear();
+				getForms().addAll((Collection)newValue);
 				return;
 			case MvcmetamodelPackage.PAGE__NAME:
 				setName((String)newValue);
@@ -317,9 +317,9 @@ public class PageImpl extends EObjectImpl implements Page {
 			case MvcmetamodelPackage.PAGE__TITLE:
 				setTitle((String)newValue);
 				return;
-			case MvcmetamodelPackage.PAGE__COMPONENT:
-				getComponent().clear();
-				getComponent().addAll((Collection)newValue);
+			case MvcmetamodelPackage.PAGE__COMPONENTS:
+				getComponents().clear();
+				getComponents().addAll((Collection)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -335,8 +335,8 @@ public class PageImpl extends EObjectImpl implements Page {
 			case MvcmetamodelPackage.PAGE__CONTAINS:
 				getContains().clear();
 				return;
-			case MvcmetamodelPackage.PAGE__COMPONENTS:
-				getComponents().clear();
+			case MvcmetamodelPackage.PAGE__FORMS:
+				getForms().clear();
 				return;
 			case MvcmetamodelPackage.PAGE__NAME:
 				setName(NAME_EDEFAULT);
@@ -347,8 +347,8 @@ public class PageImpl extends EObjectImpl implements Page {
 			case MvcmetamodelPackage.PAGE__TITLE:
 				setTitle(TITLE_EDEFAULT);
 				return;
-			case MvcmetamodelPackage.PAGE__COMPONENT:
-				getComponent().clear();
+			case MvcmetamodelPackage.PAGE__COMPONENTS:
+				getComponents().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -363,16 +363,16 @@ public class PageImpl extends EObjectImpl implements Page {
 		switch (featureID) {
 			case MvcmetamodelPackage.PAGE__CONTAINS:
 				return contains != null && !contains.isEmpty();
-			case MvcmetamodelPackage.PAGE__COMPONENTS:
-				return components != null && !components.isEmpty();
+			case MvcmetamodelPackage.PAGE__FORMS:
+				return forms != null && !forms.isEmpty();
 			case MvcmetamodelPackage.PAGE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case MvcmetamodelPackage.PAGE__TYPE:
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case MvcmetamodelPackage.PAGE__TITLE:
 				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
-			case MvcmetamodelPackage.PAGE__COMPONENT:
-				return component != null && !component.isEmpty();
+			case MvcmetamodelPackage.PAGE__COMPONENTS:
+				return components != null && !components.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

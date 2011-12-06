@@ -25,7 +25,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link mvcmetamodel.impl.ServletMappingImpl#getName <em>Name</em>}</li>
  *   <li>{@link mvcmetamodel.impl.ServletMappingImpl#getUrlPattern <em>Url Pattern</em>}</li>
  *   <li>{@link mvcmetamodel.impl.ServletMappingImpl#getServlet <em>Servlet</em>}</li>
  * </ul>
@@ -34,26 +33,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * @generated
  */
 public class ServletMappingImpl extends EObjectImpl implements ServletMapping {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getUrlPattern() <em>Url Pattern</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -100,27 +79,6 @@ public class ServletMappingImpl extends EObjectImpl implements ServletMapping {
 	 */
 	protected EClass eStaticClass() {
 		return MvcmetamodelPackage.Literals.SERVLET_MAPPING;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.SERVLET_MAPPING__NAME, oldName, name));
 	}
 
 	/**
@@ -189,8 +147,6 @@ public class ServletMappingImpl extends EObjectImpl implements ServletMapping {
 	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MvcmetamodelPackage.SERVLET_MAPPING__NAME:
-				return getName();
 			case MvcmetamodelPackage.SERVLET_MAPPING__URL_PATTERN:
 				return getUrlPattern();
 			case MvcmetamodelPackage.SERVLET_MAPPING__SERVLET:
@@ -207,9 +163,6 @@ public class ServletMappingImpl extends EObjectImpl implements ServletMapping {
 	 */
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MvcmetamodelPackage.SERVLET_MAPPING__NAME:
-				setName((String)newValue);
-				return;
 			case MvcmetamodelPackage.SERVLET_MAPPING__URL_PATTERN:
 				setUrlPattern((String)newValue);
 				return;
@@ -227,9 +180,6 @@ public class ServletMappingImpl extends EObjectImpl implements ServletMapping {
 	 */
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MvcmetamodelPackage.SERVLET_MAPPING__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case MvcmetamodelPackage.SERVLET_MAPPING__URL_PATTERN:
 				setUrlPattern(URL_PATTERN_EDEFAULT);
 				return;
@@ -247,8 +197,6 @@ public class ServletMappingImpl extends EObjectImpl implements ServletMapping {
 	 */
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MvcmetamodelPackage.SERVLET_MAPPING__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case MvcmetamodelPackage.SERVLET_MAPPING__URL_PATTERN:
 				return URL_PATTERN_EDEFAULT == null ? urlPattern != null : !URL_PATTERN_EDEFAULT.equals(urlPattern);
 			case MvcmetamodelPackage.SERVLET_MAPPING__SERVLET:
@@ -266,9 +214,7 @@ public class ServletMappingImpl extends EObjectImpl implements ServletMapping {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", urlPattern: ");
+		result.append(" (urlPattern: ");
 		result.append(urlPattern);
 		result.append(')');
 		return result.toString();

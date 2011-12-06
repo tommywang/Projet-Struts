@@ -20,4 +20,5 @@ public interface Visitor {
 	
 	public String visit(ServletMapping servletMapping);
 	
+	public String visit(InitParam initParam);
 }

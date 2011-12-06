@@ -28,7 +28,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <ul>
  *   <li>{@link mvcmetamodel.impl.ServletImpl#getName <em>Name</em>}</li>
  *   <li>{@link mvcmetamodel.impl.ServletImpl#getClass_ <em>Class</em>}</li>
- *   <li>{@link mvcmetamodel.impl.ServletImpl#getContains <em>Contains</em>}</li>
  *   <li>{@link mvcmetamodel.impl.ServletImpl#getLoadOnStartup <em>Load On Startup</em>}</li>
  *   <li>{@link mvcmetamodel.impl.ServletImpl#getInitParam <em>Init Param</em>}</li>
  * </ul>
@@ -76,16 +75,6 @@ public class ServletImpl extends EObjectImpl implements Servlet {
 	 * @ordered
 	 */
 	protected String class_ = CLASS_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getContains() <em>Contains</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContains()
-	 * @generated
-	 * @ordered
-	 */
-	protected InitParam contains;
 
 	/**
 	 * The default value of the '{@link #getLoadOnStartup() <em>Load On Startup</em>}' attribute.
@@ -182,49 +171,6 @@ public class ServletImpl extends EObjectImpl implements Servlet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InitParam getContains() {
-		return contains;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetContains(InitParam newContains, NotificationChain msgs) {
-		InitParam oldContains = contains;
-		contains = newContains;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.SERVLET__CONTAINS, oldContains, newContains);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setContains(InitParam newContains) {
-		if (newContains != contains) {
-			NotificationChain msgs = null;
-			if (contains != null)
-				msgs = ((InternalEObject)contains).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MvcmetamodelPackage.SERVLET__CONTAINS, null, msgs);
-			if (newContains != null)
-				msgs = ((InternalEObject)newContains).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MvcmetamodelPackage.SERVLET__CONTAINS, null, msgs);
-			msgs = basicSetContains(newContains, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.SERVLET__CONTAINS, newContains, newContains));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public int getLoadOnStartup() {
 		return loadOnStartup;
 	}
@@ -291,8 +237,6 @@ public class ServletImpl extends EObjectImpl implements Servlet {
 	 */
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MvcmetamodelPackage.SERVLET__CONTAINS:
-				return basicSetContains(null, msgs);
 			case MvcmetamodelPackage.SERVLET__INIT_PARAM:
 				return basicSetInitParam(null, msgs);
 		}
@@ -310,8 +254,6 @@ public class ServletImpl extends EObjectImpl implements Servlet {
 				return getName();
 			case MvcmetamodelPackage.SERVLET__CLASS:
 				return getClass_();
-			case MvcmetamodelPackage.SERVLET__CONTAINS:
-				return getContains();
 			case MvcmetamodelPackage.SERVLET__LOAD_ON_STARTUP:
 				return new Integer(getLoadOnStartup());
 			case MvcmetamodelPackage.SERVLET__INIT_PARAM:
@@ -332,9 +274,6 @@ public class ServletImpl extends EObjectImpl implements Servlet {
 				return;
 			case MvcmetamodelPackage.SERVLET__CLASS:
 				setClass((String)newValue);
-				return;
-			case MvcmetamodelPackage.SERVLET__CONTAINS:
-				setContains((InitParam)newValue);
 				return;
 			case MvcmetamodelPackage.SERVLET__LOAD_ON_STARTUP:
 				setLoadOnStartup(((Integer)newValue).intValue());
@@ -359,9 +298,6 @@ public class ServletImpl extends EObjectImpl implements Servlet {
 			case MvcmetamodelPackage.SERVLET__CLASS:
 				setClass(CLASS_EDEFAULT);
 				return;
-			case MvcmetamodelPackage.SERVLET__CONTAINS:
-				setContains((InitParam)null);
-				return;
 			case MvcmetamodelPackage.SERVLET__LOAD_ON_STARTUP:
 				setLoadOnStartup(LOAD_ON_STARTUP_EDEFAULT);
 				return;
@@ -383,8 +319,6 @@ public class ServletImpl extends EObjectImpl implements Servlet {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case MvcmetamodelPackage.SERVLET__CLASS:
 				return CLASS_EDEFAULT == null ? class_ != null : !CLASS_EDEFAULT.equals(class_);
-			case MvcmetamodelPackage.SERVLET__CONTAINS:
-				return contains != null;
 			case MvcmetamodelPackage.SERVLET__LOAD_ON_STARTUP:
 				return loadOnStartup != LOAD_ON_STARTUP_EDEFAULT;
 			case MvcmetamodelPackage.SERVLET__INIT_PARAM:

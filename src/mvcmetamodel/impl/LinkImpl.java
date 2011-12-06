@@ -9,6 +9,7 @@ package mvcmetamodel.impl;
 import mvcmetamodel.Link;
 import mvcmetamodel.MvcmetamodelPackage;
 
+import mvcmetamodel.SizeHTML;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -24,6 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link mvcmetamodel.impl.LinkImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link mvcmetamodel.impl.LinkImpl#getText <em>Text</em>}</li>
+ *   <li>{@link mvcmetamodel.impl.LinkImpl#getSize <em>Size</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,6 +71,26 @@ public class LinkImpl extends ComponentImpl implements Link {
 	 * @ordered
 	 */
 	protected String text = TEXT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final SizeHTML SIZE_EDEFAULT = SizeHTML.BIG_LITERAL;
+
+	/**
+	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSize()
+	 * @generated
+	 * @ordered
+	 */
+	protected SizeHTML size = SIZE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -135,12 +157,35 @@ public class LinkImpl extends ComponentImpl implements Link {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public SizeHTML getSize() {
+		return size;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSize(SizeHTML newSize) {
+		SizeHTML oldSize = size;
+		size = newSize == null ? SIZE_EDEFAULT : newSize;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.LINK__SIZE, oldSize, size));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case MvcmetamodelPackage.LINK__URL:
 				return getUrl();
 			case MvcmetamodelPackage.LINK__TEXT:
 				return getText();
+			case MvcmetamodelPackage.LINK__SIZE:
+				return getSize();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,6 +202,9 @@ public class LinkImpl extends ComponentImpl implements Link {
 				return;
 			case MvcmetamodelPackage.LINK__TEXT:
 				setText((String)newValue);
+				return;
+			case MvcmetamodelPackage.LINK__SIZE:
+				setSize((SizeHTML)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -175,6 +223,9 @@ public class LinkImpl extends ComponentImpl implements Link {
 			case MvcmetamodelPackage.LINK__TEXT:
 				setText(TEXT_EDEFAULT);
 				return;
+			case MvcmetamodelPackage.LINK__SIZE:
+				setSize(SIZE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -190,6 +241,8 @@ public class LinkImpl extends ComponentImpl implements Link {
 				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 			case MvcmetamodelPackage.LINK__TEXT:
 				return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
+			case MvcmetamodelPackage.LINK__SIZE:
+				return size != SIZE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -207,6 +260,8 @@ public class LinkImpl extends ComponentImpl implements Link {
 		result.append(url);
 		result.append(", text: ");
 		result.append(text);
+		result.append(", size: ");
+		result.append(size);
 		result.append(')');
 		return result.toString();
 	}
