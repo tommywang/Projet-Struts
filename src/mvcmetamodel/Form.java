@@ -21,9 +21,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link mvcmetamodel.Form#getName <em>Name</em>}</li>
  *   <li>{@link mvcmetamodel.Form#getMethod <em>Method</em>}</li>
  *   <li>{@link mvcmetamodel.Form#getAction <em>Action</em>}</li>
- *   <li>{@link mvcmetamodel.Form#getComponent <em>Component</em>}</li>
- *   <li>{@link mvcmetamodel.Form#getButtonForm <em>Button Form</em>}</li>
- *   <li>{@link mvcmetamodel.Form#getServlet <em>Servlet</em>}</li>
+ *   <li>{@link mvcmetamodel.Form#getInputs <em>Inputs</em>}</li>
+ *   <li>{@link mvcmetamodel.Form#getComponents <em>Components</em>}</li>
  * </ul>
  * </p>
  *
@@ -111,71 +110,35 @@ public interface Form extends EObject {
 	void setAction(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Component</b></em>' containment reference list.
-	 * The list contents are of type {@link mvcmetamodel.Component}.
+	 * Returns the value of the '<em><b>Inputs</b></em>' containment reference list.
+	 * The list contents are of type {@link mvcmetamodel.Input}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Component</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Inputs</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Component</em>' containment reference list.
-	 * @see mvcmetamodel.MvcmetamodelPackage#getForm_Component()
-	 * @model type="mvcmetamodel.Component" containment="true"
-	 * @generated
-	 */
-	EList getComponent();
-
-	/**
-	 * Returns the value of the '<em><b>Button Form</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Button Form</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Button Form</em>' containment reference.
-	 * @see #setButtonForm(Input)
-	 * @see mvcmetamodel.MvcmetamodelPackage#getForm_ButtonForm()
+	 * @return the value of the '<em>Inputs</em>' containment reference list.
+	 * @see mvcmetamodel.MvcmetamodelPackage#getForm_Inputs()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Input getButtonForm();
+	EList<Input> getInputs();
 
 	/**
-	 * Sets the value of the '{@link mvcmetamodel.Form#getButtonForm <em>Button Form</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Button Form</em>' containment reference.
-	 * @see #getButtonForm()
-	 * @generated
-	 */
-	void setButtonForm(Input value);
-
-	/**
-	 * Returns the value of the '<em><b>Servlet</b></em>' reference.
+	 * Returns the value of the '<em><b>Components</b></em>' containment reference list.
+	 * The list contents are of type {@link mvcmetamodel.Component}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Servlet</em>' reference isn't clear,
+	 * If the meaning of the '<em>Components</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Servlet</em>' reference.
-	 * @see #setServlet(Servlet)
-	 * @see mvcmetamodel.MvcmetamodelPackage#getForm_Servlet()
-	 * @model
+	 * @return the value of the '<em>Components</em>' containment reference list.
+	 * @see mvcmetamodel.MvcmetamodelPackage#getForm_Components()
+	 * @model containment="true"
 	 * @generated
 	 */
-	Servlet getServlet();
-
-	/**
-	 * Sets the value of the '{@link mvcmetamodel.Form#getServlet <em>Servlet</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Servlet</em>' reference.
-	 * @see #getServlet()
-	 * @generated
-	 */
-	void setServlet(Servlet value);
+	EList<Component> getComponents();
 
 } // Form

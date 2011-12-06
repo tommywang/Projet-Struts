@@ -6,8 +6,6 @@
  */
 package mvcmetamodel;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,12 +16,10 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link mvcmetamodel.Page#getContains <em>Contains</em>}</li>
- *   <li>{@link mvcmetamodel.Page#getComponents <em>Components</em>}</li>
  *   <li>{@link mvcmetamodel.Page#getName <em>Name</em>}</li>
  *   <li>{@link mvcmetamodel.Page#getType <em>Type</em>}</li>
- *   <li>{@link mvcmetamodel.Page#getTitle <em>Title</em>}</li>
- *   <li>{@link mvcmetamodel.Page#getComponent <em>Component</em>}</li>
+ *   <li>{@link mvcmetamodel.Page#getBody <em>Body</em>}</li>
+ *   <li>{@link mvcmetamodel.Page#getHead <em>Head</em>}</li>
  * </ul>
  * </p>
  *
@@ -32,38 +28,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Page extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Contains</b></em>' containment reference list.
-	 * The list contents are of type {@link mvcmetamodel.Form}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Contains</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contains</em>' containment reference list.
-	 * @see mvcmetamodel.MvcmetamodelPackage#getPage_Contains()
-	 * @model type="mvcmetamodel.Form" containment="true"
-	 * @generated
-	 */
-	EList getContains();
-
-	/**
-	 * Returns the value of the '<em><b>Components</b></em>' containment reference list.
-	 * The list contents are of type {@link mvcmetamodel.Form}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Components</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Components</em>' containment reference list.
-	 * @see mvcmetamodel.MvcmetamodelPackage#getPage_Components()
-	 * @model type="mvcmetamodel.Form" containment="true"
-	 * @generated
-	 */
-	EList getComponents();
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -117,45 +81,55 @@ public interface Page extends EObject {
 	void setType(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Title</b></em>' attribute.
+	 * Returns the value of the '<em><b>Body</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Title</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Body</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Title</em>' attribute.
-	 * @see #setTitle(String)
-	 * @see mvcmetamodel.MvcmetamodelPackage#getPage_Title()
-	 * @model
+	 * @return the value of the '<em>Body</em>' containment reference.
+	 * @see #setBody(Body)
+	 * @see mvcmetamodel.MvcmetamodelPackage#getPage_Body()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	String getTitle();
+	Body getBody();
 
 	/**
-	 * Sets the value of the '{@link mvcmetamodel.Page#getTitle <em>Title</em>}' attribute.
+	 * Sets the value of the '{@link mvcmetamodel.Page#getBody <em>Body</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Title</em>' attribute.
-	 * @see #getTitle()
+	 * @param value the new value of the '<em>Body</em>' containment reference.
+	 * @see #getBody()
 	 * @generated
 	 */
-	void setTitle(String value);
+	void setBody(Body value);
 
 	/**
-	 * Returns the value of the '<em><b>Component</b></em>' containment reference list.
-	 * The list contents are of type {@link mvcmetamodel.Component}.
+	 * Returns the value of the '<em><b>Head</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Component</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Head</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Component</em>' containment reference list.
-	 * @see mvcmetamodel.MvcmetamodelPackage#getPage_Component()
-	 * @model type="mvcmetamodel.Component" containment="true"
+	 * @return the value of the '<em>Head</em>' containment reference.
+	 * @see #setHead(Head)
+	 * @see mvcmetamodel.MvcmetamodelPackage#getPage_Head()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList getComponent();
+	Head getHead();
+
+	/**
+	 * Sets the value of the '{@link mvcmetamodel.Page#getHead <em>Head</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Head</em>' containment reference.
+	 * @see #getHead()
+	 * @generated
+	 */
+	void setHead(Head value);
 
 } // Page

@@ -8,6 +8,7 @@ package mvcmetamodel;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -60,116 +61,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	MvcmetamodelPackage eINSTANCE = mvcmetamodel.impl.MvcmetamodelPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.ServletMappingImpl <em>Servlet Mapping</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.ServletMappingImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getServletMapping()
-	 * @generated
-	 */
-	int SERVLET_MAPPING = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVLET_MAPPING__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Url Pattern</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVLET_MAPPING__URL_PATTERN = 1;
-
-	/**
-	 * The feature id for the '<em><b>Servlet</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVLET_MAPPING__SERVLET = 2;
-
-	/**
-	 * The number of structural features of the '<em>Servlet Mapping</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVLET_MAPPING_FEATURE_COUNT = 3;
-
-	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.ServletImpl <em>Servlet</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.ServletImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getServlet()
-	 * @generated
-	 */
-	int SERVLET = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVLET__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVLET__CLASS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Contains</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVLET__CONTAINS = 2;
-
-	/**
-	 * The feature id for the '<em><b>Load On Startup</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVLET__LOAD_ON_STARTUP = 3;
-
-	/**
-	 * The feature id for the '<em><b>Init Param</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVLET__INIT_PARAM = 4;
-
-	/**
-	 * The number of structural features of the '<em>Servlet</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVLET_FEATURE_COUNT = 5;
-
-	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.FormImpl <em>Form</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -177,7 +68,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getForm()
 	 * @generated
 	 */
-	int FORM = 2;
+	int FORM = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -207,31 +98,22 @@ public interface MvcmetamodelPackage extends EPackage {
 	int FORM__ACTION = 2;
 
 	/**
-	 * The feature id for the '<em><b>Component</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Inputs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORM__COMPONENT = 3;
+	int FORM__INPUTS = 3;
 
 	/**
-	 * The feature id for the '<em><b>Button Form</b></em>' containment reference.
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORM__BUTTON_FORM = 4;
-
-	/**
-	 * The feature id for the '<em><b>Servlet</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORM__SERVLET = 5;
+	int FORM__COMPONENTS = 4;
 
 	/**
 	 * The number of structural features of the '<em>Form</em>' class.
@@ -240,7 +122,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FORM_FEATURE_COUNT = 6;
+	int FORM_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.PageImpl <em>Page</em>}' class.
@@ -250,25 +132,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getPage()
 	 * @generated
 	 */
-	int PAGE = 3;
-
-	/**
-	 * The feature id for the '<em><b>Contains</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAGE__CONTAINS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAGE__COMPONENTS = 1;
+	int PAGE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -277,7 +141,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__NAME = 2;
+	int PAGE__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -286,25 +150,25 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__TYPE = 3;
+	int PAGE__TYPE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * The feature id for the '<em><b>Body</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__TITLE = 4;
+	int PAGE__BODY = 2;
 
 	/**
-	 * The feature id for the '<em><b>Component</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Head</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__COMPONENT = 5;
+	int PAGE__HEAD = 3;
 
 	/**
 	 * The number of structural features of the '<em>Page</em>' class.
@@ -313,7 +177,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE_FEATURE_COUNT = 6;
+	int PAGE_FEATURE_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.ComponentImpl <em>Component</em>}' class.
@@ -323,7 +187,16 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getComponent()
 	 * @generated
 	 */
-	int COMPONENT = 14;
+	int COMPONENT = 6;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__COMPONENTS = 0;
 
 	/**
 	 * The number of structural features of the '<em>Component</em>' class.
@@ -332,17 +205,26 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_FEATURE_COUNT = 0;
+	int COMPONENT_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.LabelImpl <em>Label</em>}' class.
+	 * The meta object id for the '{@link mvcmetamodel.impl.TextImpl <em>Text</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.LabelImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getLabel()
+	 * @see mvcmetamodel.impl.TextImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getText()
 	 * @generated
 	 */
-	int LABEL = 4;
+	int TEXT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT__COMPONENTS = COMPONENT__COMPONENTS;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -351,54 +233,26 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL__VALUE = COMPONENT_FEATURE_COUNT + 0;
+	int TEXT__VALUE = COMPONENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Label</em>' class.
+	 * The number of structural features of the '<em>Text</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 1;
+	int TEXT_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.TextFieldImpl <em>Text Field</em>}' class.
+	 * The meta object id for the '{@link mvcmetamodel.impl.WebAppImpl <em>Web App</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.TextFieldImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getTextField()
+	 * @see mvcmetamodel.impl.WebAppImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getWebApp()
 	 * @generated
 	 */
-	int TEXT_FIELD = 5;
-
-	/**
-	 * The feature id for the '<em><b>Text</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_FIELD__TEXT = COMPONENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Text Field</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_FIELD_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.InitParamImpl <em>Init Param</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.InitParamImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getInitParam()
-	 * @generated
-	 */
-	int INIT_PARAM = 6;
+	int WEB_APP = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -407,62 +261,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INIT_PARAM__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INIT_PARAM__VALUE = 1;
-
-	/**
-	 * The number of structural features of the '<em>Init Param</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INIT_PARAM_FEATURE_COUNT = 2;
-
-	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.ApplicationImpl <em>Application</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.ApplicationImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getApplication()
-	 * @generated
-	 */
-	int APPLICATION = 7;
-
-	/**
-	 * The feature id for the '<em><b>Webxml</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__WEBXML = 0;
-
-	/**
-	 * The feature id for the '<em><b>Resources</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__RESOURCES = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__NAME = 2;
+	int WEB_APP__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Page</b></em>' containment reference list.
@@ -471,191 +270,16 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__PAGE = 3;
+	int WEB_APP__PAGE = 1;
 
 	/**
-	 * The number of structural features of the '<em>Application</em>' class.
+	 * The number of structural features of the '<em>Web App</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_FEATURE_COUNT = 4;
-
-	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.WebXMLImpl <em>Web XML</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.WebXMLImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getWebXML()
-	 * @generated
-	 */
-	int WEB_XML = 8;
-
-	/**
-	 * The feature id for the '<em><b>Servlet Mapping</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_XML__SERVLET_MAPPING = 0;
-
-	/**
-	 * The feature id for the '<em><b>Resource Ref</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_XML__RESOURCE_REF = 1;
-
-	/**
-	 * The feature id for the '<em><b>Servlet</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_XML__SERVLET = 2;
-
-	/**
-	 * The feature id for the '<em><b>Welcome File List</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_XML__WELCOME_FILE_LIST = 3;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_XML__NAME = 4;
-
-	/**
-	 * The number of structural features of the '<em>Web XML</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WEB_XML_FEATURE_COUNT = 5;
-
-	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.ResourceRefImpl <em>Resource Ref</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.ResourceRefImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getResourceRef()
-	 * @generated
-	 */
-	int RESOURCE_REF = 9;
-
-	/**
-	 * The feature id for the '<em><b>Res Ref Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_REF__RES_REF_NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_REF__DESCRIPTION = 1;
-
-	/**
-	 * The feature id for the '<em><b>Res Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_REF__RES_TYPE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Res Auth</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_REF__RES_AUTH = 3;
-
-	/**
-	 * The number of structural features of the '<em>Resource Ref</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_REF_FEATURE_COUNT = 4;
-
-	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.WelcomeFileListImpl <em>Welcome File List</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.WelcomeFileListImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getWelcomeFileList()
-	 * @generated
-	 */
-	int WELCOME_FILE_LIST = 10;
-
-	/**
-	 * The feature id for the '<em><b>Welcome File</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WELCOME_FILE_LIST__WELCOME_FILE = 0;
-
-	/**
-	 * The number of structural features of the '<em>Welcome File List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WELCOME_FILE_LIST_FEATURE_COUNT = 1;
-
-	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.WelcomeFileImpl <em>Welcome File</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.WelcomeFileImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getWelcomeFile()
-	 * @generated
-	 */
-	int WELCOME_FILE = 11;
-
-	/**
-	 * The feature id for the '<em><b>Page Name</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WELCOME_FILE__PAGE_NAME = 0;
-
-	/**
-	 * The number of structural features of the '<em>Welcome File</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WELCOME_FILE_FEATURE_COUNT = 1;
+	int WEB_APP_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.TableImpl <em>Table</em>}' class.
@@ -665,7 +289,43 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getTable()
 	 * @generated
 	 */
-	int TABLE = 12;
+	int TABLE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__COMPONENTS = COMPONENT__COMPONENTS;
+
+	/**
+	 * The feature id for the '<em><b>Nb Row</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__NB_ROW = COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Nb Col</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__NB_COL = COMPONENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Cell</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__CELL = COMPONENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Table</em>' class.
@@ -674,7 +334,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 0;
+	int TABLE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.LinkImpl <em>Link</em>}' class.
@@ -684,7 +344,16 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getLink()
 	 * @generated
 	 */
-	int LINK = 13;
+	int LINK = 5;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__COMPONENTS = COMPONENT__COMPONENTS;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -696,22 +365,13 @@ public interface MvcmetamodelPackage extends EPackage {
 	int LINK__URL = COMPONENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Text</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK__TEXT = COMPONENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 2;
+	int LINK_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.InputImpl <em>Input</em>}' class.
@@ -721,16 +381,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getInput()
 	 * @generated
 	 */
-	int INPUT = 15;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT__TYPE = 0;
+	int INPUT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -739,16 +390,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__NAME = 1;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT__VALUE = 2;
+	int INPUT__NAME = 0;
 
 	/**
 	 * The number of structural features of the '<em>Input</em>' class.
@@ -757,35 +399,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_FEATURE_COUNT = 3;
-
-	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.ResourcesImpl <em>Resources</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.ResourcesImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getResources()
-	 * @generated
-	 */
-	int RESOURCES = 16;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCES__NAME = 0;
-
-	/**
-	 * The number of structural features of the '<em>Resources</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCES_FEATURE_COUNT = 1;
+	int INPUT_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.JavaImpl <em>Java</em>}' class.
@@ -795,7 +409,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getJava()
 	 * @generated
 	 */
-	int JAVA = 17;
+	int JAVA = 8;
 
 	/**
 	 * The number of structural features of the '<em>Java</em>' class.
@@ -806,114 +420,351 @@ public interface MvcmetamodelPackage extends EPackage {
 	 */
 	int JAVA_FEATURE_COUNT = 0;
 
-
 	/**
-	 * Returns the meta object for class '{@link mvcmetamodel.ServletMapping <em>Servlet Mapping</em>}'.
+	 * The meta object id for the '{@link mvcmetamodel.impl.BodyImpl <em>Body</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Servlet Mapping</em>'.
-	 * @see mvcmetamodel.ServletMapping
+	 * @see mvcmetamodel.impl.BodyImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getBody()
 	 * @generated
 	 */
-	EClass getServletMapping();
+	int BODY = 9;
 
 	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.ServletMapping#getName <em>Name</em>}'.
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see mvcmetamodel.ServletMapping#getName()
-	 * @see #getServletMapping()
 	 * @generated
+	 * @ordered
 	 */
-	EAttribute getServletMapping_Name();
+	int BODY__COMPONENTS = 0;
 
 	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.ServletMapping#getUrlPattern <em>Url Pattern</em>}'.
+	 * The feature id for the '<em><b>Form</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Url Pattern</em>'.
-	 * @see mvcmetamodel.ServletMapping#getUrlPattern()
-	 * @see #getServletMapping()
 	 * @generated
+	 * @ordered
 	 */
-	EAttribute getServletMapping_UrlPattern();
+	int BODY__FORM = 1;
 
 	/**
-	 * Returns the meta object for the reference '{@link mvcmetamodel.ServletMapping#getServlet <em>Servlet</em>}'.
+	 * The number of structural features of the '<em>Body</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Servlet</em>'.
-	 * @see mvcmetamodel.ServletMapping#getServlet()
-	 * @see #getServletMapping()
 	 * @generated
+	 * @ordered
 	 */
-	EReference getServletMapping_Servlet();
+	int BODY_FEATURE_COUNT = 2;
 
 	/**
-	 * Returns the meta object for class '{@link mvcmetamodel.Servlet <em>Servlet</em>}'.
+	 * The meta object id for the '{@link mvcmetamodel.impl.HeadImpl <em>Head</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Servlet</em>'.
-	 * @see mvcmetamodel.Servlet
+	 * @see mvcmetamodel.impl.HeadImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getHead()
 	 * @generated
 	 */
-	EClass getServlet();
+	int HEAD = 10;
 
 	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.Servlet#getName <em>Name</em>}'.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see mvcmetamodel.Servlet#getName()
-	 * @see #getServlet()
 	 * @generated
+	 * @ordered
 	 */
-	EAttribute getServlet_Name();
+	int HEAD__TITLE = 0;
 
 	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.Servlet#getClass_ <em>Class</em>}'.
+	 * The number of structural features of the '<em>Head</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Class</em>'.
-	 * @see mvcmetamodel.Servlet#getClass_()
-	 * @see #getServlet()
 	 * @generated
+	 * @ordered
 	 */
-	EAttribute getServlet_Class();
+	int HEAD_FEATURE_COUNT = 1;
 
 	/**
-	 * Returns the meta object for the containment reference '{@link mvcmetamodel.Servlet#getContains <em>Contains</em>}'.
+	 * The meta object id for the '{@link mvcmetamodel.impl.TitleImpl <em>Title</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Contains</em>'.
-	 * @see mvcmetamodel.Servlet#getContains()
-	 * @see #getServlet()
+	 * @see mvcmetamodel.impl.TitleImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getTitle()
 	 * @generated
 	 */
-	EReference getServlet_Contains();
+	int TITLE = 11;
 
 	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.Servlet#getLoadOnStartup <em>Load On Startup</em>}'.
+	 * The feature id for the '<em><b>Components</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Load On Startup</em>'.
-	 * @see mvcmetamodel.Servlet#getLoadOnStartup()
-	 * @see #getServlet()
 	 * @generated
+	 * @ordered
 	 */
-	EAttribute getServlet_LoadOnStartup();
+	int TITLE__COMPONENTS = COMPONENT__COMPONENTS;
 
 	/**
-	 * Returns the meta object for the containment reference '{@link mvcmetamodel.Servlet#getInitParam <em>Init Param</em>}'.
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Init Param</em>'.
-	 * @see mvcmetamodel.Servlet#getInitParam()
-	 * @see #getServlet()
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE__SIZE = COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Title</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.TextFieldImpl <em>Text Field</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.TextFieldImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getTextField()
 	 * @generated
 	 */
-	EReference getServlet_InitParam();
+	int TEXT_FIELD = 12;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FIELD__NAME = INPUT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Text Field</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FIELD_FEATURE_COUNT = INPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.PasswordImpl <em>Password</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.PasswordImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getPassword()
+	 * @generated
+	 */
+	int PASSWORD = 13;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PASSWORD__NAME = INPUT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Password</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PASSWORD_FEATURE_COUNT = INPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.RadioButtonImpl <em>Radio Button</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.RadioButtonImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getRadioButton()
+	 * @generated
+	 */
+	int RADIO_BUTTON = 14;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RADIO_BUTTON__NAME = INPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RADIO_BUTTON__VALUE = INPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Radio Button</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RADIO_BUTTON_FEATURE_COUNT = INPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.CheckBoxesImpl <em>Check Boxes</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.CheckBoxesImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getCheckBoxes()
+	 * @generated
+	 */
+	int CHECK_BOXES = 15;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_BOXES__NAME = INPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_BOXES__VALUE = INPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Check Boxes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHECK_BOXES_FEATURE_COUNT = INPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.SubmitButtonImpl <em>Submit Button</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.SubmitButtonImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getSubmitButton()
+	 * @generated
+	 */
+	int SUBMIT_BUTTON = 16;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMIT_BUTTON__NAME = INPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMIT_BUTTON__VALUE = INPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Submit Button</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMIT_BUTTON_FEATURE_COUNT = INPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.ParagrapheImpl <em>Paragraphe</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.ParagrapheImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getParagraphe()
+	 * @generated
+	 */
+	int PARAGRAPHE = 17;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAGRAPHE__COMPONENTS = COMPONENT__COMPONENTS;
+
+	/**
+	 * The number of structural features of the '<em>Paragraphe</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAGRAPHE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.CellImpl <em>Cell</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.CellImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getCell()
+	 * @generated
+	 */
+	int CELL = 18;
+
+	/**
+	 * The feature id for the '<em><b>Content</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CELL__CONTENT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Cell</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CELL_FEATURE_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.Size <em>Size</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.Size
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getSize()
+	 * @generated
+	 */
+	int SIZE = 19;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.Align <em>Align</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.Align
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getAlign()
+	 * @generated
+	 */
+	int ALIGN = 20;
+
 
 	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Form <em>Form</em>}'.
@@ -959,37 +810,26 @@ public interface MvcmetamodelPackage extends EPackage {
 	EAttribute getForm_Action();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Form#getComponent <em>Component</em>}'.
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Form#getInputs <em>Inputs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Component</em>'.
-	 * @see mvcmetamodel.Form#getComponent()
+	 * @return the meta object for the containment reference list '<em>Inputs</em>'.
+	 * @see mvcmetamodel.Form#getInputs()
 	 * @see #getForm()
 	 * @generated
 	 */
-	EReference getForm_Component();
+	EReference getForm_Inputs();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link mvcmetamodel.Form#getButtonForm <em>Button Form</em>}'.
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Form#getComponents <em>Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Button Form</em>'.
-	 * @see mvcmetamodel.Form#getButtonForm()
+	 * @return the meta object for the containment reference list '<em>Components</em>'.
+	 * @see mvcmetamodel.Form#getComponents()
 	 * @see #getForm()
 	 * @generated
 	 */
-	EReference getForm_ButtonForm();
-
-	/**
-	 * Returns the meta object for the reference '{@link mvcmetamodel.Form#getServlet <em>Servlet</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Servlet</em>'.
-	 * @see mvcmetamodel.Form#getServlet()
-	 * @see #getForm()
-	 * @generated
-	 */
-	EReference getForm_Servlet();
+	EReference getForm_Components();
 
 	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Page <em>Page</em>}'.
@@ -1000,28 +840,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPage();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Page#getContains <em>Contains</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Contains</em>'.
-	 * @see mvcmetamodel.Page#getContains()
-	 * @see #getPage()
-	 * @generated
-	 */
-	EReference getPage_Contains();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Page#getComponents <em>Components</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Components</em>'.
-	 * @see mvcmetamodel.Page#getComponents()
-	 * @see #getPage()
-	 * @generated
-	 */
-	EReference getPage_Components();
 
 	/**
 	 * Returns the meta object for the attribute '{@link mvcmetamodel.Page#getName <em>Name</em>}'.
@@ -1046,315 +864,79 @@ public interface MvcmetamodelPackage extends EPackage {
 	EAttribute getPage_Type();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.Page#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the containment reference '{@link mvcmetamodel.Page#getBody <em>Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Title</em>'.
-	 * @see mvcmetamodel.Page#getTitle()
+	 * @return the meta object for the containment reference '<em>Body</em>'.
+	 * @see mvcmetamodel.Page#getBody()
 	 * @see #getPage()
 	 * @generated
 	 */
-	EAttribute getPage_Title();
+	EReference getPage_Body();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Page#getComponent <em>Component</em>}'.
+	 * Returns the meta object for the containment reference '{@link mvcmetamodel.Page#getHead <em>Head</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Component</em>'.
-	 * @see mvcmetamodel.Page#getComponent()
+	 * @return the meta object for the containment reference '<em>Head</em>'.
+	 * @see mvcmetamodel.Page#getHead()
 	 * @see #getPage()
 	 * @generated
 	 */
-	EReference getPage_Component();
+	EReference getPage_Head();
 
 	/**
-	 * Returns the meta object for class '{@link mvcmetamodel.Label <em>Label</em>}'.
+	 * Returns the meta object for class '{@link mvcmetamodel.Text <em>Text</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Label</em>'.
-	 * @see mvcmetamodel.Label
+	 * @return the meta object for class '<em>Text</em>'.
+	 * @see mvcmetamodel.Text
 	 * @generated
 	 */
-	EClass getLabel();
+	EClass getText();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.Label#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.Text#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see mvcmetamodel.Label#getValue()
-	 * @see #getLabel()
+	 * @see mvcmetamodel.Text#getValue()
+	 * @see #getText()
 	 * @generated
 	 */
-	EAttribute getLabel_Value();
+	EAttribute getText_Value();
 
 	/**
-	 * Returns the meta object for class '{@link mvcmetamodel.TextField <em>Text Field</em>}'.
+	 * Returns the meta object for class '{@link mvcmetamodel.WebApp <em>Web App</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Text Field</em>'.
-	 * @see mvcmetamodel.TextField
+	 * @return the meta object for class '<em>Web App</em>'.
+	 * @see mvcmetamodel.WebApp
 	 * @generated
 	 */
-	EClass getTextField();
+	EClass getWebApp();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.TextField#getText <em>Text</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Text</em>'.
-	 * @see mvcmetamodel.TextField#getText()
-	 * @see #getTextField()
-	 * @generated
-	 */
-	EAttribute getTextField_Text();
-
-	/**
-	 * Returns the meta object for class '{@link mvcmetamodel.InitParam <em>Init Param</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Init Param</em>'.
-	 * @see mvcmetamodel.InitParam
-	 * @generated
-	 */
-	EClass getInitParam();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.InitParam#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.WebApp#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see mvcmetamodel.InitParam#getName()
-	 * @see #getInitParam()
+	 * @see mvcmetamodel.WebApp#getName()
+	 * @see #getWebApp()
 	 * @generated
 	 */
-	EAttribute getInitParam_Name();
+	EAttribute getWebApp_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.InitParam#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see mvcmetamodel.InitParam#getValue()
-	 * @see #getInitParam()
-	 * @generated
-	 */
-	EAttribute getInitParam_Value();
-
-	/**
-	 * Returns the meta object for class '{@link mvcmetamodel.Application <em>Application</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Application</em>'.
-	 * @see mvcmetamodel.Application
-	 * @generated
-	 */
-	EClass getApplication();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Application#getPage <em>Page</em>}'.
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.WebApp#getPage <em>Page</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Page</em>'.
-	 * @see mvcmetamodel.Application#getPage()
-	 * @see #getApplication()
+	 * @see mvcmetamodel.WebApp#getPage()
+	 * @see #getWebApp()
 	 * @generated
 	 */
-	EReference getApplication_Page();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link mvcmetamodel.Application#getWebxml <em>Webxml</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Webxml</em>'.
-	 * @see mvcmetamodel.Application#getWebxml()
-	 * @see #getApplication()
-	 * @generated
-	 */
-	EReference getApplication_Webxml();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Application#getResources <em>Resources</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Resources</em>'.
-	 * @see mvcmetamodel.Application#getResources()
-	 * @see #getApplication()
-	 * @generated
-	 */
-	EReference getApplication_Resources();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.Application#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see mvcmetamodel.Application#getName()
-	 * @see #getApplication()
-	 * @generated
-	 */
-	EAttribute getApplication_Name();
-
-	/**
-	 * Returns the meta object for class '{@link mvcmetamodel.WebXML <em>Web XML</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Web XML</em>'.
-	 * @see mvcmetamodel.WebXML
-	 * @generated
-	 */
-	EClass getWebXML();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link mvcmetamodel.WebXML#getServletMapping <em>Servlet Mapping</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Servlet Mapping</em>'.
-	 * @see mvcmetamodel.WebXML#getServletMapping()
-	 * @see #getWebXML()
-	 * @generated
-	 */
-	EReference getWebXML_ServletMapping();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link mvcmetamodel.WebXML#getResourceRef <em>Resource Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Resource Ref</em>'.
-	 * @see mvcmetamodel.WebXML#getResourceRef()
-	 * @see #getWebXML()
-	 * @generated
-	 */
-	EReference getWebXML_ResourceRef();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link mvcmetamodel.WebXML#getServlet <em>Servlet</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Servlet</em>'.
-	 * @see mvcmetamodel.WebXML#getServlet()
-	 * @see #getWebXML()
-	 * @generated
-	 */
-	EReference getWebXML_Servlet();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link mvcmetamodel.WebXML#getWelcomeFileList <em>Welcome File List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Welcome File List</em>'.
-	 * @see mvcmetamodel.WebXML#getWelcomeFileList()
-	 * @see #getWebXML()
-	 * @generated
-	 */
-	EReference getWebXML_WelcomeFileList();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.WebXML#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see mvcmetamodel.WebXML#getName()
-	 * @see #getWebXML()
-	 * @generated
-	 */
-	EAttribute getWebXML_Name();
-
-	/**
-	 * Returns the meta object for class '{@link mvcmetamodel.ResourceRef <em>Resource Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Resource Ref</em>'.
-	 * @see mvcmetamodel.ResourceRef
-	 * @generated
-	 */
-	EClass getResourceRef();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.ResourceRef#getResRefName <em>Res Ref Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Res Ref Name</em>'.
-	 * @see mvcmetamodel.ResourceRef#getResRefName()
-	 * @see #getResourceRef()
-	 * @generated
-	 */
-	EAttribute getResourceRef_ResRefName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.ResourceRef#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see mvcmetamodel.ResourceRef#getDescription()
-	 * @see #getResourceRef()
-	 * @generated
-	 */
-	EAttribute getResourceRef_Description();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.ResourceRef#getResType <em>Res Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Res Type</em>'.
-	 * @see mvcmetamodel.ResourceRef#getResType()
-	 * @see #getResourceRef()
-	 * @generated
-	 */
-	EAttribute getResourceRef_ResType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.ResourceRef#getResAuth <em>Res Auth</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Res Auth</em>'.
-	 * @see mvcmetamodel.ResourceRef#getResAuth()
-	 * @see #getResourceRef()
-	 * @generated
-	 */
-	EAttribute getResourceRef_ResAuth();
-
-	/**
-	 * Returns the meta object for class '{@link mvcmetamodel.WelcomeFileList <em>Welcome File List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Welcome File List</em>'.
-	 * @see mvcmetamodel.WelcomeFileList
-	 * @generated
-	 */
-	EClass getWelcomeFileList();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.WelcomeFileList#getWelcomeFile <em>Welcome File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Welcome File</em>'.
-	 * @see mvcmetamodel.WelcomeFileList#getWelcomeFile()
-	 * @see #getWelcomeFileList()
-	 * @generated
-	 */
-	EReference getWelcomeFileList_WelcomeFile();
-
-	/**
-	 * Returns the meta object for class '{@link mvcmetamodel.WelcomeFile <em>Welcome File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Welcome File</em>'.
-	 * @see mvcmetamodel.WelcomeFile
-	 * @generated
-	 */
-	EClass getWelcomeFile();
-
-	/**
-	 * Returns the meta object for the reference '{@link mvcmetamodel.WelcomeFile#getPageName <em>Page Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Page Name</em>'.
-	 * @see mvcmetamodel.WelcomeFile#getPageName()
-	 * @see #getWelcomeFile()
-	 * @generated
-	 */
-	EReference getWelcomeFile_PageName();
+	EReference getWebApp_Page();
 
 	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Table <em>Table</em>}'.
@@ -1365,6 +947,39 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.Table#getNbRow <em>Nb Row</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Row</em>'.
+	 * @see mvcmetamodel.Table#getNbRow()
+	 * @see #getTable()
+	 * @generated
+	 */
+	EAttribute getTable_NbRow();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.Table#getNbCol <em>Nb Col</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nb Col</em>'.
+	 * @see mvcmetamodel.Table#getNbCol()
+	 * @see #getTable()
+	 * @generated
+	 */
+	EAttribute getTable_NbCol();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Table#getCell <em>Cell</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Cell</em>'.
+	 * @see mvcmetamodel.Table#getCell()
+	 * @see #getTable()
+	 * @generated
+	 */
+	EReference getTable_Cell();
 
 	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Link <em>Link</em>}'.
@@ -1388,17 +1003,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	EAttribute getLink_Url();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.Link#getText <em>Text</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Text</em>'.
-	 * @see mvcmetamodel.Link#getText()
-	 * @see #getLink()
-	 * @generated
-	 */
-	EAttribute getLink_Text();
-
-	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Component <em>Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1409,6 +1013,17 @@ public interface MvcmetamodelPackage extends EPackage {
 	EClass getComponent();
 
 	/**
+	 * Returns the meta object for the reference list '{@link mvcmetamodel.Component#getComponents <em>Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Components</em>'.
+	 * @see mvcmetamodel.Component#getComponents()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EReference getComponent_Components();
+
+	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Input <em>Input</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1417,17 +1032,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getInput();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.Input#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see mvcmetamodel.Input#getType()
-	 * @see #getInput()
-	 * @generated
-	 */
-	EAttribute getInput_Type();
 
 	/**
 	 * Returns the meta object for the attribute '{@link mvcmetamodel.Input#getName <em>Name</em>}'.
@@ -1441,38 +1045,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	EAttribute getInput_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.Input#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see mvcmetamodel.Input#getValue()
-	 * @see #getInput()
-	 * @generated
-	 */
-	EAttribute getInput_Value();
-
-	/**
-	 * Returns the meta object for class '{@link mvcmetamodel.Resources <em>Resources</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Resources</em>'.
-	 * @see mvcmetamodel.Resources
-	 * @generated
-	 */
-	EClass getResources();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.Resources#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see mvcmetamodel.Resources#getName()
-	 * @see #getResources()
-	 * @generated
-	 */
-	EAttribute getResources_Name();
-
-	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Java <em>Java</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1481,6 +1053,214 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getJava();
+
+	/**
+	 * Returns the meta object for class '{@link mvcmetamodel.Body <em>Body</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Body</em>'.
+	 * @see mvcmetamodel.Body
+	 * @generated
+	 */
+	EClass getBody();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Body#getComponents <em>Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Components</em>'.
+	 * @see mvcmetamodel.Body#getComponents()
+	 * @see #getBody()
+	 * @generated
+	 */
+	EReference getBody_Components();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Body#getForm <em>Form</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Form</em>'.
+	 * @see mvcmetamodel.Body#getForm()
+	 * @see #getBody()
+	 * @generated
+	 */
+	EReference getBody_Form();
+
+	/**
+	 * Returns the meta object for class '{@link mvcmetamodel.Head <em>Head</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Head</em>'.
+	 * @see mvcmetamodel.Head
+	 * @generated
+	 */
+	EClass getHead();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.Head#getTitle <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Title</em>'.
+	 * @see mvcmetamodel.Head#getTitle()
+	 * @see #getHead()
+	 * @generated
+	 */
+	EAttribute getHead_Title();
+
+	/**
+	 * Returns the meta object for class '{@link mvcmetamodel.Title <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Title</em>'.
+	 * @see mvcmetamodel.Title
+	 * @generated
+	 */
+	EClass getTitle();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.Title#getSize <em>Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Size</em>'.
+	 * @see mvcmetamodel.Title#getSize()
+	 * @see #getTitle()
+	 * @generated
+	 */
+	EAttribute getTitle_Size();
+
+	/**
+	 * Returns the meta object for class '{@link mvcmetamodel.TextField <em>Text Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Text Field</em>'.
+	 * @see mvcmetamodel.TextField
+	 * @generated
+	 */
+	EClass getTextField();
+
+	/**
+	 * Returns the meta object for class '{@link mvcmetamodel.Password <em>Password</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Password</em>'.
+	 * @see mvcmetamodel.Password
+	 * @generated
+	 */
+	EClass getPassword();
+
+	/**
+	 * Returns the meta object for class '{@link mvcmetamodel.RadioButton <em>Radio Button</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Radio Button</em>'.
+	 * @see mvcmetamodel.RadioButton
+	 * @generated
+	 */
+	EClass getRadioButton();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.RadioButton#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see mvcmetamodel.RadioButton#getValue()
+	 * @see #getRadioButton()
+	 * @generated
+	 */
+	EAttribute getRadioButton_Value();
+
+	/**
+	 * Returns the meta object for class '{@link mvcmetamodel.CheckBoxes <em>Check Boxes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Check Boxes</em>'.
+	 * @see mvcmetamodel.CheckBoxes
+	 * @generated
+	 */
+	EClass getCheckBoxes();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.CheckBoxes#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see mvcmetamodel.CheckBoxes#getValue()
+	 * @see #getCheckBoxes()
+	 * @generated
+	 */
+	EAttribute getCheckBoxes_Value();
+
+	/**
+	 * Returns the meta object for class '{@link mvcmetamodel.SubmitButton <em>Submit Button</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Submit Button</em>'.
+	 * @see mvcmetamodel.SubmitButton
+	 * @generated
+	 */
+	EClass getSubmitButton();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.SubmitButton#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see mvcmetamodel.SubmitButton#getValue()
+	 * @see #getSubmitButton()
+	 * @generated
+	 */
+	EAttribute getSubmitButton_Value();
+
+	/**
+	 * Returns the meta object for class '{@link mvcmetamodel.Paragraphe <em>Paragraphe</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Paragraphe</em>'.
+	 * @see mvcmetamodel.Paragraphe
+	 * @generated
+	 */
+	EClass getParagraphe();
+
+	/**
+	 * Returns the meta object for class '{@link mvcmetamodel.Cell <em>Cell</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cell</em>'.
+	 * @see mvcmetamodel.Cell
+	 * @generated
+	 */
+	EClass getCell();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.Cell#getContent <em>Content</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Content</em>'.
+	 * @see mvcmetamodel.Cell#getContent()
+	 * @see #getCell()
+	 * @generated
+	 */
+	EAttribute getCell_Content();
+
+	/**
+	 * Returns the meta object for enum '{@link mvcmetamodel.Size <em>Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Size</em>'.
+	 * @see mvcmetamodel.Size
+	 * @generated
+	 */
+	EEnum getSize();
+
+	/**
+	 * Returns the meta object for enum '{@link mvcmetamodel.Align <em>Align</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Align</em>'.
+	 * @see mvcmetamodel.Align
+	 * @generated
+	 */
+	EEnum getAlign();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1504,90 +1284,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
-		/**
-		 * The meta object literal for the '{@link mvcmetamodel.impl.ServletMappingImpl <em>Servlet Mapping</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mvcmetamodel.impl.ServletMappingImpl
-		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getServletMapping()
-		 * @generated
-		 */
-		EClass SERVLET_MAPPING = eINSTANCE.getServletMapping();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SERVLET_MAPPING__NAME = eINSTANCE.getServletMapping_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Url Pattern</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SERVLET_MAPPING__URL_PATTERN = eINSTANCE.getServletMapping_UrlPattern();
-
-		/**
-		 * The meta object literal for the '<em><b>Servlet</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SERVLET_MAPPING__SERVLET = eINSTANCE.getServletMapping_Servlet();
-
-		/**
-		 * The meta object literal for the '{@link mvcmetamodel.impl.ServletImpl <em>Servlet</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mvcmetamodel.impl.ServletImpl
-		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getServlet()
-		 * @generated
-		 */
-		EClass SERVLET = eINSTANCE.getServlet();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SERVLET__NAME = eINSTANCE.getServlet_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SERVLET__CLASS = eINSTANCE.getServlet_Class();
-
-		/**
-		 * The meta object literal for the '<em><b>Contains</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SERVLET__CONTAINS = eINSTANCE.getServlet_Contains();
-
-		/**
-		 * The meta object literal for the '<em><b>Load On Startup</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SERVLET__LOAD_ON_STARTUP = eINSTANCE.getServlet_LoadOnStartup();
-
-		/**
-		 * The meta object literal for the '<em><b>Init Param</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SERVLET__INIT_PARAM = eINSTANCE.getServlet_InitParam();
-
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.FormImpl <em>Form</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -1623,28 +1319,20 @@ public interface MvcmetamodelPackage extends EPackage {
 		EAttribute FORM__ACTION = eINSTANCE.getForm_Action();
 
 		/**
-		 * The meta object literal for the '<em><b>Component</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Inputs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FORM__COMPONENT = eINSTANCE.getForm_Component();
+		EReference FORM__INPUTS = eINSTANCE.getForm_Inputs();
 
 		/**
-		 * The meta object literal for the '<em><b>Button Form</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FORM__BUTTON_FORM = eINSTANCE.getForm_ButtonForm();
-
-		/**
-		 * The meta object literal for the '<em><b>Servlet</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FORM__SERVLET = eINSTANCE.getForm_Servlet();
+		EReference FORM__COMPONENTS = eINSTANCE.getForm_Components();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.PageImpl <em>Page</em>}' class.
@@ -1655,22 +1343,6 @@ public interface MvcmetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PAGE = eINSTANCE.getPage();
-
-		/**
-		 * The meta object literal for the '<em><b>Contains</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PAGE__CONTAINS = eINSTANCE.getPage_Contains();
-
-		/**
-		 * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PAGE__COMPONENTS = eINSTANCE.getPage_Components();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1689,30 +1361,30 @@ public interface MvcmetamodelPackage extends EPackage {
 		EAttribute PAGE__TYPE = eINSTANCE.getPage_Type();
 
 		/**
-		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PAGE__TITLE = eINSTANCE.getPage_Title();
+		EReference PAGE__BODY = eINSTANCE.getPage_Body();
 
 		/**
-		 * The meta object literal for the '<em><b>Component</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Head</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PAGE__COMPONENT = eINSTANCE.getPage_Component();
+		EReference PAGE__HEAD = eINSTANCE.getPage_Head();
 
 		/**
-		 * The meta object literal for the '{@link mvcmetamodel.impl.LabelImpl <em>Label</em>}' class.
+		 * The meta object literal for the '{@link mvcmetamodel.impl.TextImpl <em>Text</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see mvcmetamodel.impl.LabelImpl
-		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getLabel()
+		 * @see mvcmetamodel.impl.TextImpl
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getText()
 		 * @generated
 		 */
-		EClass LABEL = eINSTANCE.getLabel();
+		EClass TEXT = eINSTANCE.getText();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -1720,35 +1392,17 @@ public interface MvcmetamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LABEL__VALUE = eINSTANCE.getLabel_Value();
+		EAttribute TEXT__VALUE = eINSTANCE.getText_Value();
 
 		/**
-		 * The meta object literal for the '{@link mvcmetamodel.impl.TextFieldImpl <em>Text Field</em>}' class.
+		 * The meta object literal for the '{@link mvcmetamodel.impl.WebAppImpl <em>Web App</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see mvcmetamodel.impl.TextFieldImpl
-		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getTextField()
+		 * @see mvcmetamodel.impl.WebAppImpl
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getWebApp()
 		 * @generated
 		 */
-		EClass TEXT_FIELD = eINSTANCE.getTextField();
-
-		/**
-		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TEXT_FIELD__TEXT = eINSTANCE.getTextField_Text();
-
-		/**
-		 * The meta object literal for the '{@link mvcmetamodel.impl.InitParamImpl <em>Init Param</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mvcmetamodel.impl.InitParamImpl
-		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getInitParam()
-		 * @generated
-		 */
-		EClass INIT_PARAM = eINSTANCE.getInitParam();
+		EClass WEB_APP = eINSTANCE.getWebApp();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1756,25 +1410,7 @@ public interface MvcmetamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INIT_PARAM__NAME = eINSTANCE.getInitParam_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INIT_PARAM__VALUE = eINSTANCE.getInitParam_Value();
-
-		/**
-		 * The meta object literal for the '{@link mvcmetamodel.impl.ApplicationImpl <em>Application</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mvcmetamodel.impl.ApplicationImpl
-		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getApplication()
-		 * @generated
-		 */
-		EClass APPLICATION = eINSTANCE.getApplication();
+		EAttribute WEB_APP__NAME = eINSTANCE.getWebApp_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Page</b></em>' containment reference list feature.
@@ -1782,159 +1418,7 @@ public interface MvcmetamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference APPLICATION__PAGE = eINSTANCE.getApplication_Page();
-
-		/**
-		 * The meta object literal for the '<em><b>Webxml</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APPLICATION__WEBXML = eINSTANCE.getApplication_Webxml();
-
-		/**
-		 * The meta object literal for the '<em><b>Resources</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APPLICATION__RESOURCES = eINSTANCE.getApplication_Resources();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute APPLICATION__NAME = eINSTANCE.getApplication_Name();
-
-		/**
-		 * The meta object literal for the '{@link mvcmetamodel.impl.WebXMLImpl <em>Web XML</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mvcmetamodel.impl.WebXMLImpl
-		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getWebXML()
-		 * @generated
-		 */
-		EClass WEB_XML = eINSTANCE.getWebXML();
-
-		/**
-		 * The meta object literal for the '<em><b>Servlet Mapping</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WEB_XML__SERVLET_MAPPING = eINSTANCE.getWebXML_ServletMapping();
-
-		/**
-		 * The meta object literal for the '<em><b>Resource Ref</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WEB_XML__RESOURCE_REF = eINSTANCE.getWebXML_ResourceRef();
-
-		/**
-		 * The meta object literal for the '<em><b>Servlet</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WEB_XML__SERVLET = eINSTANCE.getWebXML_Servlet();
-
-		/**
-		 * The meta object literal for the '<em><b>Welcome File List</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WEB_XML__WELCOME_FILE_LIST = eINSTANCE.getWebXML_WelcomeFileList();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_XML__NAME = eINSTANCE.getWebXML_Name();
-
-		/**
-		 * The meta object literal for the '{@link mvcmetamodel.impl.ResourceRefImpl <em>Resource Ref</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mvcmetamodel.impl.ResourceRefImpl
-		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getResourceRef()
-		 * @generated
-		 */
-		EClass RESOURCE_REF = eINSTANCE.getResourceRef();
-
-		/**
-		 * The meta object literal for the '<em><b>Res Ref Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RESOURCE_REF__RES_REF_NAME = eINSTANCE.getResourceRef_ResRefName();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RESOURCE_REF__DESCRIPTION = eINSTANCE.getResourceRef_Description();
-
-		/**
-		 * The meta object literal for the '<em><b>Res Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RESOURCE_REF__RES_TYPE = eINSTANCE.getResourceRef_ResType();
-
-		/**
-		 * The meta object literal for the '<em><b>Res Auth</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RESOURCE_REF__RES_AUTH = eINSTANCE.getResourceRef_ResAuth();
-
-		/**
-		 * The meta object literal for the '{@link mvcmetamodel.impl.WelcomeFileListImpl <em>Welcome File List</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mvcmetamodel.impl.WelcomeFileListImpl
-		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getWelcomeFileList()
-		 * @generated
-		 */
-		EClass WELCOME_FILE_LIST = eINSTANCE.getWelcomeFileList();
-
-		/**
-		 * The meta object literal for the '<em><b>Welcome File</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WELCOME_FILE_LIST__WELCOME_FILE = eINSTANCE.getWelcomeFileList_WelcomeFile();
-
-		/**
-		 * The meta object literal for the '{@link mvcmetamodel.impl.WelcomeFileImpl <em>Welcome File</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mvcmetamodel.impl.WelcomeFileImpl
-		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getWelcomeFile()
-		 * @generated
-		 */
-		EClass WELCOME_FILE = eINSTANCE.getWelcomeFile();
-
-		/**
-		 * The meta object literal for the '<em><b>Page Name</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WELCOME_FILE__PAGE_NAME = eINSTANCE.getWelcomeFile_PageName();
+		EReference WEB_APP__PAGE = eINSTANCE.getWebApp_Page();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.TableImpl <em>Table</em>}' class.
@@ -1945,6 +1429,30 @@ public interface MvcmetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TABLE = eINSTANCE.getTable();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Row</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TABLE__NB_ROW = eINSTANCE.getTable_NbRow();
+
+		/**
+		 * The meta object literal for the '<em><b>Nb Col</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TABLE__NB_COL = eINSTANCE.getTable_NbCol();
+
+		/**
+		 * The meta object literal for the '<em><b>Cell</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TABLE__CELL = eINSTANCE.getTable_Cell();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.LinkImpl <em>Link</em>}' class.
@@ -1965,14 +1473,6 @@ public interface MvcmetamodelPackage extends EPackage {
 		EAttribute LINK__URL = eINSTANCE.getLink_Url();
 
 		/**
-		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LINK__TEXT = eINSTANCE.getLink_Text();
-
-		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.ComponentImpl <em>Component</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1981,6 +1481,14 @@ public interface MvcmetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass COMPONENT = eINSTANCE.getComponent();
+
+		/**
+		 * The meta object literal for the '<em><b>Components</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT__COMPONENTS = eINSTANCE.getComponent_Components();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.InputImpl <em>Input</em>}' class.
@@ -1993,46 +1501,12 @@ public interface MvcmetamodelPackage extends EPackage {
 		EClass INPUT = eINSTANCE.getInput();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INPUT__TYPE = eINSTANCE.getInput_Type();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute INPUT__NAME = eINSTANCE.getInput_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INPUT__VALUE = eINSTANCE.getInput_Value();
-
-		/**
-		 * The meta object literal for the '{@link mvcmetamodel.impl.ResourcesImpl <em>Resources</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mvcmetamodel.impl.ResourcesImpl
-		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getResources()
-		 * @generated
-		 */
-		EClass RESOURCES = eINSTANCE.getResources();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RESOURCES__NAME = eINSTANCE.getResources_Name();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.JavaImpl <em>Java</em>}' class.
@@ -2043,6 +1517,190 @@ public interface MvcmetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass JAVA = eINSTANCE.getJava();
+
+		/**
+		 * The meta object literal for the '{@link mvcmetamodel.impl.BodyImpl <em>Body</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mvcmetamodel.impl.BodyImpl
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getBody()
+		 * @generated
+		 */
+		EClass BODY = eINSTANCE.getBody();
+
+		/**
+		 * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BODY__COMPONENTS = eINSTANCE.getBody_Components();
+
+		/**
+		 * The meta object literal for the '<em><b>Form</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BODY__FORM = eINSTANCE.getBody_Form();
+
+		/**
+		 * The meta object literal for the '{@link mvcmetamodel.impl.HeadImpl <em>Head</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mvcmetamodel.impl.HeadImpl
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getHead()
+		 * @generated
+		 */
+		EClass HEAD = eINSTANCE.getHead();
+
+		/**
+		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HEAD__TITLE = eINSTANCE.getHead_Title();
+
+		/**
+		 * The meta object literal for the '{@link mvcmetamodel.impl.TitleImpl <em>Title</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mvcmetamodel.impl.TitleImpl
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getTitle()
+		 * @generated
+		 */
+		EClass TITLE = eINSTANCE.getTitle();
+
+		/**
+		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TITLE__SIZE = eINSTANCE.getTitle_Size();
+
+		/**
+		 * The meta object literal for the '{@link mvcmetamodel.impl.TextFieldImpl <em>Text Field</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mvcmetamodel.impl.TextFieldImpl
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getTextField()
+		 * @generated
+		 */
+		EClass TEXT_FIELD = eINSTANCE.getTextField();
+
+		/**
+		 * The meta object literal for the '{@link mvcmetamodel.impl.PasswordImpl <em>Password</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mvcmetamodel.impl.PasswordImpl
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getPassword()
+		 * @generated
+		 */
+		EClass PASSWORD = eINSTANCE.getPassword();
+
+		/**
+		 * The meta object literal for the '{@link mvcmetamodel.impl.RadioButtonImpl <em>Radio Button</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mvcmetamodel.impl.RadioButtonImpl
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getRadioButton()
+		 * @generated
+		 */
+		EClass RADIO_BUTTON = eINSTANCE.getRadioButton();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RADIO_BUTTON__VALUE = eINSTANCE.getRadioButton_Value();
+
+		/**
+		 * The meta object literal for the '{@link mvcmetamodel.impl.CheckBoxesImpl <em>Check Boxes</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mvcmetamodel.impl.CheckBoxesImpl
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getCheckBoxes()
+		 * @generated
+		 */
+		EClass CHECK_BOXES = eINSTANCE.getCheckBoxes();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CHECK_BOXES__VALUE = eINSTANCE.getCheckBoxes_Value();
+
+		/**
+		 * The meta object literal for the '{@link mvcmetamodel.impl.SubmitButtonImpl <em>Submit Button</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mvcmetamodel.impl.SubmitButtonImpl
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getSubmitButton()
+		 * @generated
+		 */
+		EClass SUBMIT_BUTTON = eINSTANCE.getSubmitButton();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUBMIT_BUTTON__VALUE = eINSTANCE.getSubmitButton_Value();
+
+		/**
+		 * The meta object literal for the '{@link mvcmetamodel.impl.ParagrapheImpl <em>Paragraphe</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mvcmetamodel.impl.ParagrapheImpl
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getParagraphe()
+		 * @generated
+		 */
+		EClass PARAGRAPHE = eINSTANCE.getParagraphe();
+
+		/**
+		 * The meta object literal for the '{@link mvcmetamodel.impl.CellImpl <em>Cell</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mvcmetamodel.impl.CellImpl
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getCell()
+		 * @generated
+		 */
+		EClass CELL = eINSTANCE.getCell();
+
+		/**
+		 * The meta object literal for the '<em><b>Content</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CELL__CONTENT = eINSTANCE.getCell_Content();
+
+		/**
+		 * The meta object literal for the '{@link mvcmetamodel.Size <em>Size</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mvcmetamodel.Size
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getSize()
+		 * @generated
+		 */
+		EEnum SIZE = eINSTANCE.getSize();
+
+		/**
+		 * The meta object literal for the '{@link mvcmetamodel.Align <em>Align</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mvcmetamodel.Align
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getAlign()
+		 * @generated
+		 */
+		EEnum ALIGN = eINSTANCE.getAlign();
 
 	}
 

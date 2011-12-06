@@ -3,97 +3,86 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="mvcmetamodel"
     nsURI="http://mvcmetamodel/1.0" nsPrefix="mvcmetamodel">
-  <eClassifiers xsi:type="ecore:EClass" name="ServletMapping">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="urlPattern" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="servlet" eType="#//Servlet"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Servlet">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="class" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" eType="#//InitParam"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="loadOnStartup" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="initParam" eType="#//InitParam"
-        containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Form">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="component" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
+        eType="#//Input" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
         eType="#//Component" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="buttonForm" eType="#//Input"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="servlet" eType="#//Servlet"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Page">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
-        eType="#//Form" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
-        eType="#//Form" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="component" upperBound="-1"
-        eType="#//Component" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="body" lowerBound="1" eType="#//Body"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="head" lowerBound="1" eType="#//Head"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Label" eSuperTypes="#//Component">
+  <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//Component">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TextField" eSuperTypes="#//Component">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InitParam">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Application">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="webxml" lowerBound="1"
-        eType="#//WebXML" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="resources" upperBound="-1"
-        eType="#//Resources" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WebApp">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="page" upperBound="-1" eType="#//Page"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="WebXML">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="servletMapping" eType="#//ServletMapping"
+  <eClassifiers xsi:type="ecore:EClass" name="Table" eSuperTypes="#//Component">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbRow" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbCol" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Cell" upperBound="-1" eType="#//Cell"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceRef" eType="#//ResourceRef"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="servlet" eType="#//Servlet"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="welcomeFileList" lowerBound="1"
-        eType="#//WelcomeFileList" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResourceRef">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resRefName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resAuth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="WelcomeFileList">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="welcomeFile" lowerBound="1"
-        upperBound="-1" eType="#//WelcomeFile" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="WelcomeFile">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pageName" eType="#//Page"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Table" eSuperTypes="#//Component"/>
   <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//Component">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Component"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Component">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="#//Component"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Input">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Resources">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Java"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Body">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="#//Component" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="form" upperBound="-1" eType="#//Form"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Head">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Size">
+    <eLiterals name="HUGE"/>
+    <eLiterals name="BIG" value="1"/>
+    <eLiterals name="MEDIUM" value="2"/>
+    <eLiterals name="SMALL" value="3"/>
+    <eLiterals name="TINY" value="4"/>
+    <eLiterals name="VERYBIG" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Align">
+    <eLiterals name="LEFT"/>
+    <eLiterals name="CENTER" value="1"/>
+    <eLiterals name="RIGHT" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Title" eSuperTypes="#//Component">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="#//Size"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TextField" eSuperTypes="#//Input"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Password" eSuperTypes="#//Input"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RadioButton" eSuperTypes="#//Input">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CheckBoxes" eSuperTypes="#//Input">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SubmitButton" eSuperTypes="#//Input">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Paragraphe" eSuperTypes="#//Component"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Cell">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>

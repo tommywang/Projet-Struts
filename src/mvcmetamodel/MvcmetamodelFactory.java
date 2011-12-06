@@ -26,24 +26,6 @@ public interface MvcmetamodelFactory extends EFactory {
 	MvcmetamodelFactory eINSTANCE = mvcmetamodel.impl.MvcmetamodelFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Servlet Mapping</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Servlet Mapping</em>'.
-	 * @generated
-	 */
-	ServletMapping createServletMapping();
-
-	/**
-	 * Returns a new object of class '<em>Servlet</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Servlet</em>'.
-	 * @generated
-	 */
-	Servlet createServlet();
-
-	/**
 	 * Returns a new object of class '<em>Form</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,76 +44,22 @@ public interface MvcmetamodelFactory extends EFactory {
 	Page createPage();
 
 	/**
-	 * Returns a new object of class '<em>Label</em>'.
+	 * Returns a new object of class '<em>Text</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Label</em>'.
+	 * @return a new object of class '<em>Text</em>'.
 	 * @generated
 	 */
-	Label createLabel();
+	Text createText();
 
 	/**
-	 * Returns a new object of class '<em>Text Field</em>'.
+	 * Returns a new object of class '<em>Web App</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Text Field</em>'.
+	 * @return a new object of class '<em>Web App</em>'.
 	 * @generated
 	 */
-	TextField createTextField();
-
-	/**
-	 * Returns a new object of class '<em>Init Param</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Init Param</em>'.
-	 * @generated
-	 */
-	InitParam createInitParam();
-
-	/**
-	 * Returns a new object of class '<em>Application</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Application</em>'.
-	 * @generated
-	 */
-	Application createApplication();
-
-	/**
-	 * Returns a new object of class '<em>Web XML</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Web XML</em>'.
-	 * @generated
-	 */
-	WebXML createWebXML();
-
-	/**
-	 * Returns a new object of class '<em>Resource Ref</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Resource Ref</em>'.
-	 * @generated
-	 */
-	ResourceRef createResourceRef();
-
-	/**
-	 * Returns a new object of class '<em>Welcome File List</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Welcome File List</em>'.
-	 * @generated
-	 */
-	WelcomeFileList createWelcomeFileList();
-
-	/**
-	 * Returns a new object of class '<em>Welcome File</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Welcome File</em>'.
-	 * @generated
-	 */
-	WelcomeFile createWelcomeFile();
+	WebApp createWebApp();
 
 	/**
 	 * Returns a new object of class '<em>Table</em>'.
@@ -170,15 +98,6 @@ public interface MvcmetamodelFactory extends EFactory {
 	Input createInput();
 
 	/**
-	 * Returns a new object of class '<em>Resources</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Resources</em>'.
-	 * @generated
-	 */
-	Resources createResources();
-
-	/**
 	 * Returns a new object of class '<em>Java</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -186,6 +105,96 @@ public interface MvcmetamodelFactory extends EFactory {
 	 * @generated
 	 */
 	Java createJava();
+
+	/**
+	 * Returns a new object of class '<em>Body</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Body</em>'.
+	 * @generated
+	 */
+	Body createBody();
+
+	/**
+	 * Returns a new object of class '<em>Head</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Head</em>'.
+	 * @generated
+	 */
+	Head createHead();
+
+	/**
+	 * Returns a new object of class '<em>Title</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Title</em>'.
+	 * @generated
+	 */
+	Title createTitle();
+
+	/**
+	 * Returns a new object of class '<em>Text Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Text Field</em>'.
+	 * @generated
+	 */
+	TextField createTextField();
+
+	/**
+	 * Returns a new object of class '<em>Password</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Password</em>'.
+	 * @generated
+	 */
+	Password createPassword();
+
+	/**
+	 * Returns a new object of class '<em>Radio Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Radio Button</em>'.
+	 * @generated
+	 */
+	RadioButton createRadioButton();
+
+	/**
+	 * Returns a new object of class '<em>Check Boxes</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Check Boxes</em>'.
+	 * @generated
+	 */
+	CheckBoxes createCheckBoxes();
+
+	/**
+	 * Returns a new object of class '<em>Submit Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Submit Button</em>'.
+	 * @generated
+	 */
+	SubmitButton createSubmitButton();
+
+	/**
+	 * Returns a new object of class '<em>Paragraphe</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Paragraphe</em>'.
+	 * @generated
+	 */
+	Paragraphe createParagraphe();
+
+	/**
+	 * Returns a new object of class '<em>Cell</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cell</em>'.
+	 * @generated
+	 */
+	Cell createCell();
 
 	/**
 	 * Returns the package supported by this factory.

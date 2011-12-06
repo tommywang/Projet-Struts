@@ -16,7 +16,6 @@ package mvcmetamodel;
  * The following features are supported:
  * <ul>
  *   <li>{@link mvcmetamodel.Link#getUrl <em>Url</em>}</li>
- *   <li>{@link mvcmetamodel.Link#getText <em>Text</em>}</li>
  * </ul>
  * </p>
  *
@@ -50,31 +49,5 @@ public interface Link extends Component {
 	 * @generated
 	 */
 	void setUrl(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Text</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Text</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Text</em>' attribute.
-	 * @see #setText(String)
-	 * @see mvcmetamodel.MvcmetamodelPackage#getLink_Text()
-	 * @model
-	 * @generated
-	 */
-	String getText();
-
-	/**
-	 * Sets the value of the '{@link mvcmetamodel.Link#getText <em>Text</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Text</em>' attribute.
-	 * @see #getText()
-	 * @generated
-	 */
-	void setText(String value);
 
 } // Link

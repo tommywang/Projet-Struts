@@ -12,7 +12,6 @@ import mvcmetamodel.Component;
 import mvcmetamodel.Form;
 import mvcmetamodel.Input;
 import mvcmetamodel.MvcmetamodelPackage;
-import mvcmetamodel.Servlet;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -38,9 +37,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link mvcmetamodel.impl.FormImpl#getName <em>Name</em>}</li>
  *   <li>{@link mvcmetamodel.impl.FormImpl#getMethod <em>Method</em>}</li>
  *   <li>{@link mvcmetamodel.impl.FormImpl#getAction <em>Action</em>}</li>
- *   <li>{@link mvcmetamodel.impl.FormImpl#getComponent <em>Component</em>}</li>
- *   <li>{@link mvcmetamodel.impl.FormImpl#getButtonForm <em>Button Form</em>}</li>
- *   <li>{@link mvcmetamodel.impl.FormImpl#getServlet <em>Servlet</em>}</li>
+ *   <li>{@link mvcmetamodel.impl.FormImpl#getInputs <em>Inputs</em>}</li>
+ *   <li>{@link mvcmetamodel.impl.FormImpl#getComponents <em>Components</em>}</li>
  * </ul>
  * </p>
  *
@@ -108,34 +106,24 @@ public class FormImpl extends EObjectImpl implements Form {
 	protected String action = ACTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getComponent() <em>Component</em>}' containment reference list.
+	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getComponent()
+	 * @see #getInputs()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList component;
+	protected EList<Input> inputs;
 
 	/**
-	 * The cached value of the '{@link #getButtonForm() <em>Button Form</em>}' containment reference.
+	 * The cached value of the '{@link #getComponents() <em>Components</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getButtonForm()
+	 * @see #getComponents()
 	 * @generated
 	 * @ordered
 	 */
-	protected Input buttonForm;
-
-	/**
-	 * The cached value of the '{@link #getServlet() <em>Servlet</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getServlet()
-	 * @generated
-	 * @ordered
-	 */
-	protected Servlet servlet;
+	protected EList<Component> components;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -151,6 +139,7 @@ public class FormImpl extends EObjectImpl implements Form {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected EClass eStaticClass() {
 		return MvcmetamodelPackage.Literals.FORM;
 	}
@@ -223,11 +212,11 @@ public class FormImpl extends EObjectImpl implements Form {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList getComponent() {
-		if (component == null) {
-			component = new EObjectContainmentEList(Component.class, this, MvcmetamodelPackage.FORM__COMPONENT);
+	public EList<Input> getInputs() {
+		if (inputs == null) {
+			inputs = new EObjectContainmentEList<Input>(Input.class, this, MvcmetamodelPackage.FORM__INPUTS);
 		}
-		return component;
+		return inputs;
 	}
 
 	/**
@@ -235,23 +224,11 @@ public class FormImpl extends EObjectImpl implements Form {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Input getButtonForm() {
-		return buttonForm;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetButtonForm(Input newButtonForm, NotificationChain msgs) {
-		Input oldButtonForm = buttonForm;
-		buttonForm = newButtonForm;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.FORM__BUTTON_FORM, oldButtonForm, newButtonForm);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public EList<Component> getComponents() {
+		if (components == null) {
+			components = new EObjectContainmentEList<Component>(Component.class, this, MvcmetamodelPackage.FORM__COMPONENTS);
 		}
-		return msgs;
+		return components;
 	}
 
 	/**
@@ -259,69 +236,13 @@ public class FormImpl extends EObjectImpl implements Form {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setButtonForm(Input newButtonForm) {
-		if (newButtonForm != buttonForm) {
-			NotificationChain msgs = null;
-			if (buttonForm != null)
-				msgs = ((InternalEObject)buttonForm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MvcmetamodelPackage.FORM__BUTTON_FORM, null, msgs);
-			if (newButtonForm != null)
-				msgs = ((InternalEObject)newButtonForm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MvcmetamodelPackage.FORM__BUTTON_FORM, null, msgs);
-			msgs = basicSetButtonForm(newButtonForm, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.FORM__BUTTON_FORM, newButtonForm, newButtonForm));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Servlet getServlet() {
-		if (servlet != null && servlet.eIsProxy()) {
-			InternalEObject oldServlet = (InternalEObject)servlet;
-			servlet = (Servlet)eResolveProxy(oldServlet);
-			if (servlet != oldServlet) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MvcmetamodelPackage.FORM__SERVLET, oldServlet, servlet));
-			}
-		}
-		return servlet;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Servlet basicGetServlet() {
-		return servlet;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setServlet(Servlet newServlet) {
-		Servlet oldServlet = servlet;
-		servlet = newServlet;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.FORM__SERVLET, oldServlet, servlet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MvcmetamodelPackage.FORM__COMPONENT:
-				return ((InternalEList)getComponent()).basicRemove(otherEnd, msgs);
-			case MvcmetamodelPackage.FORM__BUTTON_FORM:
-				return basicSetButtonForm(null, msgs);
+			case MvcmetamodelPackage.FORM__INPUTS:
+				return ((InternalEList<?>)getInputs()).basicRemove(otherEnd, msgs);
+			case MvcmetamodelPackage.FORM__COMPONENTS:
+				return ((InternalEList<?>)getComponents()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -331,6 +252,7 @@ public class FormImpl extends EObjectImpl implements Form {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case MvcmetamodelPackage.FORM__NAME:
@@ -339,13 +261,10 @@ public class FormImpl extends EObjectImpl implements Form {
 				return getMethod();
 			case MvcmetamodelPackage.FORM__ACTION:
 				return getAction();
-			case MvcmetamodelPackage.FORM__COMPONENT:
-				return getComponent();
-			case MvcmetamodelPackage.FORM__BUTTON_FORM:
-				return getButtonForm();
-			case MvcmetamodelPackage.FORM__SERVLET:
-				if (resolve) return getServlet();
-				return basicGetServlet();
+			case MvcmetamodelPackage.FORM__INPUTS:
+				return getInputs();
+			case MvcmetamodelPackage.FORM__COMPONENTS:
+				return getComponents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -355,6 +274,8 @@ public class FormImpl extends EObjectImpl implements Form {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
+		@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case MvcmetamodelPackage.FORM__NAME:
@@ -366,15 +287,13 @@ public class FormImpl extends EObjectImpl implements Form {
 			case MvcmetamodelPackage.FORM__ACTION:
 				setAction((String)newValue);
 				return;
-			case MvcmetamodelPackage.FORM__COMPONENT:
-				getComponent().clear();
-				getComponent().addAll((Collection)newValue);
+			case MvcmetamodelPackage.FORM__INPUTS:
+				getInputs().clear();
+				getInputs().addAll((Collection<? extends Input>)newValue);
 				return;
-			case MvcmetamodelPackage.FORM__BUTTON_FORM:
-				setButtonForm((Input)newValue);
-				return;
-			case MvcmetamodelPackage.FORM__SERVLET:
-				setServlet((Servlet)newValue);
+			case MvcmetamodelPackage.FORM__COMPONENTS:
+				getComponents().clear();
+				getComponents().addAll((Collection<? extends Component>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -385,6 +304,7 @@ public class FormImpl extends EObjectImpl implements Form {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case MvcmetamodelPackage.FORM__NAME:
@@ -396,14 +316,11 @@ public class FormImpl extends EObjectImpl implements Form {
 			case MvcmetamodelPackage.FORM__ACTION:
 				setAction(ACTION_EDEFAULT);
 				return;
-			case MvcmetamodelPackage.FORM__COMPONENT:
-				getComponent().clear();
+			case MvcmetamodelPackage.FORM__INPUTS:
+				getInputs().clear();
 				return;
-			case MvcmetamodelPackage.FORM__BUTTON_FORM:
-				setButtonForm((Input)null);
-				return;
-			case MvcmetamodelPackage.FORM__SERVLET:
-				setServlet((Servlet)null);
+			case MvcmetamodelPackage.FORM__COMPONENTS:
+				getComponents().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -414,6 +331,7 @@ public class FormImpl extends EObjectImpl implements Form {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case MvcmetamodelPackage.FORM__NAME:
@@ -422,12 +340,10 @@ public class FormImpl extends EObjectImpl implements Form {
 				return METHOD_EDEFAULT == null ? method != null : !METHOD_EDEFAULT.equals(method);
 			case MvcmetamodelPackage.FORM__ACTION:
 				return ACTION_EDEFAULT == null ? action != null : !ACTION_EDEFAULT.equals(action);
-			case MvcmetamodelPackage.FORM__COMPONENT:
-				return component != null && !component.isEmpty();
-			case MvcmetamodelPackage.FORM__BUTTON_FORM:
-				return buttonForm != null;
-			case MvcmetamodelPackage.FORM__SERVLET:
-				return servlet != null;
+			case MvcmetamodelPackage.FORM__INPUTS:
+				return inputs != null && !inputs.isEmpty();
+			case MvcmetamodelPackage.FORM__COMPONENTS:
+				return components != null && !components.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -437,6 +353,7 @@ public class FormImpl extends EObjectImpl implements Form {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 

@@ -10,7 +10,8 @@ Export-Package: mvcmetamodel,
  mvcmetamodel.impl,
  mvcmetamodel.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;bundle-version="2.5.0"
 Eclipse-LazyStart: true
 Bundle-ActivationPolicy: lazy
 Import-Package: org.eclipse.emf.ecore.xmi,

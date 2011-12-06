@@ -37,6 +37,7 @@ public class JavaImpl extends EObjectImpl implements Java {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected EClass eStaticClass() {
 		return MvcmetamodelPackage.Literals.JAVA;
 	}

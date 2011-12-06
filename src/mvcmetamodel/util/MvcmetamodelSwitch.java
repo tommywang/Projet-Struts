@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * @see mvcmetamodel.MvcmetamodelPackage
  * @generated
  */
-public class MvcmetamodelSwitch {
+public class MvcmetamodelSwitch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class MvcmetamodelSwitch {
 	 * @return the first non-null result returned by a <code>caseXXX</code> call.
 	 * @generated
 	 */
-	public Object doSwitch(EObject theEObject) {
+	public T doSwitch(EObject theEObject) {
 		return doSwitch(theEObject.eClass(), theEObject);
 	}
 
@@ -65,16 +65,16 @@ public class MvcmetamodelSwitch {
 	 * @return the first non-null result returned by a <code>caseXXX</code> call.
 	 * @generated
 	 */
-	protected Object doSwitch(EClass theEClass, EObject theEObject) {
+	protected T doSwitch(EClass theEClass, EObject theEObject) {
 		if (theEClass.eContainer() == modelPackage) {
 			return doSwitch(theEClass.getClassifierID(), theEObject);
 		}
 		else {
-			List eSuperTypes = theEClass.getESuperTypes();
+			List<EClass> eSuperTypes = theEClass.getESuperTypes();
 			return
 				eSuperTypes.isEmpty() ?
 					defaultCase(theEObject) :
-					doSwitch((EClass)eSuperTypes.get(0), theEObject);
+					doSwitch(eSuperTypes.get(0), theEObject);
 		}
 	}
 
@@ -85,152 +85,134 @@ public class MvcmetamodelSwitch {
 	 * @return the first non-null result returned by a <code>caseXXX</code> call.
 	 * @generated
 	 */
-	protected Object doSwitch(int classifierID, EObject theEObject) {
+	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case MvcmetamodelPackage.SERVLET_MAPPING: {
-				ServletMapping servletMapping = (ServletMapping)theEObject;
-				Object result = caseServletMapping(servletMapping);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MvcmetamodelPackage.SERVLET: {
-				Servlet servlet = (Servlet)theEObject;
-				Object result = caseServlet(servlet);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case MvcmetamodelPackage.FORM: {
 				Form form = (Form)theEObject;
-				Object result = caseForm(form);
+				T result = caseForm(form);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MvcmetamodelPackage.PAGE: {
 				Page page = (Page)theEObject;
-				Object result = casePage(page);
+				T result = casePage(page);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MvcmetamodelPackage.LABEL: {
-				Label label = (Label)theEObject;
-				Object result = caseLabel(label);
-				if (result == null) result = caseComponent(label);
+			case MvcmetamodelPackage.TEXT: {
+				Text text = (Text)theEObject;
+				T result = caseText(text);
+				if (result == null) result = caseComponent(text);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MvcmetamodelPackage.TEXT_FIELD: {
-				TextField textField = (TextField)theEObject;
-				Object result = caseTextField(textField);
-				if (result == null) result = caseComponent(textField);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MvcmetamodelPackage.INIT_PARAM: {
-				InitParam initParam = (InitParam)theEObject;
-				Object result = caseInitParam(initParam);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MvcmetamodelPackage.APPLICATION: {
-				Application application = (Application)theEObject;
-				Object result = caseApplication(application);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MvcmetamodelPackage.WEB_XML: {
-				WebXML webXML = (WebXML)theEObject;
-				Object result = caseWebXML(webXML);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MvcmetamodelPackage.RESOURCE_REF: {
-				ResourceRef resourceRef = (ResourceRef)theEObject;
-				Object result = caseResourceRef(resourceRef);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MvcmetamodelPackage.WELCOME_FILE_LIST: {
-				WelcomeFileList welcomeFileList = (WelcomeFileList)theEObject;
-				Object result = caseWelcomeFileList(welcomeFileList);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MvcmetamodelPackage.WELCOME_FILE: {
-				WelcomeFile welcomeFile = (WelcomeFile)theEObject;
-				Object result = caseWelcomeFile(welcomeFile);
+			case MvcmetamodelPackage.WEB_APP: {
+				WebApp webApp = (WebApp)theEObject;
+				T result = caseWebApp(webApp);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MvcmetamodelPackage.TABLE: {
 				Table table = (Table)theEObject;
-				Object result = caseTable(table);
+				T result = caseTable(table);
 				if (result == null) result = caseComponent(table);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MvcmetamodelPackage.LINK: {
 				Link link = (Link)theEObject;
-				Object result = caseLink(link);
+				T result = caseLink(link);
 				if (result == null) result = caseComponent(link);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MvcmetamodelPackage.COMPONENT: {
 				Component component = (Component)theEObject;
-				Object result = caseComponent(component);
+				T result = caseComponent(component);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MvcmetamodelPackage.INPUT: {
 				Input input = (Input)theEObject;
-				Object result = caseInput(input);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MvcmetamodelPackage.RESOURCES: {
-				Resources resources = (Resources)theEObject;
-				Object result = caseResources(resources);
+				T result = caseInput(input);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MvcmetamodelPackage.JAVA: {
 				Java java = (Java)theEObject;
-				Object result = caseJava(java);
+				T result = caseJava(java);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MvcmetamodelPackage.BODY: {
+				Body body = (Body)theEObject;
+				T result = caseBody(body);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MvcmetamodelPackage.HEAD: {
+				Head head = (Head)theEObject;
+				T result = caseHead(head);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MvcmetamodelPackage.TITLE: {
+				Title title = (Title)theEObject;
+				T result = caseTitle(title);
+				if (result == null) result = caseComponent(title);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MvcmetamodelPackage.TEXT_FIELD: {
+				TextField textField = (TextField)theEObject;
+				T result = caseTextField(textField);
+				if (result == null) result = caseInput(textField);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MvcmetamodelPackage.PASSWORD: {
+				Password password = (Password)theEObject;
+				T result = casePassword(password);
+				if (result == null) result = caseInput(password);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MvcmetamodelPackage.RADIO_BUTTON: {
+				RadioButton radioButton = (RadioButton)theEObject;
+				T result = caseRadioButton(radioButton);
+				if (result == null) result = caseInput(radioButton);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MvcmetamodelPackage.CHECK_BOXES: {
+				CheckBoxes checkBoxes = (CheckBoxes)theEObject;
+				T result = caseCheckBoxes(checkBoxes);
+				if (result == null) result = caseInput(checkBoxes);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MvcmetamodelPackage.SUBMIT_BUTTON: {
+				SubmitButton submitButton = (SubmitButton)theEObject;
+				T result = caseSubmitButton(submitButton);
+				if (result == null) result = caseInput(submitButton);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MvcmetamodelPackage.PARAGRAPHE: {
+				Paragraphe paragraphe = (Paragraphe)theEObject;
+				T result = caseParagraphe(paragraphe);
+				if (result == null) result = caseComponent(paragraphe);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MvcmetamodelPackage.CELL: {
+				Cell cell = (Cell)theEObject;
+				T result = caseCell(cell);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			default: return defaultCase(theEObject);
 		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Servlet Mapping</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Servlet Mapping</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public Object caseServletMapping(ServletMapping object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Servlet</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Servlet</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public Object caseServlet(Servlet object) {
-		return null;
 	}
 
 	/**
@@ -244,7 +226,7 @@ public class MvcmetamodelSwitch {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public Object caseForm(Form object) {
+	public T caseForm(Form object) {
 		return null;
 	}
 
@@ -259,22 +241,37 @@ public class MvcmetamodelSwitch {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public Object casePage(Page object) {
+	public T casePage(Page object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Label</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Text</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Label</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Text</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public Object caseLabel(Label object) {
+	public T caseText(Text object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Web App</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Web App</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWebApp(WebApp object) {
 		return null;
 	}
 
@@ -289,97 +286,97 @@ public class MvcmetamodelSwitch {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public Object caseTextField(TextField object) {
+	public T caseTextField(TextField object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Init Param</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Password</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Init Param</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Password</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public Object caseInitParam(InitParam object) {
+	public T casePassword(Password object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Application</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Radio Button</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Application</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Radio Button</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public Object caseApplication(Application object) {
+	public T caseRadioButton(RadioButton object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Web XML</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Check Boxes</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Web XML</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Check Boxes</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public Object caseWebXML(WebXML object) {
+	public T caseCheckBoxes(CheckBoxes object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Resource Ref</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Submit Button</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Resource Ref</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Submit Button</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public Object caseResourceRef(ResourceRef object) {
+	public T caseSubmitButton(SubmitButton object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Welcome File List</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Paragraphe</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Welcome File List</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Paragraphe</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public Object caseWelcomeFileList(WelcomeFileList object) {
+	public T caseParagraphe(Paragraphe object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Welcome File</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Cell</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Welcome File</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Cell</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public Object caseWelcomeFile(WelcomeFile object) {
+	public T caseCell(Cell object) {
 		return null;
 	}
 
@@ -394,7 +391,7 @@ public class MvcmetamodelSwitch {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public Object caseTable(Table object) {
+	public T caseTable(Table object) {
 		return null;
 	}
 
@@ -409,7 +406,7 @@ public class MvcmetamodelSwitch {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public Object caseLink(Link object) {
+	public T caseLink(Link object) {
 		return null;
 	}
 
@@ -424,7 +421,7 @@ public class MvcmetamodelSwitch {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public Object caseComponent(Component object) {
+	public T caseComponent(Component object) {
 		return null;
 	}
 
@@ -439,22 +436,7 @@ public class MvcmetamodelSwitch {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public Object caseInput(Input object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Resources</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Resources</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public Object caseResources(Resources object) {
+	public T caseInput(Input object) {
 		return null;
 	}
 
@@ -469,7 +451,52 @@ public class MvcmetamodelSwitch {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public Object caseJava(Java object) {
+	public T caseJava(Java object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Body</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Body</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBody(Body object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Head</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Head</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHead(Head object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Title</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Title</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTitle(Title object) {
 		return null;
 	}
 
@@ -484,7 +511,7 @@ public class MvcmetamodelSwitch {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */
-	public Object defaultCase(EObject object) {
+	public T defaultCase(EObject object) {
 		return null;
 	}
 

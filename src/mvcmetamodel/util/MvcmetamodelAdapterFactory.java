@@ -52,6 +52,7 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @return whether this factory is applicable for the type of the object.
 	 * @generated
 	 */
+	@Override
 	public boolean isFactoryForType(Object object) {
 		if (object == modelPackage) {
 			return true;
@@ -68,63 +69,86 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MvcmetamodelSwitch modelSwitch =
-		new MvcmetamodelSwitch() {
-			public Object caseServletMapping(ServletMapping object) {
-				return createServletMappingAdapter();
-			}
-			public Object caseServlet(Servlet object) {
-				return createServletAdapter();
-			}
-			public Object caseForm(Form object) {
+	protected MvcmetamodelSwitch<Adapter> modelSwitch =
+		new MvcmetamodelSwitch<Adapter>() {
+			@Override
+			public Adapter caseForm(Form object) {
 				return createFormAdapter();
 			}
-			public Object casePage(Page object) {
+			@Override
+			public Adapter casePage(Page object) {
 				return createPageAdapter();
 			}
-			public Object caseLabel(Label object) {
-				return createLabelAdapter();
+			@Override
+			public Adapter caseText(Text object) {
+				return createTextAdapter();
 			}
-			public Object caseTextField(TextField object) {
-				return createTextFieldAdapter();
+			@Override
+			public Adapter caseWebApp(WebApp object) {
+				return createWebAppAdapter();
 			}
-			public Object caseInitParam(InitParam object) {
-				return createInitParamAdapter();
-			}
-			public Object caseApplication(Application object) {
-				return createApplicationAdapter();
-			}
-			public Object caseWebXML(WebXML object) {
-				return createWebXMLAdapter();
-			}
-			public Object caseResourceRef(ResourceRef object) {
-				return createResourceRefAdapter();
-			}
-			public Object caseWelcomeFileList(WelcomeFileList object) {
-				return createWelcomeFileListAdapter();
-			}
-			public Object caseWelcomeFile(WelcomeFile object) {
-				return createWelcomeFileAdapter();
-			}
-			public Object caseTable(Table object) {
+			@Override
+			public Adapter caseTable(Table object) {
 				return createTableAdapter();
 			}
-			public Object caseLink(Link object) {
+			@Override
+			public Adapter caseLink(Link object) {
 				return createLinkAdapter();
 			}
-			public Object caseComponent(Component object) {
+			@Override
+			public Adapter caseComponent(Component object) {
 				return createComponentAdapter();
 			}
-			public Object caseInput(Input object) {
+			@Override
+			public Adapter caseInput(Input object) {
 				return createInputAdapter();
 			}
-			public Object caseResources(Resources object) {
-				return createResourcesAdapter();
-			}
-			public Object caseJava(Java object) {
+			@Override
+			public Adapter caseJava(Java object) {
 				return createJavaAdapter();
 			}
-			public Object defaultCase(EObject object) {
+			@Override
+			public Adapter caseBody(Body object) {
+				return createBodyAdapter();
+			}
+			@Override
+			public Adapter caseHead(Head object) {
+				return createHeadAdapter();
+			}
+			@Override
+			public Adapter caseTitle(Title object) {
+				return createTitleAdapter();
+			}
+			@Override
+			public Adapter caseTextField(TextField object) {
+				return createTextFieldAdapter();
+			}
+			@Override
+			public Adapter casePassword(Password object) {
+				return createPasswordAdapter();
+			}
+			@Override
+			public Adapter caseRadioButton(RadioButton object) {
+				return createRadioButtonAdapter();
+			}
+			@Override
+			public Adapter caseCheckBoxes(CheckBoxes object) {
+				return createCheckBoxesAdapter();
+			}
+			@Override
+			public Adapter caseSubmitButton(SubmitButton object) {
+				return createSubmitButtonAdapter();
+			}
+			@Override
+			public Adapter caseParagraphe(Paragraphe object) {
+				return createParagrapheAdapter();
+			}
+			@Override
+			public Adapter caseCell(Cell object) {
+				return createCellAdapter();
+			}
+			@Override
+			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
 		};
@@ -137,38 +161,11 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @return the adapter for the <code>target</code>.
 	 * @generated
 	 */
+	@Override
 	public Adapter createAdapter(Notifier target) {
-		return (Adapter)modelSwitch.doSwitch((EObject)target);
+		return modelSwitch.doSwitch((EObject)target);
 	}
 
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mvcmetamodel.ServletMapping <em>Servlet Mapping</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mvcmetamodel.ServletMapping
-	 * @generated
-	 */
-	public Adapter createServletMappingAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Servlet <em>Servlet</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mvcmetamodel.Servlet
-	 * @generated
-	 */
-	public Adapter createServletAdapter() {
-		return null;
-	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Form <em>Form</em>}'.
@@ -199,16 +196,30 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Label <em>Label</em>}'.
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Text <em>Text</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mvcmetamodel.Label
+	 * @see mvcmetamodel.Text
 	 * @generated
 	 */
-	public Adapter createLabelAdapter() {
+	public Adapter createTextAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.WebApp <em>Web App</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see mvcmetamodel.WebApp
+	 * @generated
+	 */
+	public Adapter createWebAppAdapter() {
 		return null;
 	}
 
@@ -227,86 +238,86 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mvcmetamodel.InitParam <em>Init Param</em>}'.
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Password <em>Password</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mvcmetamodel.InitParam
+	 * @see mvcmetamodel.Password
 	 * @generated
 	 */
-	public Adapter createInitParamAdapter() {
+	public Adapter createPasswordAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Application <em>Application</em>}'.
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.RadioButton <em>Radio Button</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mvcmetamodel.Application
+	 * @see mvcmetamodel.RadioButton
 	 * @generated
 	 */
-	public Adapter createApplicationAdapter() {
+	public Adapter createRadioButtonAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mvcmetamodel.WebXML <em>Web XML</em>}'.
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.CheckBoxes <em>Check Boxes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mvcmetamodel.WebXML
+	 * @see mvcmetamodel.CheckBoxes
 	 * @generated
 	 */
-	public Adapter createWebXMLAdapter() {
+	public Adapter createCheckBoxesAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mvcmetamodel.ResourceRef <em>Resource Ref</em>}'.
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.SubmitButton <em>Submit Button</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mvcmetamodel.ResourceRef
+	 * @see mvcmetamodel.SubmitButton
 	 * @generated
 	 */
-	public Adapter createResourceRefAdapter() {
+	public Adapter createSubmitButtonAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mvcmetamodel.WelcomeFileList <em>Welcome File List</em>}'.
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Paragraphe <em>Paragraphe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mvcmetamodel.WelcomeFileList
+	 * @see mvcmetamodel.Paragraphe
 	 * @generated
 	 */
-	public Adapter createWelcomeFileListAdapter() {
+	public Adapter createParagrapheAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mvcmetamodel.WelcomeFile <em>Welcome File</em>}'.
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Cell <em>Cell</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mvcmetamodel.WelcomeFile
+	 * @see mvcmetamodel.Cell
 	 * @generated
 	 */
-	public Adapter createWelcomeFileAdapter() {
+	public Adapter createCellAdapter() {
 		return null;
 	}
 
@@ -367,20 +378,6 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Resources <em>Resources</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mvcmetamodel.Resources
-	 * @generated
-	 */
-	public Adapter createResourcesAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Java <em>Java</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -391,6 +388,48 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createJavaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Body <em>Body</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see mvcmetamodel.Body
+	 * @generated
+	 */
+	public Adapter createBodyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Head <em>Head</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see mvcmetamodel.Head
+	 * @generated
+	 */
+	public Adapter createHeadAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Title <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see mvcmetamodel.Title
+	 * @generated
+	 */
+	public Adapter createTitleAdapter() {
 		return null;
 	}
 

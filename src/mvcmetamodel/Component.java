@@ -6,6 +6,8 @@
  */
 package mvcmetamodel;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -13,11 +15,32 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Component</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link mvcmetamodel.Component#getComponents <em>Components</em>}</li>
+ * </ul>
+ * </p>
  *
  * @see mvcmetamodel.MvcmetamodelPackage#getComponent()
  * @model
  * @generated
  */
 public interface Component extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Components</b></em>' reference list.
+	 * The list contents are of type {@link mvcmetamodel.Component}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Components</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Components</em>' reference list.
+	 * @see mvcmetamodel.MvcmetamodelPackage#getComponent_Components()
+	 * @model
+	 * @generated
+	 */
+	EList<Component> getComponents();
 
 } // Component

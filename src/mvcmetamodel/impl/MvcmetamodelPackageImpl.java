@@ -6,29 +6,33 @@
  */
 package mvcmetamodel.impl;
 
-import mvcmetamodel.Application;
+import mvcmetamodel.Align;
+import mvcmetamodel.Body;
+import mvcmetamodel.Cell;
+import mvcmetamodel.CheckBoxes;
 import mvcmetamodel.Component;
 import mvcmetamodel.Form;
-import mvcmetamodel.InitParam;
+import mvcmetamodel.Head;
 import mvcmetamodel.Input;
 import mvcmetamodel.Java;
-import mvcmetamodel.Label;
 import mvcmetamodel.Link;
 import mvcmetamodel.MvcmetamodelFactory;
 import mvcmetamodel.MvcmetamodelPackage;
 import mvcmetamodel.Page;
-import mvcmetamodel.ResourceRef;
-import mvcmetamodel.Resources;
-import mvcmetamodel.Servlet;
-import mvcmetamodel.ServletMapping;
+import mvcmetamodel.Paragraphe;
+import mvcmetamodel.Password;
+import mvcmetamodel.RadioButton;
+import mvcmetamodel.Size;
+import mvcmetamodel.SubmitButton;
 import mvcmetamodel.Table;
+import mvcmetamodel.Text;
 import mvcmetamodel.TextField;
-import mvcmetamodel.WebXML;
-import mvcmetamodel.WelcomeFile;
-import mvcmetamodel.WelcomeFileList;
+import mvcmetamodel.Title;
+import mvcmetamodel.WebApp;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -41,20 +45,6 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * @generated
  */
 public class MvcmetamodelPackageImpl extends EPackageImpl implements MvcmetamodelPackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass servletMappingEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass servletEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,56 +64,14 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass labelEClass = null;
+	private EClass textEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass textFieldEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass initParamEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass applicationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass webXMLEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass resourceRefEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass welcomeFileListEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass welcomeFileEClass = null;
+	private EClass webAppEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -158,14 +106,91 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass resourcesEClass = null;
+	private EClass javaEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass javaEClass = null;
+	private EClass bodyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass headEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass titleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass textFieldEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass passwordEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass radioButtonEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass checkBoxesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass submitButtonEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass paragrapheEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cellEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum sizeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum alignEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -233,96 +258,6 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getServletMapping() {
-		return servletMappingEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getServletMapping_Name() {
-		return (EAttribute)servletMappingEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getServletMapping_UrlPattern() {
-		return (EAttribute)servletMappingEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getServletMapping_Servlet() {
-		return (EReference)servletMappingEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getServlet() {
-		return servletEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getServlet_Name() {
-		return (EAttribute)servletEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getServlet_Class() {
-		return (EAttribute)servletEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getServlet_Contains() {
-		return (EReference)servletEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getServlet_LoadOnStartup() {
-		return (EAttribute)servletEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getServlet_InitParam() {
-		return (EReference)servletEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getForm() {
 		return formEClass;
 	}
@@ -359,7 +294,7 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getForm_Component() {
+	public EReference getForm_Inputs() {
 		return (EReference)formEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -368,17 +303,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getForm_ButtonForm() {
+	public EReference getForm_Components() {
 		return (EReference)formEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getForm_Servlet() {
-		return (EReference)formEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -395,26 +321,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPage_Contains() {
-		return (EReference)pageEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPage_Components() {
-		return (EReference)pageEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getPage_Name() {
-		return (EAttribute)pageEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)pageEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -423,7 +331,7 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * @generated
 	 */
 	public EAttribute getPage_Type() {
-		return (EAttribute)pageEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)pageEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -431,8 +339,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPage_Title() {
-		return (EAttribute)pageEClass.getEStructuralFeatures().get(4);
+	public EReference getPage_Body() {
+		return (EReference)pageEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -440,8 +348,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPage_Component() {
-		return (EReference)pageEClass.getEStructuralFeatures().get(5);
+	public EReference getPage_Head() {
+		return (EReference)pageEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -449,8 +357,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getLabel() {
-		return labelEClass;
+	public EClass getText() {
+		return textEClass;
 	}
 
 	/**
@@ -458,8 +366,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLabel_Value() {
-		return (EAttribute)labelEClass.getEStructuralFeatures().get(0);
+	public EAttribute getText_Value() {
+		return (EAttribute)textEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -467,8 +375,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTextField() {
-		return textFieldEClass;
+	public EClass getWebApp() {
+		return webAppEClass;
 	}
 
 	/**
@@ -476,8 +384,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTextField_Text() {
-		return (EAttribute)textFieldEClass.getEStructuralFeatures().get(0);
+	public EAttribute getWebApp_Name() {
+		return (EAttribute)webAppEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -485,206 +393,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getInitParam() {
-		return initParamEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getInitParam_Name() {
-		return (EAttribute)initParamEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getInitParam_Value() {
-		return (EAttribute)initParamEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getApplication() {
-		return applicationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getApplication_Page() {
-		return (EReference)applicationEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getApplication_Webxml() {
-		return (EReference)applicationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getApplication_Resources() {
-		return (EReference)applicationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getApplication_Name() {
-		return (EAttribute)applicationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getWebXML() {
-		return webXMLEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWebXML_ServletMapping() {
-		return (EReference)webXMLEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWebXML_ResourceRef() {
-		return (EReference)webXMLEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWebXML_Servlet() {
-		return (EReference)webXMLEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWebXML_WelcomeFileList() {
-		return (EReference)webXMLEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getWebXML_Name() {
-		return (EAttribute)webXMLEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getResourceRef() {
-		return resourceRefEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getResourceRef_ResRefName() {
-		return (EAttribute)resourceRefEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getResourceRef_Description() {
-		return (EAttribute)resourceRefEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getResourceRef_ResType() {
-		return (EAttribute)resourceRefEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getResourceRef_ResAuth() {
-		return (EAttribute)resourceRefEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getWelcomeFileList() {
-		return welcomeFileListEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWelcomeFileList_WelcomeFile() {
-		return (EReference)welcomeFileListEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getWelcomeFile() {
-		return welcomeFileEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWelcomeFile_PageName() {
-		return (EReference)welcomeFileEClass.getEStructuralFeatures().get(0);
+	public EReference getWebApp_Page() {
+		return (EReference)webAppEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -694,6 +404,33 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 */
 	public EClass getTable() {
 		return tableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTable_NbRow() {
+		return (EAttribute)tableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTable_NbCol() {
+		return (EAttribute)tableEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTable_Cell() {
+		return (EReference)tableEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -719,8 +456,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLink_Text() {
-		return (EAttribute)linkEClass.getEStructuralFeatures().get(1);
+	public EClass getComponent() {
+		return componentEClass;
 	}
 
 	/**
@@ -728,8 +465,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getComponent() {
-		return componentEClass;
+	public EReference getComponent_Components() {
+		return (EReference)componentEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -746,44 +483,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getInput_Type() {
-		return (EAttribute)inputEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getInput_Name() {
-		return (EAttribute)inputEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getInput_Value() {
-		return (EAttribute)inputEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getResources() {
-		return resourcesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getResources_Name() {
-		return (EAttribute)resourcesEClass.getEStructuralFeatures().get(0);
+		return (EAttribute)inputEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -793,6 +494,186 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 */
 	public EClass getJava() {
 		return javaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBody() {
+		return bodyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBody_Components() {
+		return (EReference)bodyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBody_Form() {
+		return (EReference)bodyEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getHead() {
+		return headEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getHead_Title() {
+		return (EAttribute)headEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTitle() {
+		return titleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTitle_Size() {
+		return (EAttribute)titleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTextField() {
+		return textFieldEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPassword() {
+		return passwordEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRadioButton() {
+		return radioButtonEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRadioButton_Value() {
+		return (EAttribute)radioButtonEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCheckBoxes() {
+		return checkBoxesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCheckBoxes_Value() {
+		return (EAttribute)checkBoxesEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSubmitButton() {
+		return submitButtonEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSubmitButton_Value() {
+		return (EAttribute)submitButtonEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getParagraphe() {
+		return paragrapheEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCell() {
+		return cellEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCell_Content() {
+		return (EAttribute)cellEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getSize() {
+		return sizeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getAlign() {
+		return alignEEnum;
 	}
 
 	/**
@@ -823,86 +704,73 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		isCreated = true;
 
 		// Create classes and their features
-		servletMappingEClass = createEClass(SERVLET_MAPPING);
-		createEAttribute(servletMappingEClass, SERVLET_MAPPING__NAME);
-		createEAttribute(servletMappingEClass, SERVLET_MAPPING__URL_PATTERN);
-		createEReference(servletMappingEClass, SERVLET_MAPPING__SERVLET);
-
-		servletEClass = createEClass(SERVLET);
-		createEAttribute(servletEClass, SERVLET__NAME);
-		createEAttribute(servletEClass, SERVLET__CLASS);
-		createEReference(servletEClass, SERVLET__CONTAINS);
-		createEAttribute(servletEClass, SERVLET__LOAD_ON_STARTUP);
-		createEReference(servletEClass, SERVLET__INIT_PARAM);
-
 		formEClass = createEClass(FORM);
 		createEAttribute(formEClass, FORM__NAME);
 		createEAttribute(formEClass, FORM__METHOD);
 		createEAttribute(formEClass, FORM__ACTION);
-		createEReference(formEClass, FORM__COMPONENT);
-		createEReference(formEClass, FORM__BUTTON_FORM);
-		createEReference(formEClass, FORM__SERVLET);
+		createEReference(formEClass, FORM__INPUTS);
+		createEReference(formEClass, FORM__COMPONENTS);
 
 		pageEClass = createEClass(PAGE);
-		createEReference(pageEClass, PAGE__CONTAINS);
-		createEReference(pageEClass, PAGE__COMPONENTS);
 		createEAttribute(pageEClass, PAGE__NAME);
 		createEAttribute(pageEClass, PAGE__TYPE);
-		createEAttribute(pageEClass, PAGE__TITLE);
-		createEReference(pageEClass, PAGE__COMPONENT);
+		createEReference(pageEClass, PAGE__BODY);
+		createEReference(pageEClass, PAGE__HEAD);
 
-		labelEClass = createEClass(LABEL);
-		createEAttribute(labelEClass, LABEL__VALUE);
+		textEClass = createEClass(TEXT);
+		createEAttribute(textEClass, TEXT__VALUE);
 
-		textFieldEClass = createEClass(TEXT_FIELD);
-		createEAttribute(textFieldEClass, TEXT_FIELD__TEXT);
-
-		initParamEClass = createEClass(INIT_PARAM);
-		createEAttribute(initParamEClass, INIT_PARAM__NAME);
-		createEAttribute(initParamEClass, INIT_PARAM__VALUE);
-
-		applicationEClass = createEClass(APPLICATION);
-		createEReference(applicationEClass, APPLICATION__WEBXML);
-		createEReference(applicationEClass, APPLICATION__RESOURCES);
-		createEAttribute(applicationEClass, APPLICATION__NAME);
-		createEReference(applicationEClass, APPLICATION__PAGE);
-
-		webXMLEClass = createEClass(WEB_XML);
-		createEReference(webXMLEClass, WEB_XML__SERVLET_MAPPING);
-		createEReference(webXMLEClass, WEB_XML__RESOURCE_REF);
-		createEReference(webXMLEClass, WEB_XML__SERVLET);
-		createEReference(webXMLEClass, WEB_XML__WELCOME_FILE_LIST);
-		createEAttribute(webXMLEClass, WEB_XML__NAME);
-
-		resourceRefEClass = createEClass(RESOURCE_REF);
-		createEAttribute(resourceRefEClass, RESOURCE_REF__RES_REF_NAME);
-		createEAttribute(resourceRefEClass, RESOURCE_REF__DESCRIPTION);
-		createEAttribute(resourceRefEClass, RESOURCE_REF__RES_TYPE);
-		createEAttribute(resourceRefEClass, RESOURCE_REF__RES_AUTH);
-
-		welcomeFileListEClass = createEClass(WELCOME_FILE_LIST);
-		createEReference(welcomeFileListEClass, WELCOME_FILE_LIST__WELCOME_FILE);
-
-		welcomeFileEClass = createEClass(WELCOME_FILE);
-		createEReference(welcomeFileEClass, WELCOME_FILE__PAGE_NAME);
+		webAppEClass = createEClass(WEB_APP);
+		createEAttribute(webAppEClass, WEB_APP__NAME);
+		createEReference(webAppEClass, WEB_APP__PAGE);
 
 		tableEClass = createEClass(TABLE);
+		createEAttribute(tableEClass, TABLE__NB_ROW);
+		createEAttribute(tableEClass, TABLE__NB_COL);
+		createEReference(tableEClass, TABLE__CELL);
 
 		linkEClass = createEClass(LINK);
 		createEAttribute(linkEClass, LINK__URL);
-		createEAttribute(linkEClass, LINK__TEXT);
 
 		componentEClass = createEClass(COMPONENT);
+		createEReference(componentEClass, COMPONENT__COMPONENTS);
 
 		inputEClass = createEClass(INPUT);
-		createEAttribute(inputEClass, INPUT__TYPE);
 		createEAttribute(inputEClass, INPUT__NAME);
-		createEAttribute(inputEClass, INPUT__VALUE);
-
-		resourcesEClass = createEClass(RESOURCES);
-		createEAttribute(resourcesEClass, RESOURCES__NAME);
 
 		javaEClass = createEClass(JAVA);
+
+		bodyEClass = createEClass(BODY);
+		createEReference(bodyEClass, BODY__COMPONENTS);
+		createEReference(bodyEClass, BODY__FORM);
+
+		headEClass = createEClass(HEAD);
+		createEAttribute(headEClass, HEAD__TITLE);
+
+		titleEClass = createEClass(TITLE);
+		createEAttribute(titleEClass, TITLE__SIZE);
+
+		textFieldEClass = createEClass(TEXT_FIELD);
+
+		passwordEClass = createEClass(PASSWORD);
+
+		radioButtonEClass = createEClass(RADIO_BUTTON);
+		createEAttribute(radioButtonEClass, RADIO_BUTTON__VALUE);
+
+		checkBoxesEClass = createEClass(CHECK_BOXES);
+		createEAttribute(checkBoxesEClass, CHECK_BOXES__VALUE);
+
+		submitButtonEClass = createEClass(SUBMIT_BUTTON);
+		createEAttribute(submitButtonEClass, SUBMIT_BUTTON__VALUE);
+
+		paragrapheEClass = createEClass(PARAGRAPHE);
+
+		cellEClass = createEClass(CELL);
+		createEAttribute(cellEClass, CELL__CONTENT);
+
+		// Create enums
+		sizeEEnum = createEEnum(SIZE);
+		alignEEnum = createEEnum(ALIGN);
 	}
 
 	/**
@@ -928,93 +796,100 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Create type parameters
+
+		// Set bounds for type parameters
+
 		// Add supertypes to classes
-		labelEClass.getESuperTypes().add(this.getComponent());
-		textFieldEClass.getESuperTypes().add(this.getComponent());
+		textEClass.getESuperTypes().add(this.getComponent());
 		tableEClass.getESuperTypes().add(this.getComponent());
 		linkEClass.getESuperTypes().add(this.getComponent());
+		titleEClass.getESuperTypes().add(this.getComponent());
+		textFieldEClass.getESuperTypes().add(this.getInput());
+		passwordEClass.getESuperTypes().add(this.getInput());
+		radioButtonEClass.getESuperTypes().add(this.getInput());
+		checkBoxesEClass.getESuperTypes().add(this.getInput());
+		submitButtonEClass.getESuperTypes().add(this.getInput());
+		paragrapheEClass.getESuperTypes().add(this.getComponent());
 
 		// Initialize classes and features; add operations and parameters
-		initEClass(servletMappingEClass, ServletMapping.class, "ServletMapping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getServletMapping_Name(), ecorePackage.getEString(), "name", null, 0, 1, ServletMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getServletMapping_UrlPattern(), ecorePackage.getEString(), "urlPattern", null, 0, 1, ServletMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getServletMapping_Servlet(), this.getServlet(), null, "servlet", null, 0, 1, ServletMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(servletEClass, Servlet.class, "Servlet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getServlet_Name(), ecorePackage.getEString(), "name", null, 0, 1, Servlet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getServlet_Class(), ecorePackage.getEString(), "class", null, 0, 1, Servlet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getServlet_Contains(), this.getInitParam(), null, "contains", null, 0, 1, Servlet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getServlet_LoadOnStartup(), ecorePackage.getEInt(), "loadOnStartup", null, 0, 1, Servlet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getServlet_InitParam(), this.getInitParam(), null, "initParam", null, 0, 1, Servlet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(formEClass, Form.class, "Form", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getForm_Name(), ecorePackage.getEString(), "name", null, 0, 1, Form.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getForm_Method(), ecorePackage.getEString(), "method", null, 0, 1, Form.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getForm_Action(), ecorePackage.getEString(), "action", null, 0, 1, Form.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getForm_Component(), this.getComponent(), null, "component", null, 0, -1, Form.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getForm_ButtonForm(), this.getInput(), null, "buttonForm", null, 0, 1, Form.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getForm_Servlet(), this.getServlet(), null, "servlet", null, 0, 1, Form.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getForm_Inputs(), this.getInput(), null, "inputs", null, 0, -1, Form.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getForm_Components(), this.getComponent(), null, "components", null, 0, -1, Form.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPage_Contains(), this.getForm(), null, "contains", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPage_Components(), this.getForm(), null, "components", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPage_Name(), ecorePackage.getEString(), "name", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPage_Type(), ecorePackage.getEString(), "type", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPage_Title(), ecorePackage.getEString(), "title", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPage_Component(), this.getComponent(), null, "component", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPage_Body(), this.getBody(), null, "body", null, 1, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPage_Head(), this.getHead(), null, "head", null, 1, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(labelEClass, Label.class, "Label", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLabel_Value(), ecorePackage.getEString(), "value", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(textEClass, Text.class, "Text", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getText_Value(), ecorePackage.getEString(), "value", null, 0, 1, Text.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(textFieldEClass, TextField.class, "TextField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTextField_Text(), ecorePackage.getEString(), "text", null, 0, 1, TextField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(initParamEClass, InitParam.class, "InitParam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getInitParam_Name(), ecorePackage.getEString(), "name", null, 0, 1, InitParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInitParam_Value(), ecorePackage.getEString(), "value", null, 0, 1, InitParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(applicationEClass, Application.class, "Application", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getApplication_Webxml(), this.getWebXML(), null, "webxml", null, 1, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getApplication_Resources(), this.getResources(), null, "resources", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getApplication_Name(), ecorePackage.getEString(), "name", null, 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getApplication_Page(), this.getPage(), null, "page", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(webXMLEClass, WebXML.class, "WebXML", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWebXML_ServletMapping(), this.getServletMapping(), null, "servletMapping", null, 0, 1, WebXML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWebXML_ResourceRef(), this.getResourceRef(), null, "resourceRef", null, 0, 1, WebXML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWebXML_Servlet(), this.getServlet(), null, "servlet", null, 0, 1, WebXML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWebXML_WelcomeFileList(), this.getWelcomeFileList(), null, "welcomeFileList", null, 1, 1, WebXML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWebXML_Name(), ecorePackage.getEString(), "name", null, 0, 1, WebXML.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(resourceRefEClass, ResourceRef.class, "ResourceRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getResourceRef_ResRefName(), ecorePackage.getEString(), "resRefName", null, 0, 1, ResourceRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getResourceRef_Description(), ecorePackage.getEString(), "description", null, 0, 1, ResourceRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getResourceRef_ResType(), ecorePackage.getEString(), "resType", null, 0, 1, ResourceRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getResourceRef_ResAuth(), ecorePackage.getEString(), "resAuth", null, 0, 1, ResourceRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(welcomeFileListEClass, WelcomeFileList.class, "WelcomeFileList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWelcomeFileList_WelcomeFile(), this.getWelcomeFile(), null, "welcomeFile", null, 1, -1, WelcomeFileList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(welcomeFileEClass, WelcomeFile.class, "WelcomeFile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWelcomeFile_PageName(), this.getPage(), null, "pageName", null, 0, 1, WelcomeFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(webAppEClass, WebApp.class, "WebApp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getWebApp_Name(), ecorePackage.getEString(), "name", null, 0, 1, WebApp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWebApp_Page(), this.getPage(), null, "page", null, 0, -1, WebApp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tableEClass, Table.class, "Table", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTable_NbRow(), ecorePackage.getEInt(), "nbRow", null, 0, 1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTable_NbCol(), ecorePackage.getEInt(), "nbCol", null, 0, 1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTable_Cell(), this.getCell(), null, "Cell", null, 0, -1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLink_Url(), ecorePackage.getEString(), "url", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLink_Text(), ecorePackage.getEString(), "text", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getComponent_Components(), this.getComponent(), null, "components", null, 0, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getInput_Type(), ecorePackage.getEString(), "type", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInput_Name(), ecorePackage.getEString(), "name", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInput_Value(), ecorePackage.getEString(), "value", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(resourcesEClass, Resources.class, "Resources", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getResources_Name(), ecorePackage.getEString(), "name", null, 0, 1, Resources.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(javaEClass, Java.class, "Java", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(bodyEClass, Body.class, "Body", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBody_Components(), this.getComponent(), null, "components", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBody_Form(), this.getForm(), null, "form", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(headEClass, Head.class, "Head", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getHead_Title(), ecorePackage.getEString(), "title", null, 0, 1, Head.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(titleEClass, Title.class, "Title", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTitle_Size(), this.getSize(), "size", null, 0, 1, Title.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(textFieldEClass, TextField.class, "TextField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(passwordEClass, Password.class, "Password", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(radioButtonEClass, RadioButton.class, "RadioButton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRadioButton_Value(), ecorePackage.getEString(), "value", null, 0, 1, RadioButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(checkBoxesEClass, CheckBoxes.class, "CheckBoxes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCheckBoxes_Value(), ecorePackage.getEString(), "value", null, 0, 1, CheckBoxes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(submitButtonEClass, SubmitButton.class, "SubmitButton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSubmitButton_Value(), ecorePackage.getEString(), "value", null, 0, 1, SubmitButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(paragrapheEClass, Paragraphe.class, "Paragraphe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(cellEClass, Cell.class, "Cell", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCell_Content(), ecorePackage.getEString(), "content", null, 0, 1, Cell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(sizeEEnum, Size.class, "Size");
+		addEEnumLiteral(sizeEEnum, Size.HUGE);
+		addEEnumLiteral(sizeEEnum, Size.BIG);
+		addEEnumLiteral(sizeEEnum, Size.MEDIUM);
+		addEEnumLiteral(sizeEEnum, Size.SMALL);
+		addEEnumLiteral(sizeEEnum, Size.TINY);
+		addEEnumLiteral(sizeEEnum, Size.VERYBIG);
+
+		initEEnum(alignEEnum, Align.class, "Align");
+		addEEnumLiteral(alignEEnum, Align.LEFT);
+		addEEnumLiteral(alignEEnum, Align.CENTER);
+		addEEnumLiteral(alignEEnum, Align.RIGHT);
 
 		// Create resource
 		createResource(eNS_URI);
