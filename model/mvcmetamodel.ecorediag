@@ -286,7 +286,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_SiE3USAyEeGJgdAib-z1bA" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="mvcmetamodel.ecore#//Title"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SiE3UiAyEeGJgdAib-z1bA" x="765" y="698" width="142" height="128"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SiE3UiAyEeGJgdAib-z1bA" x="760" y="712" width="142" height="128"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_EyR0kCA0EeGJgdAib-z1bA" type="1001">
     <children xmi:type="notation:Node" xmi:id="_EySboCA0EeGJgdAib-z1bA" type="4001"/>
