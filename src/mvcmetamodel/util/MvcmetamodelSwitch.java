@@ -138,12 +138,6 @@ public class MvcmetamodelSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MvcmetamodelPackage.JAVA: {
-				Java java = (Java)theEObject;
-				T result = caseJava(java);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case MvcmetamodelPackage.BODY: {
 				Body body = (Body)theEObject;
 				T result = caseBody(body);
@@ -184,10 +178,10 @@ public class MvcmetamodelSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MvcmetamodelPackage.CHECK_BOXES: {
-				CheckBoxes checkBoxes = (CheckBoxes)theEObject;
-				T result = caseCheckBoxes(checkBoxes);
-				if (result == null) result = caseInput(checkBoxes);
+			case MvcmetamodelPackage.CHECK_BOXE: {
+				CheckBoxe checkBoxe = (CheckBoxe)theEObject;
+				T result = caseCheckBoxe(checkBoxe);
+				if (result == null) result = caseInput(checkBoxe);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -321,17 +315,17 @@ public class MvcmetamodelSwitch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Check Boxes</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Check Boxe</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Check Boxes</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Check Boxe</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCheckBoxes(CheckBoxes object) {
+	public T caseCheckBoxe(CheckBoxe object) {
 		return null;
 	}
 
@@ -437,21 +431,6 @@ public class MvcmetamodelSwitch<T> {
 	 * @generated
 	 */
 	public T caseInput(Input object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Java</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Java</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseJava(Java object) {
 		return null;
 	}
 

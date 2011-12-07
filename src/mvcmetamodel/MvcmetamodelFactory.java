@@ -98,15 +98,6 @@ public interface MvcmetamodelFactory extends EFactory {
 	Input createInput();
 
 	/**
-	 * Returns a new object of class '<em>Java</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Java</em>'.
-	 * @generated
-	 */
-	Java createJava();
-
-	/**
 	 * Returns a new object of class '<em>Body</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -161,13 +152,13 @@ public interface MvcmetamodelFactory extends EFactory {
 	RadioButton createRadioButton();
 
 	/**
-	 * Returns a new object of class '<em>Check Boxes</em>'.
+	 * Returns a new object of class '<em>Check Boxe</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Check Boxes</em>'.
+	 * @return a new object of class '<em>Check Boxe</em>'.
 	 * @generated
 	 */
-	CheckBoxes createCheckBoxes();
+	CheckBoxe createCheckBoxe();
 
 	/**
 	 * Returns a new object of class '<em>Submit Button</em>'.

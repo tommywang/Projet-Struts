@@ -9,21 +9,21 @@ package mvcmetamodel;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Check Boxes</b></em>'.
+ * A representation of the model object '<em><b>Check Boxe</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link mvcmetamodel.CheckBoxes#getValue <em>Value</em>}</li>
+ *   <li>{@link mvcmetamodel.CheckBoxe#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
- * @see mvcmetamodel.MvcmetamodelPackage#getCheckBoxes()
+ * @see mvcmetamodel.MvcmetamodelPackage#getCheckBoxe()
  * @model
  * @generated
  */
-public interface CheckBoxes extends Input {
+public interface CheckBoxe extends Input {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -34,14 +34,14 @@ public interface CheckBoxes extends Input {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
-	 * @see mvcmetamodel.MvcmetamodelPackage#getCheckBoxes_Value()
+	 * @see mvcmetamodel.MvcmetamodelPackage#getCheckBoxe_Value()
 	 * @model
 	 * @generated
 	 */
 	String getValue();
 
 	/**
-	 * Sets the value of the '{@link mvcmetamodel.CheckBoxes#getValue <em>Value</em>}' attribute.
+	 * Sets the value of the '{@link mvcmetamodel.CheckBoxe#getValue <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Value</em>' attribute.
@@ -50,4 +50,4 @@ public interface CheckBoxes extends Input {
 	 */
 	void setValue(String value);
 
-} // CheckBoxes
+} // CheckBoxe

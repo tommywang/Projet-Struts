@@ -53,7 +53,6 @@
     <genClasses ecoreClass="mvcmetamodel.ecore#//Input">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Input/name"/>
     </genClasses>
-    <genClasses ecoreClass="mvcmetamodel.ecore#//Java"/>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Body">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Body/components"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Body/form"/>
@@ -69,8 +68,8 @@
     <genClasses ecoreClass="mvcmetamodel.ecore#//RadioButton">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//RadioButton/value"/>
     </genClasses>
-    <genClasses ecoreClass="mvcmetamodel.ecore#//CheckBoxes">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//CheckBoxes/value"/>
+    <genClasses ecoreClass="mvcmetamodel.ecore#//CheckBoxe">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//CheckBoxe/value"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//SubmitButton">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//SubmitButton/value"/>

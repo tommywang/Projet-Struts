@@ -104,10 +104,6 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 				return createInputAdapter();
 			}
 			@Override
-			public Adapter caseJava(Java object) {
-				return createJavaAdapter();
-			}
-			@Override
 			public Adapter caseBody(Body object) {
 				return createBodyAdapter();
 			}
@@ -132,8 +128,8 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 				return createRadioButtonAdapter();
 			}
 			@Override
-			public Adapter caseCheckBoxes(CheckBoxes object) {
-				return createCheckBoxesAdapter();
+			public Adapter caseCheckBoxe(CheckBoxe object) {
+				return createCheckBoxeAdapter();
 			}
 			@Override
 			public Adapter caseSubmitButton(SubmitButton object) {
@@ -266,16 +262,16 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mvcmetamodel.CheckBoxes <em>Check Boxes</em>}'.
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.CheckBoxe <em>Check Boxe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mvcmetamodel.CheckBoxes
+	 * @see mvcmetamodel.CheckBoxe
 	 * @generated
 	 */
-	public Adapter createCheckBoxesAdapter() {
+	public Adapter createCheckBoxeAdapter() {
 		return null;
 	}
 
@@ -374,20 +370,6 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createInputAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Java <em>Java</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mvcmetamodel.Java
-	 * @generated
-	 */
-	public Adapter createJavaAdapter() {
 		return null;
 	}
 

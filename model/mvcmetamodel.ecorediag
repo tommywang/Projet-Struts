@@ -344,7 +344,7 @@
     <children xmi:type="notation:Node" xmi:id="_tCXNMCA0EeGJgdAib-z1bA" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_tCXNMSA0EeGJgdAib-z1bA" type="5001">
       <children xmi:type="notation:Node" xmi:id="_IeS94CA1EeGJgdAib-z1bA" type="2001">
-        <element xmi:type="ecore:EAttribute" href="mvcmetamodel.ecore#//CheckBoxes/value"/>
+        <element xmi:type="ecore:EAttribute" href="mvcmetamodel.ecore#//CheckBoxe/value"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_IeS94SA1EeGJgdAib-z1bA"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_tCXNMiA0EeGJgdAib-z1bA"/>
@@ -357,7 +357,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_tCX0QyA0EeGJgdAib-z1bA"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_tCWmISA0EeGJgdAib-z1bA" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
-    <element xmi:type="ecore:EClass" href="mvcmetamodel.ecore#//CheckBoxes"/>
+    <element xmi:type="ecore:EClass" href="mvcmetamodel.ecore#//CheckBoxe"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tCWmIiA0EeGJgdAib-z1bA" x="480" y="910" width="122" height="102"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_LzvPsCA1EeGJgdAib-z1bA" type="1001">

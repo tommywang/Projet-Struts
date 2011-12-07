@@ -402,25 +402,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	int INPUT_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.JavaImpl <em>Java</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.JavaImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getJava()
-	 * @generated
-	 */
-	int JAVA = 8;
-
-	/**
-	 * The number of structural features of the '<em>Java</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JAVA_FEATURE_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.BodyImpl <em>Body</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -428,7 +409,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getBody()
 	 * @generated
 	 */
-	int BODY = 9;
+	int BODY = 8;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
@@ -465,7 +446,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getHead()
 	 * @generated
 	 */
-	int HEAD = 10;
+	int HEAD = 9;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -493,7 +474,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getTitle()
 	 * @generated
 	 */
-	int TITLE = 11;
+	int TITLE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' reference list.
@@ -530,7 +511,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getTextField()
 	 * @generated
 	 */
-	int TEXT_FIELD = 12;
+	int TEXT_FIELD = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -558,7 +539,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getPassword()
 	 * @generated
 	 */
-	int PASSWORD = 13;
+	int PASSWORD = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -586,7 +567,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getRadioButton()
 	 * @generated
 	 */
-	int RADIO_BUTTON = 14;
+	int RADIO_BUTTON = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -616,14 +597,14 @@ public interface MvcmetamodelPackage extends EPackage {
 	int RADIO_BUTTON_FEATURE_COUNT = INPUT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.CheckBoxesImpl <em>Check Boxes</em>}' class.
+	 * The meta object id for the '{@link mvcmetamodel.impl.CheckBoxeImpl <em>Check Boxe</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.CheckBoxesImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getCheckBoxes()
+	 * @see mvcmetamodel.impl.CheckBoxeImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getCheckBoxe()
 	 * @generated
 	 */
-	int CHECK_BOXES = 15;
+	int CHECK_BOXE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -632,7 +613,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHECK_BOXES__NAME = INPUT__NAME;
+	int CHECK_BOXE__NAME = INPUT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -641,16 +622,16 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHECK_BOXES__VALUE = INPUT_FEATURE_COUNT + 0;
+	int CHECK_BOXE__VALUE = INPUT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Check Boxes</em>' class.
+	 * The number of structural features of the '<em>Check Boxe</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CHECK_BOXES_FEATURE_COUNT = INPUT_FEATURE_COUNT + 1;
+	int CHECK_BOXE_FEATURE_COUNT = INPUT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.SubmitButtonImpl <em>Submit Button</em>}' class.
@@ -660,7 +641,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getSubmitButton()
 	 * @generated
 	 */
-	int SUBMIT_BUTTON = 16;
+	int SUBMIT_BUTTON = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -697,7 +678,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getParagraphe()
 	 * @generated
 	 */
-	int PARAGRAPHE = 17;
+	int PARAGRAPHE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' reference list.
@@ -725,7 +706,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getCell()
 	 * @generated
 	 */
-	int CELL = 18;
+	int CELL = 17;
 
 	/**
 	 * The feature id for the '<em><b>Content</b></em>' attribute.
@@ -753,7 +734,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getSize()
 	 * @generated
 	 */
-	int SIZE = 19;
+	int SIZE = 18;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.Align <em>Align</em>}' enum.
@@ -763,7 +744,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getAlign()
 	 * @generated
 	 */
-	int ALIGN = 20;
+	int ALIGN = 19;
 
 
 	/**
@@ -1045,16 +1026,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	EAttribute getInput_Name();
 
 	/**
-	 * Returns the meta object for class '{@link mvcmetamodel.Java <em>Java</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Java</em>'.
-	 * @see mvcmetamodel.Java
-	 * @generated
-	 */
-	EClass getJava();
-
-	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Body <em>Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1170,25 +1141,25 @@ public interface MvcmetamodelPackage extends EPackage {
 	EAttribute getRadioButton_Value();
 
 	/**
-	 * Returns the meta object for class '{@link mvcmetamodel.CheckBoxes <em>Check Boxes</em>}'.
+	 * Returns the meta object for class '{@link mvcmetamodel.CheckBoxe <em>Check Boxe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Check Boxes</em>'.
-	 * @see mvcmetamodel.CheckBoxes
+	 * @return the meta object for class '<em>Check Boxe</em>'.
+	 * @see mvcmetamodel.CheckBoxe
 	 * @generated
 	 */
-	EClass getCheckBoxes();
+	EClass getCheckBoxe();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.CheckBoxes#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.CheckBoxe#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see mvcmetamodel.CheckBoxes#getValue()
-	 * @see #getCheckBoxes()
+	 * @see mvcmetamodel.CheckBoxe#getValue()
+	 * @see #getCheckBoxe()
 	 * @generated
 	 */
-	EAttribute getCheckBoxes_Value();
+	EAttribute getCheckBoxe_Value();
 
 	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.SubmitButton <em>Submit Button</em>}'.
@@ -1509,16 +1480,6 @@ public interface MvcmetamodelPackage extends EPackage {
 		EAttribute INPUT__NAME = eINSTANCE.getInput_Name();
 
 		/**
-		 * The meta object literal for the '{@link mvcmetamodel.impl.JavaImpl <em>Java</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mvcmetamodel.impl.JavaImpl
-		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getJava()
-		 * @generated
-		 */
-		EClass JAVA = eINSTANCE.getJava();
-
-		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.BodyImpl <em>Body</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1619,14 +1580,14 @@ public interface MvcmetamodelPackage extends EPackage {
 		EAttribute RADIO_BUTTON__VALUE = eINSTANCE.getRadioButton_Value();
 
 		/**
-		 * The meta object literal for the '{@link mvcmetamodel.impl.CheckBoxesImpl <em>Check Boxes</em>}' class.
+		 * The meta object literal for the '{@link mvcmetamodel.impl.CheckBoxeImpl <em>Check Boxe</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see mvcmetamodel.impl.CheckBoxesImpl
-		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getCheckBoxes()
+		 * @see mvcmetamodel.impl.CheckBoxeImpl
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getCheckBoxe()
 		 * @generated
 		 */
-		EClass CHECK_BOXES = eINSTANCE.getCheckBoxes();
+		EClass CHECK_BOXE = eINSTANCE.getCheckBoxe();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -1634,7 +1595,7 @@ public interface MvcmetamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CHECK_BOXES__VALUE = eINSTANCE.getCheckBoxes_Value();
+		EAttribute CHECK_BOXE__VALUE = eINSTANCE.getCheckBoxe_Value();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.SubmitButtonImpl <em>Submit Button</em>}' class.

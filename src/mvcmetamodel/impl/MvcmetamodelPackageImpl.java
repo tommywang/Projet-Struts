@@ -9,12 +9,11 @@ package mvcmetamodel.impl;
 import mvcmetamodel.Align;
 import mvcmetamodel.Body;
 import mvcmetamodel.Cell;
-import mvcmetamodel.CheckBoxes;
+import mvcmetamodel.CheckBoxe;
 import mvcmetamodel.Component;
 import mvcmetamodel.Form;
 import mvcmetamodel.Head;
 import mvcmetamodel.Input;
-import mvcmetamodel.Java;
 import mvcmetamodel.Link;
 import mvcmetamodel.MvcmetamodelFactory;
 import mvcmetamodel.MvcmetamodelPackage;
@@ -106,13 +105,6 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass javaEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass bodyEClass = null;
 
 	/**
@@ -155,7 +147,7 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass checkBoxesEClass = null;
+	private EClass checkBoxeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -492,15 +484,6 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getJava() {
-		return javaEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getBody() {
 		return bodyEClass;
 	}
@@ -600,8 +583,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCheckBoxes() {
-		return checkBoxesEClass;
+	public EClass getCheckBoxe() {
+		return checkBoxeEClass;
 	}
 
 	/**
@@ -609,8 +592,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCheckBoxes_Value() {
-		return (EAttribute)checkBoxesEClass.getEStructuralFeatures().get(0);
+	public EAttribute getCheckBoxe_Value() {
+		return (EAttribute)checkBoxeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -738,8 +721,6 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		inputEClass = createEClass(INPUT);
 		createEAttribute(inputEClass, INPUT__NAME);
 
-		javaEClass = createEClass(JAVA);
-
 		bodyEClass = createEClass(BODY);
 		createEReference(bodyEClass, BODY__COMPONENTS);
 		createEReference(bodyEClass, BODY__FORM);
@@ -757,8 +738,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		radioButtonEClass = createEClass(RADIO_BUTTON);
 		createEAttribute(radioButtonEClass, RADIO_BUTTON__VALUE);
 
-		checkBoxesEClass = createEClass(CHECK_BOXES);
-		createEAttribute(checkBoxesEClass, CHECK_BOXES__VALUE);
+		checkBoxeEClass = createEClass(CHECK_BOXE);
+		createEAttribute(checkBoxeEClass, CHECK_BOXE__VALUE);
 
 		submitButtonEClass = createEClass(SUBMIT_BUTTON);
 		createEAttribute(submitButtonEClass, SUBMIT_BUTTON__VALUE);
@@ -808,7 +789,7 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		textFieldEClass.getESuperTypes().add(this.getInput());
 		passwordEClass.getESuperTypes().add(this.getInput());
 		radioButtonEClass.getESuperTypes().add(this.getInput());
-		checkBoxesEClass.getESuperTypes().add(this.getInput());
+		checkBoxeEClass.getESuperTypes().add(this.getInput());
 		submitButtonEClass.getESuperTypes().add(this.getInput());
 		paragrapheEClass.getESuperTypes().add(this.getComponent());
 
@@ -847,8 +828,6 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInput_Name(), ecorePackage.getEString(), "name", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(javaEClass, Java.class, "Java", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(bodyEClass, Body.class, "Body", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBody_Components(), this.getComponent(), null, "components", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBody_Form(), this.getForm(), null, "form", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -866,8 +845,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		initEClass(radioButtonEClass, RadioButton.class, "RadioButton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRadioButton_Value(), ecorePackage.getEString(), "value", null, 0, 1, RadioButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(checkBoxesEClass, CheckBoxes.class, "CheckBoxes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCheckBoxes_Value(), ecorePackage.getEString(), "value", null, 0, 1, CheckBoxes.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(checkBoxeEClass, CheckBoxe.class, "CheckBoxe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCheckBoxe_Value(), ecorePackage.getEString(), "value", null, 0, 1, CheckBoxe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(submitButtonEClass, SubmitButton.class, "SubmitButton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSubmitButton_Value(), ecorePackage.getEString(), "value", null, 0, 1, SubmitButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

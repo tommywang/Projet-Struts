@@ -6,7 +6,7 @@
  */
 package mvcmetamodel.impl;
 
-import mvcmetamodel.CheckBoxes;
+import mvcmetamodel.CheckBoxe;
 import mvcmetamodel.MvcmetamodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -17,18 +17,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Check Boxes</b></em>'.
+ * An implementation of the model object '<em><b>Check Boxe</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link mvcmetamodel.impl.CheckBoxesImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link mvcmetamodel.impl.CheckBoxeImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class CheckBoxesImpl extends InputImpl implements CheckBoxes {
+public class CheckBoxeImpl extends InputImpl implements CheckBoxe {
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class CheckBoxesImpl extends InputImpl implements CheckBoxes {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CheckBoxesImpl() {
+	protected CheckBoxeImpl() {
 		super();
 	}
 
@@ -65,7 +65,7 @@ public class CheckBoxesImpl extends InputImpl implements CheckBoxes {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MvcmetamodelPackage.Literals.CHECK_BOXES;
+		return MvcmetamodelPackage.Literals.CHECK_BOXE;
 	}
 
 	/**
@@ -86,7 +86,7 @@ public class CheckBoxesImpl extends InputImpl implements CheckBoxes {
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.CHECK_BOXES__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.CHECK_BOXE__VALUE, oldValue, value));
 	}
 
 	/**
@@ -97,7 +97,7 @@ public class CheckBoxesImpl extends InputImpl implements CheckBoxes {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MvcmetamodelPackage.CHECK_BOXES__VALUE:
+			case MvcmetamodelPackage.CHECK_BOXE__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -111,7 +111,7 @@ public class CheckBoxesImpl extends InputImpl implements CheckBoxes {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MvcmetamodelPackage.CHECK_BOXES__VALUE:
+			case MvcmetamodelPackage.CHECK_BOXE__VALUE:
 				setValue((String)newValue);
 				return;
 		}
@@ -126,7 +126,7 @@ public class CheckBoxesImpl extends InputImpl implements CheckBoxes {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MvcmetamodelPackage.CHECK_BOXES__VALUE:
+			case MvcmetamodelPackage.CHECK_BOXE__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
 		}
@@ -141,7 +141,7 @@ public class CheckBoxesImpl extends InputImpl implements CheckBoxes {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MvcmetamodelPackage.CHECK_BOXES__VALUE:
+			case MvcmetamodelPackage.CHECK_BOXE__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);
@@ -163,4 +163,4 @@ public class CheckBoxesImpl extends InputImpl implements CheckBoxes {
 		return result.toString();
 	}
 
-} //CheckBoxesImpl
+} //CheckBoxeImpl

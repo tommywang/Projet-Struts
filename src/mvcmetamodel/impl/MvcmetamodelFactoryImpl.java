@@ -69,14 +69,13 @@ public class MvcmetamodelFactoryImpl extends EFactoryImpl implements Mvcmetamode
 			case MvcmetamodelPackage.LINK: return createLink();
 			case MvcmetamodelPackage.COMPONENT: return createComponent();
 			case MvcmetamodelPackage.INPUT: return createInput();
-			case MvcmetamodelPackage.JAVA: return createJava();
 			case MvcmetamodelPackage.BODY: return createBody();
 			case MvcmetamodelPackage.HEAD: return createHead();
 			case MvcmetamodelPackage.TITLE: return createTitle();
 			case MvcmetamodelPackage.TEXT_FIELD: return createTextField();
 			case MvcmetamodelPackage.PASSWORD: return createPassword();
 			case MvcmetamodelPackage.RADIO_BUTTON: return createRadioButton();
-			case MvcmetamodelPackage.CHECK_BOXES: return createCheckBoxes();
+			case MvcmetamodelPackage.CHECK_BOXE: return createCheckBoxe();
 			case MvcmetamodelPackage.SUBMIT_BUTTON: return createSubmitButton();
 			case MvcmetamodelPackage.PARAGRAPHE: return createParagraphe();
 			case MvcmetamodelPackage.CELL: return createCell();
@@ -204,16 +203,6 @@ public class MvcmetamodelFactoryImpl extends EFactoryImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Java createJava() {
-		JavaImpl java = new JavaImpl();
-		return java;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Body createBody() {
 		BodyImpl body = new BodyImpl();
 		return body;
@@ -274,9 +263,9 @@ public class MvcmetamodelFactoryImpl extends EFactoryImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CheckBoxes createCheckBoxes() {
-		CheckBoxesImpl checkBoxes = new CheckBoxesImpl();
-		return checkBoxes;
+	public CheckBoxe createCheckBoxe() {
+		CheckBoxeImpl checkBoxe = new CheckBoxeImpl();
+		return checkBoxe;
 	}
 
 	/**

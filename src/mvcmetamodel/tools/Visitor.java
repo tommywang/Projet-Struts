@@ -4,21 +4,39 @@ import mvcmetamodel.*;
 
 public interface Visitor {
 
-	public String visit(WebXML webxml);
+	public String visit(Body body);
 	
-	public String visit(Resources resources);
+	public String visit(Cell cell);
+	
+	public String visit(CheckBoxe checkboxe);
+	
+	public String visit(Component component);
+	
+	public String visit(Form form);
+	
+	public String visit(Head head);
+	
+	public String visit(Input input);
+	
+	public String visit(Link link);
 	
 	public String visit(Page page);
 	
-	public String visit(WelcomeFileList welcomeFileList);
+	public String visit(Paragraphe paragraphe);
 	
-	public String visit(WelcomeFile welcomeFile);
+	public String visit(Password password);
 	
-	public String visit(ResourceRef resourceRef);
+	public String visit(RadioButton radioButton);
 	
-	public String visit(Servlet servlet);
+	public String visit(SubmitButton submitButton);
 	
-	public String visit(ServletMapping servletMapping);
+	public String visit(Table table);
 	
-	public String visit(InitParam initParam);
+	public String visit(TextField textField);
+	
+	public String visit(Text text);
+	
+	public String visit(Title title);
+	
+	public String visit(WebApp webApp);
 }
