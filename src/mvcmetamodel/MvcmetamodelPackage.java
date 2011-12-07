@@ -190,7 +190,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	int COMPONENT = 6;
 
 	/**
-	 * The feature id for the '<em><b>Components</b></em>' reference list.
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -218,7 +218,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	int TEXT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Components</b></em>' reference list.
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -292,7 +292,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	int TABLE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Components</b></em>' reference list.
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -347,7 +347,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	int LINK = 5;
 
 	/**
-	 * The feature id for the '<em><b>Components</b></em>' reference list.
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -477,7 +477,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	int TITLE = 10;
 
 	/**
-	 * The feature id for the '<em><b>Components</b></em>' reference list.
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -681,7 +681,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	int PARAGRAPHE = 16;
 
 	/**
-	 * The feature id for the '<em><b>Components</b></em>' reference list.
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -994,10 +994,10 @@ public interface MvcmetamodelPackage extends EPackage {
 	EClass getComponent();
 
 	/**
-	 * Returns the meta object for the reference list '{@link mvcmetamodel.Component#getComponents <em>Components</em>}'.
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Component#getComponents <em>Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Components</em>'.
+	 * @return the meta object for the containment reference list '<em>Components</em>'.
 	 * @see mvcmetamodel.Component#getComponents()
 	 * @see #getComponent()
 	 * @generated
@@ -1454,7 +1454,7 @@ public interface MvcmetamodelPackage extends EPackage {
 		EClass COMPONENT = eINSTANCE.getComponent();
 
 		/**
-		 * The meta object literal for the '<em><b>Components</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

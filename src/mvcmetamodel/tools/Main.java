@@ -7,10 +7,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Map;
-import mvcmetamodel.Application;
-import mvcmetamodel.MvcmetamodelPackage;
-import mvcmetamodel.WebXML;
-import mvcmetamodel.impl.MvcmetamodelFactoryImpl;
+import mvcmetamodel.*;
+import mvcmetamodel.impl.*;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -22,7 +20,7 @@ public class Main {
 	/**
 	* @param args
 	*/
-	public static Application load(File f) {
+	public static WebApp load(File f) {
 		ResourceSet rs = new ResourceSetImpl();
 		Resource.Factory.Registry registry = rs.getResourceFactoryRegistry();
 		Map<String,Object> m = registry.getExtensionToFactoryMap();
@@ -33,7 +31,7 @@ public class Main {
 		Resource resource = rs.getResource(uri, true);
 	
 		if (resource.isLoaded() && resource.getContents().size() > 0) {
-			return (Application) resource.getContents().get(0);
+			return (WebApp) resource.getContents().get(0);
 		}
 		return null;
 	}
@@ -52,12 +50,16 @@ public class Main {
     }
 	
 	public static void main(String[] args) { 
-		File f = new File("model/Application.xmi");
-		Application appli=load(f);	
+		File f = new File("model/WebApp.xmi");
+		WebApp appli=load(f);	
 		MvcmetamodelFactoryImpl fac=new MvcmetamodelFactoryImpl();
 		System.out.println(appli.getName());
-		WebXML webxml = appli.getWebxml();
-		String result= new WebXMLVisitor().visit(webxml);
+		//WebXML webxml = appli.getWebxml();
+		Page mainPage=appli.getPage().get(0);
+		String result=new JSPVisitor().visit(mainPage);
+		//String result= new WebXMLVisitor().visit(webxml);
+		System.out.println(result);
+		/*
 		File monFichier;
 		try
 		{
@@ -70,6 +72,7 @@ public class Main {
 		{
 			System.out.println("Impossible de créer le fichier");
 		}
+		*/
 	}
 	
 }

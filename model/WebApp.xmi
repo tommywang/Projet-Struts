@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mvcmetamodel:WebApp xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvcmetamodel="http://mvcmetamodel/1.0" name="FirstApp">
+  <page name="main" type="jsp">
+    <body>
+      <components xsi:type="mvcmetamodel:Link" url="/AddContact"/>
+    </body>
+    <head title="hello"/>
+  </page>
+</mvcmetamodel:WebApp>

@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Component extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Components</b></em>' reference list.
+	 * Returns the value of the '<em><b>Components</b></em>' containment reference list.
 	 * The list contents are of type {@link mvcmetamodel.Component}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -36,9 +36,9 @@ public interface Component extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Components</em>' reference list.
+	 * @return the value of the '<em>Components</em>' containment reference list.
 	 * @see mvcmetamodel.MvcmetamodelPackage#getComponent_Components()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Component> getComponents();
