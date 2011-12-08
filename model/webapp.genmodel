@@ -60,6 +60,7 @@
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Head">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Head/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Head/components"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Title">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Title/size"/>

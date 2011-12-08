@@ -458,13 +458,22 @@ public interface MvcmetamodelPackage extends EPackage {
 	int HEAD__TITLE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HEAD__COMPONENTS = 1;
+
+	/**
 	 * The number of structural features of the '<em>Head</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HEAD_FEATURE_COUNT = 1;
+	int HEAD_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.TitleImpl <em>Title</em>}' class.
@@ -1145,6 +1154,17 @@ public interface MvcmetamodelPackage extends EPackage {
 	EAttribute getHead_Title();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Head#getComponents <em>Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Components</em>'.
+	 * @see mvcmetamodel.Head#getComponents()
+	 * @see #getHead()
+	 * @generated
+	 */
+	EReference getHead_Components();
+
+	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Title <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1650,6 +1670,14 @@ public interface MvcmetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute HEAD__TITLE = eINSTANCE.getHead_Title();
+
+		/**
+		 * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference HEAD__COMPONENTS = eINSTANCE.getHead_Components();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.TitleImpl <em>Title</em>}' class.

@@ -9,11 +9,9 @@ package mvcmetamodel.impl;
 import java.util.Collection;
 
 import mvcmetamodel.Line;
-import mvcmetamodel.Cell;
 import mvcmetamodel.MvcmetamodelPackage;
 import mvcmetamodel.Table;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;

@@ -52,11 +52,13 @@ public class JSPVisitor implements Visitor {
 	@Override
 	public String visit(Body body) {
 		String result="";
+		result+="<body>\n";
 		if (!body.getComponents().isEmpty()){
 			for (Component c:body.getComponents()){
 				result+=this.visit(c);
 			}
 		}
+		result+="<body/>\n";
 		return result;
 	}
 
@@ -81,16 +83,26 @@ public class JSPVisitor implements Visitor {
 	@Override
 	public String visit(Form form) {
 		String result="";
+		result+="<html:form>\n";
 		
+		
+		result+="<html:form/>\n";
 		return result;
 	}
 
 	@Override
 	public String visit(Head head) {
 		String result="";
+		result+="<head>\n";
 		if (!(head.getTitle().equals(""))){
 			result+="<title>" + head.getTitle() + "</title>\n";
-		}
+		}/*
+		if (!head.getComponents().isEmpty()){
+			for (Component c:head.getComponents()){
+				result+=this.visit(c);
+			}
+		}*/
+		result+="<head/>\n";
 		return result;
 	}
 
@@ -161,8 +173,33 @@ public class JSPVisitor implements Visitor {
 
 	@Override
 	public String visit(Title title) {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("pass here");
+		String result="";
+		result+="<h"+title.getSize()+">";
+		for (Component c:title.getComponents()){
+			result+=this.visit(c);
+		}
+		result+="<h"+title.getSize()+"/>\n";
+		/*
+		switch (title.getSize()){
+			case HUGE:
+				result+="<h1> ";
+				
+				result+="<h1/> ";
+			case HUGE:
+				result+="<h1> ";
+				
+				result+="<h1/> ";
+			case HUGE:
+				result+="<h1> ";
+				
+				result+="<h1/> ";
+			case HUGE:
+				result+="<h1> ";
+				
+				result+="<h1/> ";
+		}*/
+		return result;
 	}
 
 	@Override

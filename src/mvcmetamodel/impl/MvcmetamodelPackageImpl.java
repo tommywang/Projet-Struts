@@ -10,7 +10,6 @@ import mvcmetamodel.Align;
 import mvcmetamodel.Body;
 import mvcmetamodel.Cell;
 import mvcmetamodel.CheckBox;
-import mvcmetamodel.CheckBoxe;
 import mvcmetamodel.Component;
 import mvcmetamodel.Form;
 import mvcmetamodel.Head;
@@ -547,6 +546,15 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getHead_Components() {
+		return (EReference)headEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTitle() {
 		return titleEClass;
 	}
@@ -791,6 +799,7 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 
 		headEClass = createEClass(HEAD);
 		createEAttribute(headEClass, HEAD__TITLE);
+		createEReference(headEClass, HEAD__COMPONENTS);
 
 		titleEClass = createEClass(TITLE);
 		createEAttribute(titleEClass, TITLE__SIZE);
@@ -904,6 +913,7 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 
 		initEClass(headEClass, Head.class, "Head", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHead_Title(), ecorePackage.getEString(), "title", null, 0, 1, Head.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHead_Components(), this.getComponent(), null, "components", null, 0, -1, Head.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(titleEClass, Title.class, "Title", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTitle_Size(), this.getSize(), "size", null, 0, 1, Title.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
