@@ -9,6 +9,7 @@ package mvcmetamodel.impl;
 import java.util.Collection;
 
 import mvcmetamodel.Body;
+import mvcmetamodel.Content;
 import mvcmetamodel.Component;
 import mvcmetamodel.Form;
 import mvcmetamodel.MvcmetamodelPackage;
@@ -33,9 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link mvcmetamodel.impl.BodyImpl#getComponents <em>Components</em>}</li>
- *   <li>{@link mvcmetamodel.impl.BodyImpl#getForms <em>Forms</em>}</li>
- *   <li>{@link mvcmetamodel.impl.BodyImpl#getTables <em>Tables</em>}</li>
+ *   <li>{@link mvcmetamodel.impl.BodyImpl#getContents <em>Contents</em>}</li>
  * </ul>
  * </p>
  *
@@ -43,34 +42,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class BodyImpl extends EObjectImpl implements Body {
 	/**
-	 * The cached value of the '{@link #getComponents() <em>Components</em>}' containment reference list.
+	 * The cached value of the '{@link #getContents() <em>Contents</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getComponents()
+	 * @see #getContents()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Component> components;
-
-	/**
-	 * The cached value of the '{@link #getForms() <em>Forms</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getForms()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Form> forms;
-
-	/**
-	 * The cached value of the '{@link #getTables() <em>Tables</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTables()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Table> tables;
+	protected EList<Content> contents;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -96,35 +75,11 @@ public class BodyImpl extends EObjectImpl implements Body {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Component> getComponents() {
-		if (components == null) {
-			components = new EObjectContainmentEList<Component>(Component.class, this, MvcmetamodelPackage.BODY__COMPONENTS);
+	public EList<Content> getContents() {
+		if (contents == null) {
+			contents = new EObjectContainmentEList<Content>(Content.class, this, MvcmetamodelPackage.BODY__CONTENTS);
 		}
-		return components;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Form> getForms() {
-		if (forms == null) {
-			forms = new EObjectContainmentEList<Form>(Form.class, this, MvcmetamodelPackage.BODY__FORMS);
-		}
-		return forms;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Table> getTables() {
-		if (tables == null) {
-			tables = new EObjectContainmentEList<Table>(Table.class, this, MvcmetamodelPackage.BODY__TABLES);
-		}
-		return tables;
+		return contents;
 	}
 
 	/**
@@ -135,12 +90,8 @@ public class BodyImpl extends EObjectImpl implements Body {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MvcmetamodelPackage.BODY__COMPONENTS:
-				return ((InternalEList<?>)getComponents()).basicRemove(otherEnd, msgs);
-			case MvcmetamodelPackage.BODY__FORMS:
-				return ((InternalEList<?>)getForms()).basicRemove(otherEnd, msgs);
-			case MvcmetamodelPackage.BODY__TABLES:
-				return ((InternalEList<?>)getTables()).basicRemove(otherEnd, msgs);
+			case MvcmetamodelPackage.BODY__CONTENTS:
+				return ((InternalEList<?>)getContents()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -153,12 +104,8 @@ public class BodyImpl extends EObjectImpl implements Body {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MvcmetamodelPackage.BODY__COMPONENTS:
-				return getComponents();
-			case MvcmetamodelPackage.BODY__FORMS:
-				return getForms();
-			case MvcmetamodelPackage.BODY__TABLES:
-				return getTables();
+			case MvcmetamodelPackage.BODY__CONTENTS:
+				return getContents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -172,17 +119,9 @@ public class BodyImpl extends EObjectImpl implements Body {
 		@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MvcmetamodelPackage.BODY__COMPONENTS:
-				getComponents().clear();
-				getComponents().addAll((Collection<? extends Component>)newValue);
-				return;
-			case MvcmetamodelPackage.BODY__FORMS:
-				getForms().clear();
-				getForms().addAll((Collection<? extends Form>)newValue);
-				return;
-			case MvcmetamodelPackage.BODY__TABLES:
-				getTables().clear();
-				getTables().addAll((Collection<? extends Table>)newValue);
+			case MvcmetamodelPackage.BODY__CONTENTS:
+				getContents().clear();
+				getContents().addAll((Collection<? extends Content>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -196,14 +135,8 @@ public class BodyImpl extends EObjectImpl implements Body {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MvcmetamodelPackage.BODY__COMPONENTS:
-				getComponents().clear();
-				return;
-			case MvcmetamodelPackage.BODY__FORMS:
-				getForms().clear();
-				return;
-			case MvcmetamodelPackage.BODY__TABLES:
-				getTables().clear();
+			case MvcmetamodelPackage.BODY__CONTENTS:
+				getContents().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -217,12 +150,8 @@ public class BodyImpl extends EObjectImpl implements Body {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MvcmetamodelPackage.BODY__COMPONENTS:
-				return components != null && !components.isEmpty();
-			case MvcmetamodelPackage.BODY__FORMS:
-				return forms != null && !forms.isEmpty();
-			case MvcmetamodelPackage.BODY__TABLES:
-				return tables != null && !tables.isEmpty();
+			case MvcmetamodelPackage.BODY__CONTENTS:
+				return contents != null && !contents.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

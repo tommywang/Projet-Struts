@@ -197,6 +197,15 @@ public interface MvcmetamodelFactory extends EFactory {
 	Line createLine();
 
 	/**
+	 * Returns a new object of class '<em>Content</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Content</em>'.
+	 * @generated
+	 */
+	Content createContent();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

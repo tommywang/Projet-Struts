@@ -80,6 +80,7 @@ public class MvcmetamodelFactoryImpl extends EFactoryImpl implements Mvcmetamode
 			case MvcmetamodelPackage.PARAGRAPHE: return createParagraphe();
 			case MvcmetamodelPackage.CELL: return createCell();
 			case MvcmetamodelPackage.LINE: return createLine();
+			case MvcmetamodelPackage.CONTENT: return createContent();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -307,6 +308,16 @@ public class MvcmetamodelFactoryImpl extends EFactoryImpl implements Mvcmetamode
 	public Line createLine() {
 		LineImpl line = new LineImpl();
 		return line;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Content createContent() {
+		ContentImpl content = new ContentImpl();
+		return content;
 	}
 
 	/**

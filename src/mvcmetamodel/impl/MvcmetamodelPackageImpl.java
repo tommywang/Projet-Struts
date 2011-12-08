@@ -11,6 +11,7 @@ import mvcmetamodel.Body;
 import mvcmetamodel.Cell;
 import mvcmetamodel.CheckBox;
 import mvcmetamodel.Component;
+import mvcmetamodel.Content;
 import mvcmetamodel.Form;
 import mvcmetamodel.Head;
 import mvcmetamodel.Input;
@@ -177,6 +178,13 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * @generated
 	 */
 	private EClass lineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass contentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -501,26 +509,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBody_Components() {
+	public EReference getBody_Contents() {
 		return (EReference)bodyEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBody_Forms() {
-		return (EReference)bodyEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBody_Tables() {
-		return (EReference)bodyEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -717,6 +707,42 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getContent() {
+		return contentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getContent_Forms() {
+		return (EReference)contentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getContent_Components() {
+		return (EReference)contentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getContent_Tables() {
+		return (EReference)contentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getSize() {
 		return sizeEEnum;
 	}
@@ -793,9 +819,7 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		createEAttribute(inputEClass, INPUT__NAME);
 
 		bodyEClass = createEClass(BODY);
-		createEReference(bodyEClass, BODY__COMPONENTS);
-		createEReference(bodyEClass, BODY__FORMS);
-		createEReference(bodyEClass, BODY__TABLES);
+		createEReference(bodyEClass, BODY__CONTENTS);
 
 		headEClass = createEClass(HEAD);
 		createEAttribute(headEClass, HEAD__TITLE);
@@ -827,6 +851,11 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 
 		lineEClass = createEClass(LINE);
 		createEReference(lineEClass, LINE__CELLS);
+
+		contentEClass = createEClass(CONTENT);
+		createEReference(contentEClass, CONTENT__FORMS);
+		createEReference(contentEClass, CONTENT__COMPONENTS);
+		createEReference(contentEClass, CONTENT__TABLES);
 
 		// Create enums
 		sizeEEnum = createEEnum(SIZE);
@@ -907,9 +936,7 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		initEAttribute(getInput_Name(), ecorePackage.getEString(), "name", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(bodyEClass, Body.class, "Body", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBody_Components(), this.getComponent(), null, "components", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBody_Forms(), this.getForm(), null, "forms", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBody_Tables(), this.getTable(), null, "tables", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBody_Contents(), this.getContent(), null, "contents", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(headEClass, Head.class, "Head", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHead_Title(), ecorePackage.getEString(), "title", null, 0, 1, Head.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -941,6 +968,11 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 
 		initEClass(lineEClass, Line.class, "Line", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLine_Cells(), this.getCell(), null, "cells", null, 0, -1, Line.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(contentEClass, Content.class, "Content", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getContent_Forms(), this.getForm(), null, "forms", null, 0, -1, Content.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContent_Components(), this.getComponent(), null, "components", null, 0, -1, Content.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContent_Tables(), this.getTable(), null, "tables", null, 0, -1, Content.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(sizeEEnum, Size.class, "Size");

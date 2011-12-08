@@ -18,9 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link mvcmetamodel.Body#getComponents <em>Components</em>}</li>
- *   <li>{@link mvcmetamodel.Body#getForms <em>Forms</em>}</li>
- *   <li>{@link mvcmetamodel.Body#getTables <em>Tables</em>}</li>
+ *   <li>{@link mvcmetamodel.Body#getContents <em>Contents</em>}</li>
  * </ul>
  * </p>
  *
@@ -30,51 +28,19 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Body extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Components</b></em>' containment reference list.
-	 * The list contents are of type {@link mvcmetamodel.Component}.
+	 * Returns the value of the '<em><b>Contents</b></em>' containment reference list.
+	 * The list contents are of type {@link mvcmetamodel.Content}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Components</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Contents</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Components</em>' containment reference list.
-	 * @see mvcmetamodel.MvcmetamodelPackage#getBody_Components()
+	 * @return the value of the '<em>Contents</em>' containment reference list.
+	 * @see mvcmetamodel.MvcmetamodelPackage#getBody_Contents()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Component> getComponents();
-
-	/**
-	 * Returns the value of the '<em><b>Forms</b></em>' containment reference list.
-	 * The list contents are of type {@link mvcmetamodel.Form}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Forms</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Forms</em>' containment reference list.
-	 * @see mvcmetamodel.MvcmetamodelPackage#getBody_Forms()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Form> getForms();
-
-	/**
-	 * Returns the value of the '<em><b>Tables</b></em>' containment reference list.
-	 * The list contents are of type {@link mvcmetamodel.Table}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Tables</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tables</em>' containment reference list.
-	 * @see mvcmetamodel.MvcmetamodelPackage#getBody_Tables()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Table> getTables();
+	EList<Content> getContents();
 
 } // Body

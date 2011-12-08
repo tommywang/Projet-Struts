@@ -403,31 +403,13 @@ public interface MvcmetamodelPackage extends EPackage {
 	int BODY = 8;
 
 	/**
-	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Contents</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BODY__COMPONENTS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Forms</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BODY__FORMS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Tables</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BODY__TABLES = 2;
+	int BODY__CONTENTS = 0;
 
 	/**
 	 * The number of structural features of the '<em>Body</em>' class.
@@ -436,7 +418,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BODY_FEATURE_COUNT = 3;
+	int BODY_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.HeadImpl <em>Head</em>}' class.
@@ -791,6 +773,52 @@ public interface MvcmetamodelPackage extends EPackage {
 	int LINE_FEATURE_COUNT = 1;
 
 	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.ContentImpl <em>Content</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.ContentImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getContent()
+	 * @generated
+	 */
+	int CONTENT = 19;
+
+	/**
+	 * The feature id for the '<em><b>Forms</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENT__FORMS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENT__COMPONENTS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Tables</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENT__TABLES = 2;
+
+	/**
+	 * The number of structural features of the '<em>Content</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENT_FEATURE_COUNT = 3;
+
+	/**
 	 * The meta object id for the '{@link mvcmetamodel.Size <em>Size</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -798,7 +826,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getSize()
 	 * @generated
 	 */
-	int SIZE = 19;
+	int SIZE = 20;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.Align <em>Align</em>}' enum.
@@ -808,7 +836,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getAlign()
 	 * @generated
 	 */
-	int ALIGN = 20;
+	int ALIGN = 21;
 
 
 	/**
@@ -1100,37 +1128,15 @@ public interface MvcmetamodelPackage extends EPackage {
 	EClass getBody();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Body#getComponents <em>Components</em>}'.
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Body#getContents <em>Contents</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Components</em>'.
-	 * @see mvcmetamodel.Body#getComponents()
+	 * @return the meta object for the containment reference list '<em>Contents</em>'.
+	 * @see mvcmetamodel.Body#getContents()
 	 * @see #getBody()
 	 * @generated
 	 */
-	EReference getBody_Components();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Body#getForms <em>Forms</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Forms</em>'.
-	 * @see mvcmetamodel.Body#getForms()
-	 * @see #getBody()
-	 * @generated
-	 */
-	EReference getBody_Forms();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Body#getTables <em>Tables</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Tables</em>'.
-	 * @see mvcmetamodel.Body#getTables()
-	 * @see #getBody()
-	 * @generated
-	 */
-	EReference getBody_Tables();
+	EReference getBody_Contents();
 
 	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Head <em>Head</em>}'.
@@ -1352,6 +1358,49 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLine_Cells();
+
+	/**
+	 * Returns the meta object for class '{@link mvcmetamodel.Content <em>Content</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Content</em>'.
+	 * @see mvcmetamodel.Content
+	 * @generated
+	 */
+	EClass getContent();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Content#getForms <em>Forms</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Forms</em>'.
+	 * @see mvcmetamodel.Content#getForms()
+	 * @see #getContent()
+	 * @generated
+	 */
+	EReference getContent_Forms();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Content#getComponents <em>Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Components</em>'.
+	 * @see mvcmetamodel.Content#getComponents()
+	 * @see #getContent()
+	 * @generated
+	 */
+	EReference getContent_Components();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Content#getTables <em>Tables</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tables</em>'.
+	 * @see mvcmetamodel.Content#getTables()
+	 * @see #getContent()
+	 * @generated
+	 */
+	EReference getContent_Tables();
 
 	/**
 	 * Returns the meta object for enum '{@link mvcmetamodel.Size <em>Size</em>}'.
@@ -1630,28 +1679,12 @@ public interface MvcmetamodelPackage extends EPackage {
 		EClass BODY = eINSTANCE.getBody();
 
 		/**
-		 * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Contents</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BODY__COMPONENTS = eINSTANCE.getBody_Components();
-
-		/**
-		 * The meta object literal for the '<em><b>Forms</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BODY__FORMS = eINSTANCE.getBody_Forms();
-
-		/**
-		 * The meta object literal for the '<em><b>Tables</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BODY__TABLES = eINSTANCE.getBody_Tables();
+		EReference BODY__CONTENTS = eINSTANCE.getBody_Contents();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.HeadImpl <em>Head</em>}' class.
@@ -1840,6 +1873,40 @@ public interface MvcmetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LINE__CELLS = eINSTANCE.getLine_Cells();
+
+		/**
+		 * The meta object literal for the '{@link mvcmetamodel.impl.ContentImpl <em>Content</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mvcmetamodel.impl.ContentImpl
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getContent()
+		 * @generated
+		 */
+		EClass CONTENT = eINSTANCE.getContent();
+
+		/**
+		 * The meta object literal for the '<em><b>Forms</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTENT__FORMS = eINSTANCE.getContent_Forms();
+
+		/**
+		 * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTENT__COMPONENTS = eINSTANCE.getContent_Components();
+
+		/**
+		 * The meta object literal for the '<em><b>Tables</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTENT__TABLES = eINSTANCE.getContent_Tables();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.Size <em>Size</em>}' enum.

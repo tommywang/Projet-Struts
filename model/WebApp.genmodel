@@ -54,9 +54,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Input/name"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Body">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Body/components"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Body/forms"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Body/tables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Body/contents"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Head">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Head/title"/>
@@ -86,6 +84,11 @@
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Line">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Line/cells"/>
+    </genClasses>
+    <genClasses ecoreClass="mvcmetamodel.ecore#//Content">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Content/forms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Content/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Content/tables"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
