@@ -17,8 +17,9 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link mvcmetamodel.Cell#getContent <em>Content</em>}</li>
  *   <li>{@link mvcmetamodel.Cell#getComponents <em>Components</em>}</li>
+ *   <li>{@link mvcmetamodel.Cell#getAlign <em>Align</em>}</li>
+ *   <li>{@link mvcmetamodel.Cell#getColspan <em>Colspan</em>}</li>
  * </ul>
  * </p>
  *
@@ -27,32 +28,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Cell extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Content</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Content</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Content</em>' attribute.
-	 * @see #setContent(String)
-	 * @see mvcmetamodel.MvcmetamodelPackage#getCell_Content()
-	 * @model
-	 * @generated
-	 */
-	String getContent();
-
-	/**
-	 * Sets the value of the '{@link mvcmetamodel.Cell#getContent <em>Content</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Content</em>' attribute.
-	 * @see #getContent()
-	 * @generated
-	 */
-	void setContent(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Components</b></em>' containment reference list.
 	 * The list contents are of type {@link mvcmetamodel.Component}.
@@ -68,5 +43,60 @@ public interface Cell extends EObject {
 	 * @generated
 	 */
 	EList<Component> getComponents();
+
+	/**
+	 * Returns the value of the '<em><b>Align</b></em>' attribute.
+	 * The literals are from the enumeration {@link mvcmetamodel.Align}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Align</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Align</em>' attribute.
+	 * @see mvcmetamodel.Align
+	 * @see #setAlign(Align)
+	 * @see mvcmetamodel.MvcmetamodelPackage#getCell_Align()
+	 * @model
+	 * @generated
+	 */
+	Align getAlign();
+
+	/**
+	 * Sets the value of the '{@link mvcmetamodel.Cell#getAlign <em>Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Align</em>' attribute.
+	 * @see mvcmetamodel.Align
+	 * @see #getAlign()
+	 * @generated
+	 */
+	void setAlign(Align value);
+
+	/**
+	 * Returns the value of the '<em><b>Colspan</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Colspan</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Colspan</em>' attribute.
+	 * @see #setColspan(int)
+	 * @see mvcmetamodel.MvcmetamodelPackage#getCell_Colspan()
+	 * @model
+	 * @generated
+	 */
+	int getColspan();
+
+	/**
+	 * Sets the value of the '{@link mvcmetamodel.Cell#getColspan <em>Colspan</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Colspan</em>' attribute.
+	 * @see #getColspan()
+	 * @generated
+	 */
+	void setColspan(int value);
 
 } // Cell

@@ -621,13 +621,22 @@ public interface MvcmetamodelPackage extends EPackage {
 	int TEXT_FIELD__MAX_LENGTH = COMPONENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FIELD__NAME = COMPONENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Text Field</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_FIELD_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 2;
+	int TEXT_FIELD_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
@@ -765,22 +774,31 @@ public interface MvcmetamodelPackage extends EPackage {
 	int PARAGRAPHE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Content</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CELL__CONTENT = 0;
-
-	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CELL__COMPONENTS = 1;
+	int CELL__COMPONENTS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Align</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CELL__ALIGN = 1;
+
+	/**
+	 * The feature id for the '<em><b>Colspan</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CELL__COLSPAN = 2;
 
 	/**
 	 * The number of structural features of the '<em>Cell</em>' class.
@@ -789,7 +807,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CELL_FEATURE_COUNT = 2;
+	int CELL_FEATURE_COUNT = 3;
 
 	/**
 	 * The feature id for the '<em><b>Cells</b></em>' containment reference list.
@@ -1215,6 +1233,17 @@ public interface MvcmetamodelPackage extends EPackage {
 	EAttribute getTextField_MaxLength();
 
 	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.TextField#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see mvcmetamodel.TextField#getName()
+	 * @see #getTextField()
+	 * @generated
+	 */
+	EAttribute getTextField_Name();
+
+	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Password <em>Password</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1330,17 +1359,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	EClass getCell();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.Cell#getContent <em>Content</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Content</em>'.
-	 * @see mvcmetamodel.Cell#getContent()
-	 * @see #getCell()
-	 * @generated
-	 */
-	EAttribute getCell_Content();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Cell#getComponents <em>Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1350,6 +1368,28 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCell_Components();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.Cell#getAlign <em>Align</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Align</em>'.
+	 * @see mvcmetamodel.Cell#getAlign()
+	 * @see #getCell()
+	 * @generated
+	 */
+	EAttribute getCell_Align();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.Cell#getColspan <em>Colspan</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Colspan</em>'.
+	 * @see mvcmetamodel.Cell#getColspan()
+	 * @see #getCell()
+	 * @generated
+	 */
+	EAttribute getCell_Colspan();
 
 	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Line <em>Line</em>}'.
@@ -1737,6 +1777,14 @@ public interface MvcmetamodelPackage extends EPackage {
 		EAttribute TEXT_FIELD__MAX_LENGTH = eINSTANCE.getTextField_MaxLength();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_FIELD__NAME = eINSTANCE.getTextField_Name();
+
+		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.PasswordImpl <em>Password</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1837,20 +1885,28 @@ public interface MvcmetamodelPackage extends EPackage {
 		EClass CELL = eINSTANCE.getCell();
 
 		/**
-		 * The meta object literal for the '<em><b>Content</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CELL__CONTENT = eINSTANCE.getCell_Content();
-
-		/**
 		 * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference CELL__COMPONENTS = eINSTANCE.getCell_Components();
+
+		/**
+		 * The meta object literal for the '<em><b>Align</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CELL__ALIGN = eINSTANCE.getCell_Align();
+
+		/**
+		 * The meta object literal for the '<em><b>Colspan</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CELL__COLSPAN = eINSTANCE.getCell_Colspan();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.LineImpl <em>Line</em>}' class.

@@ -3,9 +3,9 @@
 <html:html>
 <head>
 <title>Main Page</title>
-<head/>
+</head>
 <body>
 <A HREF=ContactCreation.do> Ajouter un nouveau Contact en utilisant l'Action Form Validation
  </A>
-<body/>
+</body>
 </html:html>

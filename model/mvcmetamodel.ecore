@@ -74,6 +74,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="TextField" eSuperTypes="#//Component">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxLength" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Password" eSuperTypes="#//Component"/>
   <eClassifiers xsi:type="ecore:EClass" name="RadioButton" eSuperTypes="#//Input">
@@ -92,7 +93,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
         eType="#//Component" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="align" eType="#//Align"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="colspan:" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="colspan" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
+        eType="#//Input" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Line">
     <eStructuralFeatures xsi:type="ecore:EReference" name="cells" upperBound="-1"

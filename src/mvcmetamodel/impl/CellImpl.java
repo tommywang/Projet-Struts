@@ -7,6 +7,7 @@
 package mvcmetamodel.impl;
 
 import java.util.Collection;
+import mvcmetamodel.Align;
 import mvcmetamodel.Cell;
 import mvcmetamodel.Component;
 import mvcmetamodel.MvcmetamodelPackage;
@@ -30,34 +31,15 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link mvcmetamodel.impl.CellImpl#getContent <em>Content</em>}</li>
  *   <li>{@link mvcmetamodel.impl.CellImpl#getComponents <em>Components</em>}</li>
+ *   <li>{@link mvcmetamodel.impl.CellImpl#getAlign <em>Align</em>}</li>
+ *   <li>{@link mvcmetamodel.impl.CellImpl#getColspan <em>Colspan</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class CellImpl extends EObjectImpl implements Cell {
-	/**
-	 * The default value of the '{@link #getContent() <em>Content</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContent()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CONTENT_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getContent() <em>Content</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContent()
-	 * @generated
-	 * @ordered
-	 */
-	protected String content = CONTENT_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getComponents() <em>Components</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -67,6 +49,46 @@ public class CellImpl extends EObjectImpl implements Cell {
 	 * @ordered
 	 */
 	protected EList<Component> components;
+
+	/**
+	 * The default value of the '{@link #getAlign() <em>Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlign()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Align ALIGN_EDEFAULT = Align.LEFT;
+
+	/**
+	 * The cached value of the '{@link #getAlign() <em>Align</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlign()
+	 * @generated
+	 * @ordered
+	 */
+	protected Align align = ALIGN_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getColspan() <em>Colspan</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColspan()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int COLSPAN_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getColspan() <em>Colspan</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getColspan()
+	 * @generated
+	 * @ordered
+	 */
+	protected int colspan = COLSPAN_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -92,32 +114,53 @@ public class CellImpl extends EObjectImpl implements Cell {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getContent() {
-		return content;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setContent(String newContent) {
-		String oldContent = content;
-		content = newContent;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.CELL__CONTENT, oldContent, content));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Component> getComponents() {
 		if (components == null) {
 			components = new EObjectContainmentEList<Component>(Component.class, this, MvcmetamodelPackage.CELL__COMPONENTS);
 		}
 		return components;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Align getAlign() {
+		return align;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAlign(Align newAlign) {
+		Align oldAlign = align;
+		align = newAlign == null ? ALIGN_EDEFAULT : newAlign;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.CELL__ALIGN, oldAlign, align));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getColspan() {
+		return colspan;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setColspan(int newColspan) {
+		int oldColspan = colspan;
+		colspan = newColspan;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.CELL__COLSPAN, oldColspan, colspan));
 	}
 
 	/**
@@ -142,10 +185,12 @@ public class CellImpl extends EObjectImpl implements Cell {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MvcmetamodelPackage.CELL__CONTENT:
-				return getContent();
 			case MvcmetamodelPackage.CELL__COMPONENTS:
 				return getComponents();
+			case MvcmetamodelPackage.CELL__ALIGN:
+				return getAlign();
+			case MvcmetamodelPackage.CELL__COLSPAN:
+				return getColspan();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -159,12 +204,15 @@ public class CellImpl extends EObjectImpl implements Cell {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MvcmetamodelPackage.CELL__CONTENT:
-				setContent((String)newValue);
-				return;
 			case MvcmetamodelPackage.CELL__COMPONENTS:
 				getComponents().clear();
 				getComponents().addAll((Collection<? extends Component>)newValue);
+				return;
+			case MvcmetamodelPackage.CELL__ALIGN:
+				setAlign((Align)newValue);
+				return;
+			case MvcmetamodelPackage.CELL__COLSPAN:
+				setColspan((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -178,11 +226,14 @@ public class CellImpl extends EObjectImpl implements Cell {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MvcmetamodelPackage.CELL__CONTENT:
-				setContent(CONTENT_EDEFAULT);
-				return;
 			case MvcmetamodelPackage.CELL__COMPONENTS:
 				getComponents().clear();
+				return;
+			case MvcmetamodelPackage.CELL__ALIGN:
+				setAlign(ALIGN_EDEFAULT);
+				return;
+			case MvcmetamodelPackage.CELL__COLSPAN:
+				setColspan(COLSPAN_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -196,10 +247,12 @@ public class CellImpl extends EObjectImpl implements Cell {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MvcmetamodelPackage.CELL__CONTENT:
-				return CONTENT_EDEFAULT == null ? content != null : !CONTENT_EDEFAULT.equals(content);
 			case MvcmetamodelPackage.CELL__COMPONENTS:
 				return components != null && !components.isEmpty();
+			case MvcmetamodelPackage.CELL__ALIGN:
+				return align != ALIGN_EDEFAULT;
+			case MvcmetamodelPackage.CELL__COLSPAN:
+				return colspan != COLSPAN_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -214,8 +267,10 @@ public class CellImpl extends EObjectImpl implements Cell {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (content: ");
-		result.append(content);
+		result.append(" (align: ");
+		result.append(align);
+		result.append(", colspan: ");
+		result.append(colspan);
 		result.append(')');
 		return result.toString();
 	}

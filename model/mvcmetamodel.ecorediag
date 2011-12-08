@@ -283,6 +283,10 @@
   <children xmi:type="notation:Node" xmi:id="_EyR0kCA0EeGJgdAib-z1bA" type="1001">
     <children xmi:type="notation:Node" xmi:id="_EySboCA0EeGJgdAib-z1bA" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_EySboSA0EeGJgdAib-z1bA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_mVryUCG_EeGwH4wOIBaiUg" type="2001">
+        <element xmi:type="ecore:EAttribute" href="mvcmetamodel.ecore#//TextField/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_mVryUSG_EeGwH4wOIBaiUg"/>
+      </children>
       <children xmi:type="notation:Node" xmi:id="_Oqdw4CEUEeGpC4qt5sSNTg" type="2001">
         <element xmi:type="ecore:EAttribute" href="mvcmetamodel.ecore#//TextField/size"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_Oqdw4SEUEeGpC4qt5sSNTg"/>
@@ -412,7 +416,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_4O8XESG4EeGwH4wOIBaiUg"/>
       </children>
       <children xmi:type="notation:Node" xmi:id="_-YFfkCG4EeGwH4wOIBaiUg" type="2001">
-        <element xmi:type="ecore:EAttribute" href="mvcmetamodel.ecore#//Cell/colspan%3A"/>
+        <element xmi:type="ecore:EAttribute" href="mvcmetamodel.ecore#//Cell/colspan"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_-YFfkSG4EeGwH4wOIBaiUg"/>
       </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_e43pgiBhEeGAv9DxTwgIAQ"/>
@@ -732,5 +736,17 @@
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5uq54yG3EeGwH4wOIBaiUg" points="[-5, -14, 63, 210]$[-66, -211, 2, 13]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5usIACG3EeGwH4wOIBaiUg" id="(0.5,0.1388888888888889)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5usvECG3EeGwH4wOIBaiUg" id="(0.7569444444444444,0.8992248062015504)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_flvywCHDEeGwH4wOIBaiUg" type="3002" source="_e43CcCBhEeGAv9DxTwgIAQ" target="_hK8UMB58EeGCBazAp1emmQ">
+    <children xmi:type="notation:Node" xmi:id="_flwZ0CHDEeGwH4wOIBaiUg" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_flwZ0SHDEeGwH4wOIBaiUg" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_flwZ0iHDEeGwH4wOIBaiUg" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_flwZ0yHDEeGwH4wOIBaiUg" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_flvywSHDEeGwH4wOIBaiUg" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_flvywiHDEeGwH4wOIBaiUg" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="mvcmetamodel.ecore#//Cell/inputs"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_flvywyHDEeGwH4wOIBaiUg" points="[-61, 19, 883, -257]$[-875, 328, 69, 52]"/>
   </edges>
 </notation:Diagram>

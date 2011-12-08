@@ -590,6 +590,15 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTextField_Name() {
+		return (EAttribute)textFieldEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPassword() {
 		return passwordEClass;
 	}
@@ -689,8 +698,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCell_Content() {
-		return (EAttribute)cellEClass.getEStructuralFeatures().get(0);
+	public EReference getCell_Components() {
+		return (EReference)cellEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -698,8 +707,17 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCell_Components() {
-		return (EReference)cellEClass.getEStructuralFeatures().get(1);
+	public EAttribute getCell_Align() {
+		return (EAttribute)cellEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCell_Colspan() {
+		return (EAttribute)cellEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -822,6 +840,7 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		textFieldEClass = createEClass(TEXT_FIELD);
 		createEAttribute(textFieldEClass, TEXT_FIELD__SIZE);
 		createEAttribute(textFieldEClass, TEXT_FIELD__MAX_LENGTH);
+		createEAttribute(textFieldEClass, TEXT_FIELD__NAME);
 
 		passwordEClass = createEClass(PASSWORD);
 
@@ -839,8 +858,9 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		paragrapheEClass = createEClass(PARAGRAPHE);
 
 		cellEClass = createEClass(CELL);
-		createEAttribute(cellEClass, CELL__CONTENT);
 		createEReference(cellEClass, CELL__COMPONENTS);
+		createEAttribute(cellEClass, CELL__ALIGN);
+		createEAttribute(cellEClass, CELL__COLSPAN);
 
 		lineEClass = createEClass(LINE);
 		createEReference(lineEClass, LINE__CELLS);
@@ -941,6 +961,7 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		initEClass(textFieldEClass, TextField.class, "TextField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTextField_Size(), ecorePackage.getEInt(), "size", null, 0, 1, TextField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTextField_MaxLength(), ecorePackage.getEInt(), "maxLength", null, 0, 1, TextField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextField_Name(), ecorePackage.getEString(), "name", null, 0, 1, TextField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(passwordEClass, Password.class, "Password", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -958,8 +979,9 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		initEClass(paragrapheEClass, Paragraphe.class, "Paragraphe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(cellEClass, Cell.class, "Cell", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCell_Content(), ecorePackage.getEString(), "content", null, 0, 1, Cell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCell_Components(), this.getComponent(), null, "components", null, 0, -1, Cell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCell_Align(), this.getAlign(), "align", null, 0, 1, Cell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCell_Colspan(), ecorePackage.getEInt(), "colspan", null, 0, 1, Cell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(lineEClass, Line.class, "Line", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLine_Cells(), this.getCell(), null, "cells", null, 0, -1, Line.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

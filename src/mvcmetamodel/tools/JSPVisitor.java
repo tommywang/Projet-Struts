@@ -62,8 +62,26 @@ public class JSPVisitor implements Visitor {
 
 	@Override
 	public String visit(Cell cell) {
-		// TODO Auto-generated method stub
-		return null;
+		String result="";
+		if (cell.getAlign()==Align.CENTER)
+			result+="<td align=\"center\" ";
+		else if (cell.getAlign()==Align.LEFT)
+			result+="<td align=\"left\" ";
+		else
+			result+="<td align=\"right\" ";
+		
+		if (cell.getColspan()!=0){
+			result+="colspan=" + cell.getColspan() + ">\n";
+		}
+		else{
+			result+=">\n";
+		}
+		
+		for (Component c: cell.getComponents()){
+			result+=this.visit(c);
+		}
+		result+="</td>\n";
+		return result;
 	}
 
 	@Override
@@ -75,6 +93,9 @@ public class JSPVisitor implements Visitor {
 		else if (component instanceof Text){
 			result+=this.visit((Text) component);
 		}
+		else if (component instanceof TextField){
+			result+=this.visit((TextField) component);
+		}
 		return result;
 	}
 
@@ -83,9 +104,15 @@ public class JSPVisitor implements Visitor {
 		String result="";
 
 		result+="<html:form "+ "action=\"/" +form.getAction()+ "\">\n";
-		//for ()
-
-
+		for (Component c:form.getComponents()){
+			result+=this.visit(c);
+		}
+		for (Table t:form.getTables()){
+			result+=this.visit(t);
+		}
+		for (Input c:form.getInputs()){
+			result+=this.visit(c);
+		}
 
 		result+="</html:form>\n";
 		return result;
@@ -152,22 +179,20 @@ public class JSPVisitor implements Visitor {
 	@Override
 	public String visit(Table table) {
 		String result="";
-		result="<table>\n";
+		result+="<table>\n";
 		for (Line l:table.getLines()){
 			result+=this.visit(l);
 		}
-		result="</table>\n";
+		result+="</table>\n";
 		return result;
 	}
 
 	@Override
 	public String visit(TextField textField) {
-		/*
 		String result="";
-		result="<html:text property=\"";
-		<html:text property="firstName" size="30"
-			maxlength="30" />*/
-		return null;
+		result+="<html:text property=\""+textField.getName()+"\" size=\""+textField.getSize()
+		+"\" maxlength=\""+textField.getMaxLength()+"\"/>\n";
+		return result;
 	}
 
 	@Override
@@ -186,25 +211,6 @@ public class JSPVisitor implements Visitor {
 			result+=this.visit(c);
 		}
 		result+="</h"+title.getSize()+">\n";
-		/*
-		switch (title.getSize()){
-			case HUGE:
-				result+="<h1> ";
-				
-				result+="<h1/> ";
-			case HUGE:
-				result+="<h1> ";
-				
-				result+="<h1/> ";
-			case HUGE:
-				result+="<h1> ";
-				
-				result+="<h1/> ";
-			case HUGE:
-				result+="<h1> ";
-				
-				result+="<h1/> ";
-		}*/
 		return result;
 	}
 
@@ -228,9 +234,11 @@ public class JSPVisitor implements Visitor {
 	public String visit(Line line) {
 		String result="";
 		result+="<tr>\n";
-		
+			for (Cell c:line.getCells()){
+				result+=this.visit(c);
+			}
 		result+="</tr>\n";
-		return null;
+		return result;
 	}
 
 

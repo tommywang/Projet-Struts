@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="ASCII"?>
-<mvcmetamodel:WebApp xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvcmetamodel="http://mvcmetamodel/1.0">
+<mvcmetamodel:WebApp xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvcmetamodel="http://mvcmetamodel/1.0" xsi:schemaLocation="http://mvcmetamodel/1.0 mvcmetamodel.ecore">
   <pages name="creationContact" type="jsp">
     <body>
       <contents xsi:type="mvcmetamodel:Text" value="This a Form"/>
       <contents xsi:type="mvcmetamodel:Form" action="AddContact">
         <tables>
           <lines>
-            <cells align="CENTER" colspan:="2"/>
+            <cells align="CENTER" colspan="2"/>
+          </lines>
+          <lines>
+            <cells align="RIGHT">
+              <components xsi:type="mvcmetamodel:Text" value="First name"/>
+            </cells>
+            <cells>
+              <components xsi:type="mvcmetamodel:TextField" size="30" maxLength="30" name="firstname"/>
+            </cells>
           </lines>
         </tables>
       </contents>

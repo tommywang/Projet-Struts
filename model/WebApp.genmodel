@@ -66,6 +66,7 @@
     <genClasses ecoreClass="mvcmetamodel.ecore#//TextField">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//TextField/size"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//TextField/maxLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//TextField/name"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Password"/>
     <genClasses ecoreClass="mvcmetamodel.ecore#//RadioButton">
@@ -81,8 +82,9 @@
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Paragraphe"/>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Cell">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Cell/content"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Cell/components"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Cell/align"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Cell/colspan"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Line">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Line/cells"/>
