@@ -90,6 +90,7 @@ public class MvcmetamodelSwitch<T> {
 			case MvcmetamodelPackage.FORM: {
 				Form form = (Form)theEObject;
 				T result = caseForm(form);
+				if (result == null) result = caseContent(form);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -103,6 +104,7 @@ public class MvcmetamodelSwitch<T> {
 				Text text = (Text)theEObject;
 				T result = caseText(text);
 				if (result == null) result = caseComponent(text);
+				if (result == null) result = caseContent(text);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -115,6 +117,7 @@ public class MvcmetamodelSwitch<T> {
 			case MvcmetamodelPackage.TABLE: {
 				Table table = (Table)theEObject;
 				T result = caseTable(table);
+				if (result == null) result = caseContent(table);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -122,12 +125,14 @@ public class MvcmetamodelSwitch<T> {
 				Link link = (Link)theEObject;
 				T result = caseLink(link);
 				if (result == null) result = caseComponent(link);
+				if (result == null) result = caseContent(link);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MvcmetamodelPackage.COMPONENT: {
 				Component component = (Component)theEObject;
 				T result = caseComponent(component);
+				if (result == null) result = caseContent(component);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -153,20 +158,23 @@ public class MvcmetamodelSwitch<T> {
 				Title title = (Title)theEObject;
 				T result = caseTitle(title);
 				if (result == null) result = caseComponent(title);
+				if (result == null) result = caseContent(title);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MvcmetamodelPackage.TEXT_FIELD: {
 				TextField textField = (TextField)theEObject;
 				T result = caseTextField(textField);
-				if (result == null) result = caseInput(textField);
+				if (result == null) result = caseComponent(textField);
+				if (result == null) result = caseContent(textField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MvcmetamodelPackage.PASSWORD: {
 				Password password = (Password)theEObject;
 				T result = casePassword(password);
-				if (result == null) result = caseInput(password);
+				if (result == null) result = caseComponent(password);
+				if (result == null) result = caseContent(password);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -195,6 +203,7 @@ public class MvcmetamodelSwitch<T> {
 				Paragraphe paragraphe = (Paragraphe)theEObject;
 				T result = caseParagraphe(paragraphe);
 				if (result == null) result = caseComponent(paragraphe);
+				if (result == null) result = caseContent(paragraphe);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

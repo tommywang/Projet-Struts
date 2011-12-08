@@ -2,9 +2,11 @@
 <%@ taglib prefix="bean" uri="http://struts.apache.org/tags-bean"%>
 <html:html>
 <head>
-<title>Main Page</title>
+<title>Add Contact</title>
 <head/>
 <body>
-<A HREF=ContactCreation.do> Ajouter un nouveau Contact en utilisant l'Action Form Validation </A>
+This a Form
+<html:form action="/AddContact">
+<html:form/>
 <body/>
 </html:html>

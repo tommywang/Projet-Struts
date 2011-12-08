@@ -24,7 +24,7 @@ package mvcmetamodel;
  * @model
  * @generated
  */
-public interface TextField extends Input {
+public interface TextField extends Component {
 
 	/**
 	 * Returns the value of the '<em><b>Size</b></em>' attribute.

@@ -57,7 +57,7 @@ public class Main {
 		//WebXML webxml = appli.getWebxml();
 		Page mainPage=appli.getStartPage();
 		String result=new JSPVisitor().visit(mainPage);
-		
+		System.out.println(result);
 		File monFichier;
 		try
 		{
@@ -71,14 +71,17 @@ public class Main {
 		{
 			System.out.println("Impossible de créer le fichier");
 		}
+		
 		for (Page p :appli.getPages()){
 			File mFile;
 			try
 			{
+				String result1=new JSPVisitor().visit(p);
+				System.out.println(result1);
 				String pageName="test/"+p.getName()+"."+p.getType();
 				mFile = new File(pageName);
 				mFile.createNewFile();
-				Main.ecrireFichier(mFile, result);
+				Main.ecrireFichier(mFile, result1);
 				System.out.println("tout va bien");
 			}
 			catch (IOException e)
@@ -88,7 +91,7 @@ public class Main {
 		}
 		
 		//String result= new WebXMLVisitor().visit(webxml);
-		System.out.println(result);
+		
 		/*
 		File monFichier;
 		try

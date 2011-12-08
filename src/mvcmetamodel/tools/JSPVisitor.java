@@ -47,18 +47,16 @@ public class JSPVisitor implements Visitor {
 		return result;*/
 	}
 
-
-
 	@Override
 	public String visit(Body body) {
 		String result="";
 		result+="<body>\n";
-		if (!body.getComponents().isEmpty()){
-			for (Component c:body.getComponents()){
+		if (!body.getContents().isEmpty()){
+			for (Content c:body.getContents()){
 				result+=this.visit(c);
 			}
 		}
-		result+="<body/>\n";
+		result+="</body>\n";
 		return result;
 	}
 
@@ -83,10 +81,13 @@ public class JSPVisitor implements Visitor {
 	@Override
 	public String visit(Form form) {
 		String result="";
-		result+="<html:form>\n";
-		
-		
-		result+="<html:form/>\n";
+
+		result+="<html:form "+ "action=\"/" +form.getAction()+ "\">\n";
+		//for ()
+
+
+
+		result+="</html:form>\n";
 		return result;
 	}
 
@@ -102,7 +103,7 @@ public class JSPVisitor implements Visitor {
 				result+=this.visit(c);
 			}
 		}*/
-		result+="<head/>\n";
+		result+="</head>\n";
 		return result;
 	}
 
@@ -150,8 +151,13 @@ public class JSPVisitor implements Visitor {
 
 	@Override
 	public String visit(Table table) {
-		// TODO Auto-generated method stub
-		return null;
+		String result="";
+		result="<table>\n";
+		for (Line l:table.getLines()){
+			result+=this.visit(l);
+		}
+		result="</table>\n";
+		return result;
 	}
 
 	@Override
@@ -167,7 +173,7 @@ public class JSPVisitor implements Visitor {
 	@Override
 	public String visit(Text text) {
 		String result="";
-		result=text.getValue();
+		result=text.getValue()+"\n";
 		return result;
 	}
 
@@ -179,7 +185,7 @@ public class JSPVisitor implements Visitor {
 		for (Component c:title.getComponents()){
 			result+=this.visit(c);
 		}
-		result+="<h"+title.getSize()+"/>\n";
+		result+="</h"+title.getSize()+">\n";
 		/*
 		switch (title.getSize()){
 			case HUGE:
@@ -220,8 +226,31 @@ public class JSPVisitor implements Visitor {
 
 	@Override
 	public String visit(Line line) {
-		// TODO Auto-generated method stub
+		String result="";
+		result+="<tr>\n";
+		
+		result+="</tr>\n";
 		return null;
+	}
+
+
+
+	@Override
+	public String visit(Content content) {
+		String result="";
+		if (content instanceof Form){
+			System.out.println("form");
+			result+=this.visit((Form) content);
+		}
+		else if (content instanceof Component){
+			System.out.println("comp");
+			result+=this.visit((Component) content);
+		}
+		else if (content instanceof Table){
+			System.out.println("table");
+			result+=this.visit((Table) content);
+		}
+		return result;
 	}
 
 }

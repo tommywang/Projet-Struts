@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mvcmetamodel:WebApp xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvcmetamodel="http://mvcmetamodel/1.0">
+  <pages name="creationContact" type="jsp">
+    <body>
+      <contents xsi:type="mvcmetamodel:Text" value="This a Form"/>
+      <contents xsi:type="mvcmetamodel:Form" action="AddContact">
+        <tables>
+          <lines>
+            <cells align="CENTER" colspan:="2"/>
+          </lines>
+        </tables>
+      </contents>
+    </body>
+    <head title="Add Contact"/>
+  </pages>
+  <startPage name="index" type="jsp">
+    <body>
+      <contents xsi:type="mvcmetamodel:Title">
+        <components xsi:type="mvcmetamodel:Text" value="Hello Struts!"/>
+      </contents>
+      <contents xsi:type="mvcmetamodel:Link" url="ContactCreation.do">
+        <components xsi:type="mvcmetamodel:Text" value="Ajouter un nouveau Contact en utilisant l'Action Form Validation"/>
+      </contents>
+    </body>
+    <head title="Main Page"/>
+  </startPage>
+</mvcmetamodel:WebApp>

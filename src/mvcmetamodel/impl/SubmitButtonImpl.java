@@ -23,6 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link mvcmetamodel.impl.SubmitButtonImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link mvcmetamodel.impl.SubmitButtonImpl#getSuccessTarget <em>Success Target</em>}</li>
+ *   <li>{@link mvcmetamodel.impl.SubmitButtonImpl#getErrorTarget <em>Error Target</em>}</li>
  * </ul>
  * </p>
  *
@@ -48,6 +50,46 @@ public class SubmitButtonImpl extends InputImpl implements SubmitButton {
 	 * @ordered
 	 */
 	protected String value = VALUE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSuccessTarget() <em>Success Target</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSuccessTarget()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SUCCESS_TARGET_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSuccessTarget() <em>Success Target</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSuccessTarget()
+	 * @generated
+	 * @ordered
+	 */
+	protected String successTarget = SUCCESS_TARGET_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getErrorTarget() <em>Error Target</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getErrorTarget()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ERROR_TARGET_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getErrorTarget() <em>Error Target</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getErrorTarget()
+	 * @generated
+	 * @ordered
+	 */
+	protected String errorTarget = ERROR_TARGET_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,11 +136,57 @@ public class SubmitButtonImpl extends InputImpl implements SubmitButton {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getSuccessTarget() {
+		return successTarget;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSuccessTarget(String newSuccessTarget) {
+		String oldSuccessTarget = successTarget;
+		successTarget = newSuccessTarget;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.SUBMIT_BUTTON__SUCCESS_TARGET, oldSuccessTarget, successTarget));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getErrorTarget() {
+		return errorTarget;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setErrorTarget(String newErrorTarget) {
+		String oldErrorTarget = errorTarget;
+		errorTarget = newErrorTarget;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.SUBMIT_BUTTON__ERROR_TARGET, oldErrorTarget, errorTarget));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case MvcmetamodelPackage.SUBMIT_BUTTON__VALUE:
 				return getValue();
+			case MvcmetamodelPackage.SUBMIT_BUTTON__SUCCESS_TARGET:
+				return getSuccessTarget();
+			case MvcmetamodelPackage.SUBMIT_BUTTON__ERROR_TARGET:
+				return getErrorTarget();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -113,6 +201,12 @@ public class SubmitButtonImpl extends InputImpl implements SubmitButton {
 		switch (featureID) {
 			case MvcmetamodelPackage.SUBMIT_BUTTON__VALUE:
 				setValue((String)newValue);
+				return;
+			case MvcmetamodelPackage.SUBMIT_BUTTON__SUCCESS_TARGET:
+				setSuccessTarget((String)newValue);
+				return;
+			case MvcmetamodelPackage.SUBMIT_BUTTON__ERROR_TARGET:
+				setErrorTarget((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -129,6 +223,12 @@ public class SubmitButtonImpl extends InputImpl implements SubmitButton {
 			case MvcmetamodelPackage.SUBMIT_BUTTON__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
+			case MvcmetamodelPackage.SUBMIT_BUTTON__SUCCESS_TARGET:
+				setSuccessTarget(SUCCESS_TARGET_EDEFAULT);
+				return;
+			case MvcmetamodelPackage.SUBMIT_BUTTON__ERROR_TARGET:
+				setErrorTarget(ERROR_TARGET_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -143,6 +243,10 @@ public class SubmitButtonImpl extends InputImpl implements SubmitButton {
 		switch (featureID) {
 			case MvcmetamodelPackage.SUBMIT_BUTTON__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+			case MvcmetamodelPackage.SUBMIT_BUTTON__SUCCESS_TARGET:
+				return SUCCESS_TARGET_EDEFAULT == null ? successTarget != null : !SUCCESS_TARGET_EDEFAULT.equals(successTarget);
+			case MvcmetamodelPackage.SUBMIT_BUTTON__ERROR_TARGET:
+				return ERROR_TARGET_EDEFAULT == null ? errorTarget != null : !ERROR_TARGET_EDEFAULT.equals(errorTarget);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -159,6 +263,10 @@ public class SubmitButtonImpl extends InputImpl implements SubmitButton {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (value: ");
 		result.append(value);
+		result.append(", successTarget: ");
+		result.append(successTarget);
+		result.append(", errorTarget: ");
+		result.append(errorTarget);
 		result.append(')');
 		return result.toString();
 	}

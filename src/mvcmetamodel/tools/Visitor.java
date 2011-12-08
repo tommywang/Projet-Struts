@@ -12,6 +12,8 @@ public interface Visitor {
 	
 	public String visit(Component component);
 	
+	public String visit(Content content);
+	
 	public String visit(Form form);
 	
 	public String visit(Head head);

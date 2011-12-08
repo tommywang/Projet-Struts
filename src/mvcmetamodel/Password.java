@@ -17,5 +17,5 @@ package mvcmetamodel;
  * @model
  * @generated
  */
-public interface Password extends Input {
+public interface Password extends Component {
 } // Password

@@ -71,69 +71,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	int FORM = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORM__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Method</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORM__METHOD = 1;
-
-	/**
-	 * The feature id for the '<em><b>Action</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORM__ACTION = 2;
-
-	/**
-	 * The feature id for the '<em><b>Inputs</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORM__INPUTS = 3;
-
-	/**
-	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORM__COMPONENTS = 4;
-
-	/**
-	 * The feature id for the '<em><b>Tables</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORM__TABLES = 5;
-
-	/**
-	 * The number of structural features of the '<em>Form</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORM_FEATURE_COUNT = 6;
-
-	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.PageImpl <em>Page</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -142,6 +79,258 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	int PAGE = 1;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.ComponentImpl <em>Component</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.ComponentImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getComponent()
+	 * @generated
+	 */
+	int COMPONENT = 6;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.TextImpl <em>Text</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.TextImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getText()
+	 * @generated
+	 */
+	int TEXT = 2;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.WebAppImpl <em>Web App</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.WebAppImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getWebApp()
+	 * @generated
+	 */
+	int WEB_APP = 3;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.TableImpl <em>Table</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.TableImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getTable()
+	 * @generated
+	 */
+	int TABLE = 4;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.LinkImpl <em>Link</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.LinkImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getLink()
+	 * @generated
+	 */
+	int LINK = 5;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.InputImpl <em>Input</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.InputImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getInput()
+	 * @generated
+	 */
+	int INPUT = 7;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.BodyImpl <em>Body</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.BodyImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getBody()
+	 * @generated
+	 */
+	int BODY = 8;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.HeadImpl <em>Head</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.HeadImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getHead()
+	 * @generated
+	 */
+	int HEAD = 9;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.TitleImpl <em>Title</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.TitleImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getTitle()
+	 * @generated
+	 */
+	int TITLE = 10;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.TextFieldImpl <em>Text Field</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.TextFieldImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getTextField()
+	 * @generated
+	 */
+	int TEXT_FIELD = 11;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.PasswordImpl <em>Password</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.PasswordImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getPassword()
+	 * @generated
+	 */
+	int PASSWORD = 12;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.RadioButtonImpl <em>Radio Button</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.RadioButtonImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getRadioButton()
+	 * @generated
+	 */
+	int RADIO_BUTTON = 13;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.CheckBoxImpl <em>Check Box</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.CheckBoxImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getCheckBox()
+	 * @generated
+	 */
+	int CHECK_BOX = 14;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.SubmitButtonImpl <em>Submit Button</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.SubmitButtonImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getSubmitButton()
+	 * @generated
+	 */
+	int SUBMIT_BUTTON = 15;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.ParagrapheImpl <em>Paragraphe</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.ParagrapheImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getParagraphe()
+	 * @generated
+	 */
+	int PARAGRAPHE = 16;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.CellImpl <em>Cell</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.CellImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getCell()
+	 * @generated
+	 */
+	int CELL = 17;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.LineImpl <em>Line</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.LineImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getLine()
+	 * @generated
+	 */
+	int LINE = 18;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.ContentImpl <em>Content</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.ContentImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getContent()
+	 * @generated
+	 */
+	int CONTENT = 19;
+
+	/**
+	 * The number of structural features of the '<em>Content</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENT_FEATURE_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM__NAME = CONTENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Method</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM__METHOD = CONTENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM__ACTION = CONTENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Inputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM__INPUTS = CONTENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM__COMPONENTS = CONTENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Tables</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM__TABLES = CONTENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of structural features of the '<em>Form</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM_FEATURE_COUNT = CONTENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -189,23 +378,13 @@ public interface MvcmetamodelPackage extends EPackage {
 	int PAGE_FEATURE_COUNT = 4;
 
 	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.ComponentImpl <em>Component</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.ComponentImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getComponent()
-	 * @generated
-	 */
-	int COMPONENT = 6;
-
-	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__COMPONENTS = 0;
+	int COMPONENT__COMPONENTS = CONTENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Component</em>' class.
@@ -214,17 +393,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_FEATURE_COUNT = 1;
-
-	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.TextImpl <em>Text</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.TextImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getText()
-	 * @generated
-	 */
-	int TEXT = 2;
+	int COMPONENT_FEATURE_COUNT = CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
@@ -252,16 +421,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.WebAppImpl <em>Web App</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.WebAppImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getWebApp()
-	 * @generated
-	 */
-	int WEB_APP = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -300,23 +459,13 @@ public interface MvcmetamodelPackage extends EPackage {
 	int WEB_APP_FEATURE_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.TableImpl <em>Table</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.TableImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getTable()
-	 * @generated
-	 */
-	int TABLE = 4;
-
-	/**
 	 * The feature id for the '<em><b>Lines</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE__LINES = 0;
+	int TABLE__LINES = CONTENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Table</em>' class.
@@ -325,17 +474,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_FEATURE_COUNT = 1;
-
-	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.LinkImpl <em>Link</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.LinkImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getLink()
-	 * @generated
-	 */
-	int LINK = 5;
+	int TABLE_FEATURE_COUNT = CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
@@ -365,16 +504,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	int LINK_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.InputImpl <em>Input</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.InputImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getInput()
-	 * @generated
-	 */
-	int INPUT = 7;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -393,16 +522,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	int INPUT_FEATURE_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.BodyImpl <em>Body</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.BodyImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getBody()
-	 * @generated
-	 */
-	int BODY = 8;
-
-	/**
 	 * The feature id for the '<em><b>Contents</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -419,16 +538,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int BODY_FEATURE_COUNT = 1;
-
-	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.HeadImpl <em>Head</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.HeadImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getHead()
-	 * @generated
-	 */
-	int HEAD = 9;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -458,16 +567,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	int HEAD_FEATURE_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.TitleImpl <em>Title</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.TitleImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getTitle()
-	 * @generated
-	 */
-	int TITLE = 10;
-
-	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -495,23 +594,13 @@ public interface MvcmetamodelPackage extends EPackage {
 	int TITLE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.TextFieldImpl <em>Text Field</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.TextFieldImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getTextField()
-	 * @generated
-	 */
-	int TEXT_FIELD = 11;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_FIELD__NAME = INPUT__NAME;
+	int TEXT_FIELD__COMPONENTS = COMPONENT__COMPONENTS;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -520,7 +609,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_FIELD__SIZE = INPUT_FEATURE_COUNT + 0;
+	int TEXT_FIELD__SIZE = COMPONENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Max Length</b></em>' attribute.
@@ -529,7 +618,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_FIELD__MAX_LENGTH = INPUT_FEATURE_COUNT + 1;
+	int TEXT_FIELD__MAX_LENGTH = COMPONENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Text Field</em>' class.
@@ -538,26 +627,16 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_FIELD_FEATURE_COUNT = INPUT_FEATURE_COUNT + 2;
+	int TEXT_FIELD_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.PasswordImpl <em>Password</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.PasswordImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getPassword()
-	 * @generated
-	 */
-	int PASSWORD = 12;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PASSWORD__NAME = INPUT__NAME;
+	int PASSWORD__COMPONENTS = COMPONENT__COMPONENTS;
 
 	/**
 	 * The number of structural features of the '<em>Password</em>' class.
@@ -566,17 +645,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PASSWORD_FEATURE_COUNT = INPUT_FEATURE_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.RadioButtonImpl <em>Radio Button</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.RadioButtonImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getRadioButton()
-	 * @generated
-	 */
-	int RADIO_BUTTON = 13;
+	int PASSWORD_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -606,16 +675,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	int RADIO_BUTTON_FEATURE_COUNT = INPUT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.CheckBoxImpl <em>Check Box</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.CheckBoxImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getCheckBox()
-	 * @generated
-	 */
-	int CHECK_BOX = 14;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -643,16 +702,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	int CHECK_BOX_FEATURE_COUNT = INPUT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.SubmitButtonImpl <em>Submit Button</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.SubmitButtonImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getSubmitButton()
-	 * @generated
-	 */
-	int SUBMIT_BUTTON = 15;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -671,23 +720,31 @@ public interface MvcmetamodelPackage extends EPackage {
 	int SUBMIT_BUTTON__VALUE = INPUT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Success Target</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMIT_BUTTON__SUCCESS_TARGET = INPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Error Target</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMIT_BUTTON__ERROR_TARGET = INPUT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Submit Button</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBMIT_BUTTON_FEATURE_COUNT = INPUT_FEATURE_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.ParagrapheImpl <em>Paragraphe</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.ParagrapheImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getParagraphe()
-	 * @generated
-	 */
-	int PARAGRAPHE = 16;
+	int SUBMIT_BUTTON_FEATURE_COUNT = INPUT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
@@ -706,16 +763,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int PARAGRAPHE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.CellImpl <em>Cell</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.CellImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getCell()
-	 * @generated
-	 */
-	int CELL = 17;
 
 	/**
 	 * The feature id for the '<em><b>Content</b></em>' attribute.
@@ -745,16 +792,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	int CELL_FEATURE_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.LineImpl <em>Line</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.LineImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getLine()
-	 * @generated
-	 */
-	int LINE = 18;
-
-	/**
 	 * The feature id for the '<em><b>Cells</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -771,52 +808,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int LINE_FEATURE_COUNT = 1;
-
-	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.ContentImpl <em>Content</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.ContentImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getContent()
-	 * @generated
-	 */
-	int CONTENT = 19;
-
-	/**
-	 * The feature id for the '<em><b>Forms</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTENT__FORMS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTENT__COMPONENTS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Tables</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTENT__TABLES = 2;
-
-	/**
-	 * The number of structural features of the '<em>Content</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTENT_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.Size <em>Size</em>}' enum.
@@ -1297,6 +1288,28 @@ public interface MvcmetamodelPackage extends EPackage {
 	EAttribute getSubmitButton_Value();
 
 	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.SubmitButton#getSuccessTarget <em>Success Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Success Target</em>'.
+	 * @see mvcmetamodel.SubmitButton#getSuccessTarget()
+	 * @see #getSubmitButton()
+	 * @generated
+	 */
+	EAttribute getSubmitButton_SuccessTarget();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.SubmitButton#getErrorTarget <em>Error Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Error Target</em>'.
+	 * @see mvcmetamodel.SubmitButton#getErrorTarget()
+	 * @see #getSubmitButton()
+	 * @generated
+	 */
+	EAttribute getSubmitButton_ErrorTarget();
+
+	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Paragraphe <em>Paragraphe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1368,39 +1381,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getContent();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Content#getForms <em>Forms</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Forms</em>'.
-	 * @see mvcmetamodel.Content#getForms()
-	 * @see #getContent()
-	 * @generated
-	 */
-	EReference getContent_Forms();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Content#getComponents <em>Components</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Components</em>'.
-	 * @see mvcmetamodel.Content#getComponents()
-	 * @see #getContent()
-	 * @generated
-	 */
-	EReference getContent_Components();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Content#getTables <em>Tables</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Tables</em>'.
-	 * @see mvcmetamodel.Content#getTables()
-	 * @see #getContent()
-	 * @generated
-	 */
-	EReference getContent_Tables();
 
 	/**
 	 * Returns the meta object for enum '{@link mvcmetamodel.Size <em>Size</em>}'.
@@ -1821,6 +1801,22 @@ public interface MvcmetamodelPackage extends EPackage {
 		EAttribute SUBMIT_BUTTON__VALUE = eINSTANCE.getSubmitButton_Value();
 
 		/**
+		 * The meta object literal for the '<em><b>Success Target</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUBMIT_BUTTON__SUCCESS_TARGET = eINSTANCE.getSubmitButton_SuccessTarget();
+
+		/**
+		 * The meta object literal for the '<em><b>Error Target</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUBMIT_BUTTON__ERROR_TARGET = eINSTANCE.getSubmitButton_ErrorTarget();
+
+		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.ParagrapheImpl <em>Paragraphe</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1883,30 +1879,6 @@ public interface MvcmetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONTENT = eINSTANCE.getContent();
-
-		/**
-		 * The meta object literal for the '<em><b>Forms</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTENT__FORMS = eINSTANCE.getContent_Forms();
-
-		/**
-		 * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTENT__COMPONENTS = eINSTANCE.getContent_Components();
-
-		/**
-		 * The meta object literal for the '<em><b>Tables</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTENT__TABLES = eINSTANCE.getContent_Tables();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.Size <em>Size</em>}' enum.

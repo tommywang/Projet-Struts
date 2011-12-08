@@ -5,6 +5,7 @@
 <title>Main Page</title>
 <head/>
 <body>
-<A HREF=ContactCreation.do> Ajouter un nouveau Contact en utilisant l'Action Form Validation </A>
+<A HREF=ContactCreation.do> Ajouter un nouveau Contact en utilisant l'Action Form Validation
+ </A>
 <body/>
 </html:html>

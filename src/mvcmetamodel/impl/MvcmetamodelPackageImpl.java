@@ -653,6 +653,24 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSubmitButton_SuccessTarget() {
+		return (EAttribute)submitButtonEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSubmitButton_ErrorTarget() {
+		return (EAttribute)submitButtonEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getParagraphe() {
 		return paragrapheEClass;
 	}
@@ -709,33 +727,6 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 */
 	public EClass getContent() {
 		return contentEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getContent_Forms() {
-		return (EReference)contentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getContent_Components() {
-		return (EReference)contentEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getContent_Tables() {
-		return (EReference)contentEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -842,6 +833,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 
 		submitButtonEClass = createEClass(SUBMIT_BUTTON);
 		createEAttribute(submitButtonEClass, SUBMIT_BUTTON__VALUE);
+		createEAttribute(submitButtonEClass, SUBMIT_BUTTON__SUCCESS_TARGET);
+		createEAttribute(submitButtonEClass, SUBMIT_BUTTON__ERROR_TARGET);
 
 		paragrapheEClass = createEClass(PARAGRAPHE);
 
@@ -853,9 +846,6 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		createEReference(lineEClass, LINE__CELLS);
 
 		contentEClass = createEClass(CONTENT);
-		createEReference(contentEClass, CONTENT__FORMS);
-		createEReference(contentEClass, CONTENT__COMPONENTS);
-		createEReference(contentEClass, CONTENT__TABLES);
 
 		// Create enums
 		sizeEEnum = createEEnum(SIZE);
@@ -890,11 +880,14 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		formEClass.getESuperTypes().add(this.getContent());
 		textEClass.getESuperTypes().add(this.getComponent());
+		tableEClass.getESuperTypes().add(this.getContent());
 		linkEClass.getESuperTypes().add(this.getComponent());
+		componentEClass.getESuperTypes().add(this.getContent());
 		titleEClass.getESuperTypes().add(this.getComponent());
-		textFieldEClass.getESuperTypes().add(this.getInput());
-		passwordEClass.getESuperTypes().add(this.getInput());
+		textFieldEClass.getESuperTypes().add(this.getComponent());
+		passwordEClass.getESuperTypes().add(this.getComponent());
 		radioButtonEClass.getESuperTypes().add(this.getInput());
 		checkBoxEClass.getESuperTypes().add(this.getInput());
 		submitButtonEClass.getESuperTypes().add(this.getInput());
@@ -959,6 +952,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 
 		initEClass(submitButtonEClass, SubmitButton.class, "SubmitButton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSubmitButton_Value(), ecorePackage.getEString(), "value", null, 0, 1, SubmitButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSubmitButton_SuccessTarget(), ecorePackage.getEString(), "successTarget", null, 0, 1, SubmitButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSubmitButton_ErrorTarget(), ecorePackage.getEString(), "errorTarget", null, 0, 1, SubmitButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(paragrapheEClass, Paragraphe.class, "Paragraphe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -970,9 +965,6 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		initEReference(getLine_Cells(), this.getCell(), null, "cells", null, 0, -1, Line.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(contentEClass, Content.class, "Content", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getContent_Forms(), this.getForm(), null, "forms", null, 0, -1, Content.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContent_Components(), this.getComponent(), null, "components", null, 0, -1, Content.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContent_Tables(), this.getTable(), null, "tables", null, 0, -1, Content.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(sizeEEnum, Size.class, "Size");

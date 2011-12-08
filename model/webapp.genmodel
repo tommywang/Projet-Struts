@@ -76,6 +76,8 @@
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//SubmitButton">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//SubmitButton/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//SubmitButton/successTarget"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//SubmitButton/errorTarget"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Paragraphe"/>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Cell">
@@ -85,10 +87,6 @@
     <genClasses ecoreClass="mvcmetamodel.ecore#//Line">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Line/cells"/>
     </genClasses>
-    <genClasses ecoreClass="mvcmetamodel.ecore#//Content">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Content/forms"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Content/components"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Content/tables"/>
-    </genClasses>
+    <genClasses ecoreClass="mvcmetamodel.ecore#//Content"/>
   </genPackages>
 </genmodel:GenModel>

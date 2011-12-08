@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class PasswordImpl extends InputImpl implements Password {
+public class PasswordImpl extends ComponentImpl implements Password {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

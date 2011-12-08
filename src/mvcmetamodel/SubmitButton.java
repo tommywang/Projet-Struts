@@ -16,6 +16,8 @@ package mvcmetamodel;
  * The following features are supported:
  * <ul>
  *   <li>{@link mvcmetamodel.SubmitButton#getValue <em>Value</em>}</li>
+ *   <li>{@link mvcmetamodel.SubmitButton#getSuccessTarget <em>Success Target</em>}</li>
+ *   <li>{@link mvcmetamodel.SubmitButton#getErrorTarget <em>Error Target</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,5 +51,57 @@ public interface SubmitButton extends Input {
 	 * @generated
 	 */
 	void setValue(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Success Target</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Success Target</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Success Target</em>' attribute.
+	 * @see #setSuccessTarget(String)
+	 * @see mvcmetamodel.MvcmetamodelPackage#getSubmitButton_SuccessTarget()
+	 * @model
+	 * @generated
+	 */
+	String getSuccessTarget();
+
+	/**
+	 * Sets the value of the '{@link mvcmetamodel.SubmitButton#getSuccessTarget <em>Success Target</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Success Target</em>' attribute.
+	 * @see #getSuccessTarget()
+	 * @generated
+	 */
+	void setSuccessTarget(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Error Target</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Error Target</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Error Target</em>' attribute.
+	 * @see #setErrorTarget(String)
+	 * @see mvcmetamodel.MvcmetamodelPackage#getSubmitButton_ErrorTarget()
+	 * @model
+	 * @generated
+	 */
+	String getErrorTarget();
+
+	/**
+	 * Sets the value of the '{@link mvcmetamodel.SubmitButton#getErrorTarget <em>Error Target</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Error Target</em>' attribute.
+	 * @see #getErrorTarget()
+	 * @generated
+	 */
+	void setErrorTarget(String value);
 
 } // SubmitButton

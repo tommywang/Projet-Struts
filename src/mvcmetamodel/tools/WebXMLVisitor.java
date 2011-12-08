@@ -9,6 +9,7 @@ import mvcmetamodel.Cell;
 import mvcmetamodel.CheckBox;
 import mvcmetamodel.CheckBoxe;
 import mvcmetamodel.Component;
+import mvcmetamodel.Content;
 import mvcmetamodel.Form;
 import mvcmetamodel.Head;
 import mvcmetamodel.Input;
@@ -38,7 +39,6 @@ public class WebXMLVisitor implements Visitor {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 
 	@Override
 	public String visit(Component component) {
@@ -160,6 +160,12 @@ public class WebXMLVisitor implements Visitor {
 
 	@Override
 	public String visit(Line line) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String visit(Content content) {
 		// TODO Auto-generated method stub
 		return null;
 	}
