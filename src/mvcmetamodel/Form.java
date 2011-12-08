@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link mvcmetamodel.Form#getAction <em>Action</em>}</li>
  *   <li>{@link mvcmetamodel.Form#getInputs <em>Inputs</em>}</li>
  *   <li>{@link mvcmetamodel.Form#getComponents <em>Components</em>}</li>
+ *   <li>{@link mvcmetamodel.Form#getTables <em>Tables</em>}</li>
  * </ul>
  * </p>
  *
@@ -140,5 +141,21 @@ public interface Form extends EObject {
 	 * @generated
 	 */
 	EList<Component> getComponents();
+
+	/**
+	 * Returns the value of the '<em><b>Tables</b></em>' containment reference list.
+	 * The list contents are of type {@link mvcmetamodel.Table}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Tables</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Tables</em>' containment reference list.
+	 * @see mvcmetamodel.MvcmetamodelPackage#getForm_Tables()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Table> getTables();
 
 } // Form

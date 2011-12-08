@@ -152,13 +152,13 @@ public interface MvcmetamodelFactory extends EFactory {
 	RadioButton createRadioButton();
 
 	/**
-	 * Returns a new object of class '<em>Check Boxe</em>'.
+	 * Returns a new object of class '<em>Check Box</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Check Boxe</em>'.
+	 * @return a new object of class '<em>Check Box</em>'.
 	 * @generated
 	 */
-	CheckBoxe createCheckBoxe();
+	CheckBox createCheckBox();
 
 	/**
 	 * Returns a new object of class '<em>Submit Button</em>'.
@@ -186,6 +186,15 @@ public interface MvcmetamodelFactory extends EFactory {
 	 * @generated
 	 */
 	Cell createCell();
+
+	/**
+	 * Returns a new object of class '<em>Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Line</em>'.
+	 * @generated
+	 */
+	Line createLine();
 
 	/**
 	 * Returns the package supported by this factory.

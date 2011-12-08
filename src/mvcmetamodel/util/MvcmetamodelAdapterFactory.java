@@ -128,8 +128,8 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 				return createRadioButtonAdapter();
 			}
 			@Override
-			public Adapter caseCheckBoxe(CheckBoxe object) {
-				return createCheckBoxeAdapter();
+			public Adapter caseCheckBox(CheckBox object) {
+				return createCheckBoxAdapter();
 			}
 			@Override
 			public Adapter caseSubmitButton(SubmitButton object) {
@@ -142,6 +142,10 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseCell(Cell object) {
 				return createCellAdapter();
+			}
+			@Override
+			public Adapter caseLine(Line object) {
+				return createLineAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -262,16 +266,16 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mvcmetamodel.CheckBoxe <em>Check Boxe</em>}'.
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.CheckBox <em>Check Box</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mvcmetamodel.CheckBoxe
+	 * @see mvcmetamodel.CheckBox
 	 * @generated
 	 */
-	public Adapter createCheckBoxeAdapter() {
+	public Adapter createCheckBoxAdapter() {
 		return null;
 	}
 
@@ -314,6 +318,20 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCellAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Line <em>Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see mvcmetamodel.Line
+	 * @generated
+	 */
+	public Adapter createLineAdapter() {
 		return null;
 	}
 

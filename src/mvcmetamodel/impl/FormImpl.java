@@ -13,6 +13,7 @@ import mvcmetamodel.Form;
 import mvcmetamodel.Input;
 import mvcmetamodel.MvcmetamodelPackage;
 
+import mvcmetamodel.Table;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -39,6 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link mvcmetamodel.impl.FormImpl#getAction <em>Action</em>}</li>
  *   <li>{@link mvcmetamodel.impl.FormImpl#getInputs <em>Inputs</em>}</li>
  *   <li>{@link mvcmetamodel.impl.FormImpl#getComponents <em>Components</em>}</li>
+ *   <li>{@link mvcmetamodel.impl.FormImpl#getTables <em>Tables</em>}</li>
  * </ul>
  * </p>
  *
@@ -124,6 +126,16 @@ public class FormImpl extends EObjectImpl implements Form {
 	 * @ordered
 	 */
 	protected EList<Component> components;
+
+	/**
+	 * The cached value of the '{@link #getTables() <em>Tables</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTables()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Table> tables;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -236,6 +248,18 @@ public class FormImpl extends EObjectImpl implements Form {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Table> getTables() {
+		if (tables == null) {
+			tables = new EObjectContainmentEList<Table>(Table.class, this, MvcmetamodelPackage.FORM__TABLES);
+		}
+		return tables;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -243,6 +267,8 @@ public class FormImpl extends EObjectImpl implements Form {
 				return ((InternalEList<?>)getInputs()).basicRemove(otherEnd, msgs);
 			case MvcmetamodelPackage.FORM__COMPONENTS:
 				return ((InternalEList<?>)getComponents()).basicRemove(otherEnd, msgs);
+			case MvcmetamodelPackage.FORM__TABLES:
+				return ((InternalEList<?>)getTables()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -265,6 +291,8 @@ public class FormImpl extends EObjectImpl implements Form {
 				return getInputs();
 			case MvcmetamodelPackage.FORM__COMPONENTS:
 				return getComponents();
+			case MvcmetamodelPackage.FORM__TABLES:
+				return getTables();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -295,6 +323,10 @@ public class FormImpl extends EObjectImpl implements Form {
 				getComponents().clear();
 				getComponents().addAll((Collection<? extends Component>)newValue);
 				return;
+			case MvcmetamodelPackage.FORM__TABLES:
+				getTables().clear();
+				getTables().addAll((Collection<? extends Table>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -322,6 +354,9 @@ public class FormImpl extends EObjectImpl implements Form {
 			case MvcmetamodelPackage.FORM__COMPONENTS:
 				getComponents().clear();
 				return;
+			case MvcmetamodelPackage.FORM__TABLES:
+				getTables().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -344,6 +379,8 @@ public class FormImpl extends EObjectImpl implements Form {
 				return inputs != null && !inputs.isEmpty();
 			case MvcmetamodelPackage.FORM__COMPONENTS:
 				return components != null && !components.isEmpty();
+			case MvcmetamodelPackage.FORM__TABLES:
+				return tables != null && !tables.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

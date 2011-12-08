@@ -116,13 +116,22 @@ public interface MvcmetamodelPackage extends EPackage {
 	int FORM__COMPONENTS = 4;
 
 	/**
+	 * The feature id for the '<em><b>Tables</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM__TABLES = 5;
+
+	/**
 	 * The number of structural features of the '<em>Form</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORM_FEATURE_COUNT = 5;
+	int FORM_FEATURE_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.PageImpl <em>Page</em>}' class.
@@ -264,13 +273,22 @@ public interface MvcmetamodelPackage extends EPackage {
 	int WEB_APP__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Page</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Pages</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__PAGE = 1;
+	int WEB_APP__PAGES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Start Page</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_APP__START_PAGE = 2;
 
 	/**
 	 * The number of structural features of the '<em>Web App</em>' class.
@@ -279,7 +297,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP_FEATURE_COUNT = 2;
+	int WEB_APP_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.TableImpl <em>Table</em>}' class.
@@ -292,40 +310,13 @@ public interface MvcmetamodelPackage extends EPackage {
 	int TABLE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Lines</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE__COMPONENTS = COMPONENT__COMPONENTS;
-
-	/**
-	 * The feature id for the '<em><b>Nb Row</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE__NB_ROW = COMPONENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Nb Col</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE__NB_COL = COMPONENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Cell</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE__CELL = COMPONENT_FEATURE_COUNT + 2;
+	int TABLE__LINES = 0;
 
 	/**
 	 * The number of structural features of the '<em>Table</em>' class.
@@ -334,7 +325,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 3;
+	int TABLE_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.LinkImpl <em>Link</em>}' class.
@@ -421,13 +412,22 @@ public interface MvcmetamodelPackage extends EPackage {
 	int BODY__COMPONENTS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Form</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Forms</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BODY__FORM = 1;
+	int BODY__FORMS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Tables</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BODY__TABLES = 2;
 
 	/**
 	 * The number of structural features of the '<em>Body</em>' class.
@@ -436,7 +436,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BODY_FEATURE_COUNT = 2;
+	int BODY_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.HeadImpl <em>Head</em>}' class.
@@ -523,13 +523,31 @@ public interface MvcmetamodelPackage extends EPackage {
 	int TEXT_FIELD__NAME = INPUT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FIELD__SIZE = INPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Max Length</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FIELD__MAX_LENGTH = INPUT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Text Field</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_FIELD_FEATURE_COUNT = INPUT_FEATURE_COUNT + 0;
+	int TEXT_FIELD_FEATURE_COUNT = INPUT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.PasswordImpl <em>Password</em>}' class.
@@ -597,14 +615,14 @@ public interface MvcmetamodelPackage extends EPackage {
 	int RADIO_BUTTON_FEATURE_COUNT = INPUT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link mvcmetamodel.impl.CheckBoxeImpl <em>Check Boxe</em>}' class.
+	 * The meta object id for the '{@link mvcmetamodel.impl.CheckBoxImpl <em>Check Box</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see mvcmetamodel.impl.CheckBoxeImpl
-	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getCheckBoxe()
+	 * @see mvcmetamodel.impl.CheckBoxImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getCheckBox()
 	 * @generated
 	 */
-	int CHECK_BOXE = 14;
+	int CHECK_BOX = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -613,7 +631,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHECK_BOXE__NAME = INPUT__NAME;
+	int CHECK_BOX__NAME = INPUT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -622,16 +640,16 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CHECK_BOXE__VALUE = INPUT_FEATURE_COUNT + 0;
+	int CHECK_BOX__VALUE = INPUT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Check Boxe</em>' class.
+	 * The number of structural features of the '<em>Check Box</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CHECK_BOXE_FEATURE_COUNT = INPUT_FEATURE_COUNT + 1;
+	int CHECK_BOX_FEATURE_COUNT = INPUT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.SubmitButtonImpl <em>Submit Button</em>}' class.
@@ -718,13 +736,50 @@ public interface MvcmetamodelPackage extends EPackage {
 	int CELL__CONTENT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CELL__COMPONENTS = 1;
+
+	/**
 	 * The number of structural features of the '<em>Cell</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CELL_FEATURE_COUNT = 1;
+	int CELL_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.LineImpl <em>Line</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.LineImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getLine()
+	 * @generated
+	 */
+	int LINE = 18;
+
+	/**
+	 * The feature id for the '<em><b>Cells</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE__CELLS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.Size <em>Size</em>}' enum.
@@ -734,7 +789,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getSize()
 	 * @generated
 	 */
-	int SIZE = 18;
+	int SIZE = 19;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.Align <em>Align</em>}' enum.
@@ -744,7 +799,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getAlign()
 	 * @generated
 	 */
-	int ALIGN = 19;
+	int ALIGN = 20;
 
 
 	/**
@@ -811,6 +866,17 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getForm_Components();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Form#getTables <em>Tables</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tables</em>'.
+	 * @see mvcmetamodel.Form#getTables()
+	 * @see #getForm()
+	 * @generated
+	 */
+	EReference getForm_Tables();
 
 	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Page <em>Page</em>}'.
@@ -909,15 +975,26 @@ public interface MvcmetamodelPackage extends EPackage {
 	EAttribute getWebApp_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.WebApp#getPage <em>Page</em>}'.
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.WebApp#getPages <em>Pages</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Page</em>'.
-	 * @see mvcmetamodel.WebApp#getPage()
+	 * @return the meta object for the containment reference list '<em>Pages</em>'.
+	 * @see mvcmetamodel.WebApp#getPages()
 	 * @see #getWebApp()
 	 * @generated
 	 */
-	EReference getWebApp_Page();
+	EReference getWebApp_Pages();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link mvcmetamodel.WebApp#getStartPage <em>Start Page</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Start Page</em>'.
+	 * @see mvcmetamodel.WebApp#getStartPage()
+	 * @see #getWebApp()
+	 * @generated
+	 */
+	EReference getWebApp_StartPage();
 
 	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Table <em>Table</em>}'.
@@ -930,37 +1007,15 @@ public interface MvcmetamodelPackage extends EPackage {
 	EClass getTable();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.Table#getNbRow <em>Nb Row</em>}'.
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Table#getLines <em>Lines</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nb Row</em>'.
-	 * @see mvcmetamodel.Table#getNbRow()
+	 * @return the meta object for the containment reference list '<em>Lines</em>'.
+	 * @see mvcmetamodel.Table#getLines()
 	 * @see #getTable()
 	 * @generated
 	 */
-	EAttribute getTable_NbRow();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.Table#getNbCol <em>Nb Col</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nb Col</em>'.
-	 * @see mvcmetamodel.Table#getNbCol()
-	 * @see #getTable()
-	 * @generated
-	 */
-	EAttribute getTable_NbCol();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Table#getCell <em>Cell</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Cell</em>'.
-	 * @see mvcmetamodel.Table#getCell()
-	 * @see #getTable()
-	 * @generated
-	 */
-	EReference getTable_Cell();
+	EReference getTable_Lines();
 
 	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Link <em>Link</em>}'.
@@ -1047,15 +1102,26 @@ public interface MvcmetamodelPackage extends EPackage {
 	EReference getBody_Components();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Body#getForm <em>Form</em>}'.
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Body#getForms <em>Forms</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Form</em>'.
-	 * @see mvcmetamodel.Body#getForm()
+	 * @return the meta object for the containment reference list '<em>Forms</em>'.
+	 * @see mvcmetamodel.Body#getForms()
 	 * @see #getBody()
 	 * @generated
 	 */
-	EReference getBody_Form();
+	EReference getBody_Forms();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Body#getTables <em>Tables</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tables</em>'.
+	 * @see mvcmetamodel.Body#getTables()
+	 * @see #getBody()
+	 * @generated
+	 */
+	EReference getBody_Tables();
 
 	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Head <em>Head</em>}'.
@@ -1110,6 +1176,28 @@ public interface MvcmetamodelPackage extends EPackage {
 	EClass getTextField();
 
 	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.TextField#getSize <em>Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Size</em>'.
+	 * @see mvcmetamodel.TextField#getSize()
+	 * @see #getTextField()
+	 * @generated
+	 */
+	EAttribute getTextField_Size();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.TextField#getMaxLength <em>Max Length</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Max Length</em>'.
+	 * @see mvcmetamodel.TextField#getMaxLength()
+	 * @see #getTextField()
+	 * @generated
+	 */
+	EAttribute getTextField_MaxLength();
+
+	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Password <em>Password</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1141,25 +1229,25 @@ public interface MvcmetamodelPackage extends EPackage {
 	EAttribute getRadioButton_Value();
 
 	/**
-	 * Returns the meta object for class '{@link mvcmetamodel.CheckBoxe <em>Check Boxe</em>}'.
+	 * Returns the meta object for class '{@link mvcmetamodel.CheckBox <em>Check Box</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Check Boxe</em>'.
-	 * @see mvcmetamodel.CheckBoxe
+	 * @return the meta object for class '<em>Check Box</em>'.
+	 * @see mvcmetamodel.CheckBox
 	 * @generated
 	 */
-	EClass getCheckBoxe();
+	EClass getCheckBox();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.CheckBoxe#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.CheckBox#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see mvcmetamodel.CheckBoxe#getValue()
-	 * @see #getCheckBoxe()
+	 * @see mvcmetamodel.CheckBox#getValue()
+	 * @see #getCheckBox()
 	 * @generated
 	 */
-	EAttribute getCheckBoxe_Value();
+	EAttribute getCheckBox_Value();
 
 	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.SubmitButton <em>Submit Button</em>}'.
@@ -1212,6 +1300,38 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCell_Content();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Cell#getComponents <em>Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Components</em>'.
+	 * @see mvcmetamodel.Cell#getComponents()
+	 * @see #getCell()
+	 * @generated
+	 */
+	EReference getCell_Components();
+
+	/**
+	 * Returns the meta object for class '{@link mvcmetamodel.Line <em>Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Line</em>'.
+	 * @see mvcmetamodel.Line
+	 * @generated
+	 */
+	EClass getLine();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Line#getCells <em>Cells</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Cells</em>'.
+	 * @see mvcmetamodel.Line#getCells()
+	 * @see #getLine()
+	 * @generated
+	 */
+	EReference getLine_Cells();
 
 	/**
 	 * Returns the meta object for enum '{@link mvcmetamodel.Size <em>Size</em>}'.
@@ -1306,6 +1426,14 @@ public interface MvcmetamodelPackage extends EPackage {
 		EReference FORM__COMPONENTS = eINSTANCE.getForm_Components();
 
 		/**
+		 * The meta object literal for the '<em><b>Tables</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FORM__TABLES = eINSTANCE.getForm_Tables();
+
+		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.PageImpl <em>Page</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1384,12 +1512,20 @@ public interface MvcmetamodelPackage extends EPackage {
 		EAttribute WEB_APP__NAME = eINSTANCE.getWebApp_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Page</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Pages</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference WEB_APP__PAGE = eINSTANCE.getWebApp_Page();
+		EReference WEB_APP__PAGES = eINSTANCE.getWebApp_Pages();
+
+		/**
+		 * The meta object literal for the '<em><b>Start Page</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_APP__START_PAGE = eINSTANCE.getWebApp_StartPage();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.TableImpl <em>Table</em>}' class.
@@ -1402,28 +1538,12 @@ public interface MvcmetamodelPackage extends EPackage {
 		EClass TABLE = eINSTANCE.getTable();
 
 		/**
-		 * The meta object literal for the '<em><b>Nb Row</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Lines</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TABLE__NB_ROW = eINSTANCE.getTable_NbRow();
-
-		/**
-		 * The meta object literal for the '<em><b>Nb Col</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TABLE__NB_COL = eINSTANCE.getTable_NbCol();
-
-		/**
-		 * The meta object literal for the '<em><b>Cell</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TABLE__CELL = eINSTANCE.getTable_Cell();
+		EReference TABLE__LINES = eINSTANCE.getTable_Lines();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.LinkImpl <em>Link</em>}' class.
@@ -1498,12 +1618,20 @@ public interface MvcmetamodelPackage extends EPackage {
 		EReference BODY__COMPONENTS = eINSTANCE.getBody_Components();
 
 		/**
-		 * The meta object literal for the '<em><b>Form</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Forms</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BODY__FORM = eINSTANCE.getBody_Form();
+		EReference BODY__FORMS = eINSTANCE.getBody_Forms();
+
+		/**
+		 * The meta object literal for the '<em><b>Tables</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BODY__TABLES = eINSTANCE.getBody_Tables();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.HeadImpl <em>Head</em>}' class.
@@ -1552,6 +1680,22 @@ public interface MvcmetamodelPackage extends EPackage {
 		EClass TEXT_FIELD = eINSTANCE.getTextField();
 
 		/**
+		 * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_FIELD__SIZE = eINSTANCE.getTextField_Size();
+
+		/**
+		 * The meta object literal for the '<em><b>Max Length</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_FIELD__MAX_LENGTH = eINSTANCE.getTextField_MaxLength();
+
+		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.PasswordImpl <em>Password</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1580,14 +1724,14 @@ public interface MvcmetamodelPackage extends EPackage {
 		EAttribute RADIO_BUTTON__VALUE = eINSTANCE.getRadioButton_Value();
 
 		/**
-		 * The meta object literal for the '{@link mvcmetamodel.impl.CheckBoxeImpl <em>Check Boxe</em>}' class.
+		 * The meta object literal for the '{@link mvcmetamodel.impl.CheckBoxImpl <em>Check Box</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see mvcmetamodel.impl.CheckBoxeImpl
-		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getCheckBoxe()
+		 * @see mvcmetamodel.impl.CheckBoxImpl
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getCheckBox()
 		 * @generated
 		 */
-		EClass CHECK_BOXE = eINSTANCE.getCheckBoxe();
+		EClass CHECK_BOX = eINSTANCE.getCheckBox();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -1595,7 +1739,7 @@ public interface MvcmetamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CHECK_BOXE__VALUE = eINSTANCE.getCheckBoxe_Value();
+		EAttribute CHECK_BOX__VALUE = eINSTANCE.getCheckBox_Value();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.SubmitButtonImpl <em>Submit Button</em>}' class.
@@ -1642,6 +1786,32 @@ public interface MvcmetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CELL__CONTENT = eINSTANCE.getCell_Content();
+
+		/**
+		 * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CELL__COMPONENTS = eINSTANCE.getCell_Components();
+
+		/**
+		 * The meta object literal for the '{@link mvcmetamodel.impl.LineImpl <em>Line</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mvcmetamodel.impl.LineImpl
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getLine()
+		 * @generated
+		 */
+		EClass LINE = eINSTANCE.getLine();
+
+		/**
+		 * The meta object literal for the '<em><b>Cells</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LINE__CELLS = eINSTANCE.getLine_Cells();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.Size <em>Size</em>}' enum.

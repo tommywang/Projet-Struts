@@ -34,7 +34,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link mvcmetamodel.impl.WebAppImpl#getName <em>Name</em>}</li>
- *   <li>{@link mvcmetamodel.impl.WebAppImpl#getPage <em>Page</em>}</li>
+ *   <li>{@link mvcmetamodel.impl.WebAppImpl#getPages <em>Pages</em>}</li>
+ *   <li>{@link mvcmetamodel.impl.WebAppImpl#getStartPage <em>Start Page</em>}</li>
  * </ul>
  * </p>
  *
@@ -62,14 +63,24 @@ public class WebAppImpl extends EObjectImpl implements WebApp {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getPage() <em>Page</em>}' containment reference list.
+	 * The cached value of the '{@link #getPages() <em>Pages</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPage()
+	 * @see #getPages()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Page> page;
+	protected EList<Page> pages;
+
+	/**
+	 * The cached value of the '{@link #getStartPage() <em>Start Page</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStartPage()
+	 * @generated
+	 * @ordered
+	 */
+	protected Page startPage;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -116,11 +127,54 @@ public class WebAppImpl extends EObjectImpl implements WebApp {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Page> getPage() {
-		if (page == null) {
-			page = new EObjectContainmentEList<Page>(Page.class, this, MvcmetamodelPackage.WEB_APP__PAGE);
+	public EList<Page> getPages() {
+		if (pages == null) {
+			pages = new EObjectContainmentEList<Page>(Page.class, this, MvcmetamodelPackage.WEB_APP__PAGES);
 		}
-		return page;
+		return pages;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Page getStartPage() {
+		return startPage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetStartPage(Page newStartPage, NotificationChain msgs) {
+		Page oldStartPage = startPage;
+		startPage = newStartPage;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.WEB_APP__START_PAGE, oldStartPage, newStartPage);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStartPage(Page newStartPage) {
+		if (newStartPage != startPage) {
+			NotificationChain msgs = null;
+			if (startPage != null)
+				msgs = ((InternalEObject)startPage).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MvcmetamodelPackage.WEB_APP__START_PAGE, null, msgs);
+			if (newStartPage != null)
+				msgs = ((InternalEObject)newStartPage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MvcmetamodelPackage.WEB_APP__START_PAGE, null, msgs);
+			msgs = basicSetStartPage(newStartPage, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.WEB_APP__START_PAGE, newStartPage, newStartPage));
 	}
 
 	/**
@@ -131,8 +185,10 @@ public class WebAppImpl extends EObjectImpl implements WebApp {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MvcmetamodelPackage.WEB_APP__PAGE:
-				return ((InternalEList<?>)getPage()).basicRemove(otherEnd, msgs);
+			case MvcmetamodelPackage.WEB_APP__PAGES:
+				return ((InternalEList<?>)getPages()).basicRemove(otherEnd, msgs);
+			case MvcmetamodelPackage.WEB_APP__START_PAGE:
+				return basicSetStartPage(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -147,8 +203,10 @@ public class WebAppImpl extends EObjectImpl implements WebApp {
 		switch (featureID) {
 			case MvcmetamodelPackage.WEB_APP__NAME:
 				return getName();
-			case MvcmetamodelPackage.WEB_APP__PAGE:
-				return getPage();
+			case MvcmetamodelPackage.WEB_APP__PAGES:
+				return getPages();
+			case MvcmetamodelPackage.WEB_APP__START_PAGE:
+				return getStartPage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -165,9 +223,12 @@ public class WebAppImpl extends EObjectImpl implements WebApp {
 			case MvcmetamodelPackage.WEB_APP__NAME:
 				setName((String)newValue);
 				return;
-			case MvcmetamodelPackage.WEB_APP__PAGE:
-				getPage().clear();
-				getPage().addAll((Collection<? extends Page>)newValue);
+			case MvcmetamodelPackage.WEB_APP__PAGES:
+				getPages().clear();
+				getPages().addAll((Collection<? extends Page>)newValue);
+				return;
+			case MvcmetamodelPackage.WEB_APP__START_PAGE:
+				setStartPage((Page)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -184,8 +245,11 @@ public class WebAppImpl extends EObjectImpl implements WebApp {
 			case MvcmetamodelPackage.WEB_APP__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case MvcmetamodelPackage.WEB_APP__PAGE:
-				getPage().clear();
+			case MvcmetamodelPackage.WEB_APP__PAGES:
+				getPages().clear();
+				return;
+			case MvcmetamodelPackage.WEB_APP__START_PAGE:
+				setStartPage((Page)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -201,8 +265,10 @@ public class WebAppImpl extends EObjectImpl implements WebApp {
 		switch (featureID) {
 			case MvcmetamodelPackage.WEB_APP__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case MvcmetamodelPackage.WEB_APP__PAGE:
-				return page != null && !page.isEmpty();
+			case MvcmetamodelPackage.WEB_APP__PAGES:
+				return pages != null && !pages.isEmpty();
+			case MvcmetamodelPackage.WEB_APP__START_PAGE:
+				return startPage != null;
 		}
 		return super.eIsSet(featureID);
 	}

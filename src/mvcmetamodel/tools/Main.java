@@ -55,8 +55,38 @@ public class Main {
 		MvcmetamodelFactoryImpl fac=new MvcmetamodelFactoryImpl();
 		System.out.println(appli.getName());
 		//WebXML webxml = appli.getWebxml();
-		Page mainPage=appli.getPage().get(0);
+		Page mainPage=appli.getStartPage();
 		String result=new JSPVisitor().visit(mainPage);
+		
+		File monFichier;
+		try
+		{
+			String pageName="test/"+mainPage.getName()+"."+mainPage.getType();
+			monFichier = new File(pageName);
+			monFichier.createNewFile();
+			Main.ecrireFichier(monFichier, result);
+			System.out.println("tout va bien");
+		}
+		catch (IOException e)
+		{
+			System.out.println("Impossible de créer le fichier");
+		}
+		for (Page p :appli.getPages()){
+			File mFile;
+			try
+			{
+				String pageName="test/"+p.getName()+"."+p.getType();
+				mFile = new File(pageName);
+				mFile.createNewFile();
+				Main.ecrireFichier(mFile, result);
+				System.out.println("tout va bien");
+			}
+			catch (IOException e)
+			{
+				System.out.println("Impossible de créer le fichier");
+			}
+		}
+		
 		//String result= new WebXMLVisitor().visit(webxml);
 		System.out.println(result);
 		/*

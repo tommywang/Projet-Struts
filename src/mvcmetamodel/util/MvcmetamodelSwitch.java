@@ -115,7 +115,6 @@ public class MvcmetamodelSwitch<T> {
 			case MvcmetamodelPackage.TABLE: {
 				Table table = (Table)theEObject;
 				T result = caseTable(table);
-				if (result == null) result = caseComponent(table);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -178,10 +177,10 @@ public class MvcmetamodelSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MvcmetamodelPackage.CHECK_BOXE: {
-				CheckBoxe checkBoxe = (CheckBoxe)theEObject;
-				T result = caseCheckBoxe(checkBoxe);
-				if (result == null) result = caseInput(checkBoxe);
+			case MvcmetamodelPackage.CHECK_BOX: {
+				CheckBox checkBox = (CheckBox)theEObject;
+				T result = caseCheckBox(checkBox);
+				if (result == null) result = caseInput(checkBox);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -202,6 +201,12 @@ public class MvcmetamodelSwitch<T> {
 			case MvcmetamodelPackage.CELL: {
 				Cell cell = (Cell)theEObject;
 				T result = caseCell(cell);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MvcmetamodelPackage.LINE: {
+				Line line = (Line)theEObject;
+				T result = caseLine(line);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -315,17 +320,17 @@ public class MvcmetamodelSwitch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Check Boxe</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Check Box</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Check Boxe</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Check Box</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCheckBoxe(CheckBoxe object) {
+	public T caseCheckBox(CheckBox object) {
 		return null;
 	}
 
@@ -371,6 +376,21 @@ public class MvcmetamodelSwitch<T> {
 	 * @generated
 	 */
 	public T caseCell(Cell object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Line</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLine(Line object) {
 		return null;
 	}
 

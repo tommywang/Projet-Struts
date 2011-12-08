@@ -8,7 +8,7 @@ public interface Visitor {
 	
 	public String visit(Cell cell);
 	
-	public String visit(CheckBoxe checkboxe);
+	public String visit(CheckBox checkbox);
 	
 	public String visit(Component component);
 	
@@ -17,6 +17,8 @@ public interface Visitor {
 	public String visit(Head head);
 	
 	public String visit(Input input);
+	
+	public String visit(Line line);
 	
 	public String visit(Link link);
 	

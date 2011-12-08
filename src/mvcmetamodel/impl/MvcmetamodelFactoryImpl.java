@@ -75,10 +75,11 @@ public class MvcmetamodelFactoryImpl extends EFactoryImpl implements Mvcmetamode
 			case MvcmetamodelPackage.TEXT_FIELD: return createTextField();
 			case MvcmetamodelPackage.PASSWORD: return createPassword();
 			case MvcmetamodelPackage.RADIO_BUTTON: return createRadioButton();
-			case MvcmetamodelPackage.CHECK_BOXE: return createCheckBoxe();
+			case MvcmetamodelPackage.CHECK_BOX: return createCheckBox();
 			case MvcmetamodelPackage.SUBMIT_BUTTON: return createSubmitButton();
 			case MvcmetamodelPackage.PARAGRAPHE: return createParagraphe();
 			case MvcmetamodelPackage.CELL: return createCell();
+			case MvcmetamodelPackage.LINE: return createLine();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -263,9 +264,9 @@ public class MvcmetamodelFactoryImpl extends EFactoryImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CheckBoxe createCheckBoxe() {
-		CheckBoxeImpl checkBoxe = new CheckBoxeImpl();
-		return checkBoxe;
+	public CheckBox createCheckBox() {
+		CheckBoxImpl checkBox = new CheckBoxImpl();
+		return checkBox;
 	}
 
 	/**
@@ -296,6 +297,16 @@ public class MvcmetamodelFactoryImpl extends EFactoryImpl implements Mvcmetamode
 	public Cell createCell() {
 		CellImpl cell = new CellImpl();
 		return cell;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Line createLine() {
+		LineImpl line = new LineImpl();
+		return line;
 	}
 
 	/**
