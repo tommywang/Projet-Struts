@@ -12,7 +12,11 @@ public interface Visitor {
 	
 	public String visit(Component component);
 	
+	public String visit(Container container);
+	
 	public String visit(Content content);
+	
+	public String visit(Final mFinal);
 	
 	public String visit(Form form);
 	
@@ -26,7 +30,7 @@ public interface Visitor {
 	
 	public String visit(Page page);
 	
-	public String visit(Paragraphe paragraphe);
+	public String visit(Paragraph paragraph);
 	
 	public String visit(Password password);
 	
@@ -38,7 +42,7 @@ public interface Visitor {
 	
 	public String visit(TextField textField);
 	
-	public String visit(Text text);
+	public String visit(TextLabel textLabel);
 	
 	public String visit(Title title);
 	

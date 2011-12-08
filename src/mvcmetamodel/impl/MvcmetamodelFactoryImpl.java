@@ -63,7 +63,7 @@ public class MvcmetamodelFactoryImpl extends EFactoryImpl implements Mvcmetamode
 		switch (eClass.getClassifierID()) {
 			case MvcmetamodelPackage.FORM: return createForm();
 			case MvcmetamodelPackage.PAGE: return createPage();
-			case MvcmetamodelPackage.TEXT: return createText();
+			case MvcmetamodelPackage.TEXT_LABEL: return createTextLabel();
 			case MvcmetamodelPackage.WEB_APP: return createWebApp();
 			case MvcmetamodelPackage.TABLE: return createTable();
 			case MvcmetamodelPackage.LINK: return createLink();
@@ -77,10 +77,12 @@ public class MvcmetamodelFactoryImpl extends EFactoryImpl implements Mvcmetamode
 			case MvcmetamodelPackage.RADIO_BUTTON: return createRadioButton();
 			case MvcmetamodelPackage.CHECK_BOX: return createCheckBox();
 			case MvcmetamodelPackage.SUBMIT_BUTTON: return createSubmitButton();
-			case MvcmetamodelPackage.PARAGRAPHE: return createParagraphe();
+			case MvcmetamodelPackage.PARAGRAPH: return createParagraph();
 			case MvcmetamodelPackage.CELL: return createCell();
 			case MvcmetamodelPackage.LINE: return createLine();
 			case MvcmetamodelPackage.CONTENT: return createContent();
+			case MvcmetamodelPackage.CONTAINER: return createContainer();
+			case MvcmetamodelPackage.FINAL: return createFinal();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -98,6 +100,8 @@ public class MvcmetamodelFactoryImpl extends EFactoryImpl implements Mvcmetamode
 				return createSizeFromString(eDataType, initialValue);
 			case MvcmetamodelPackage.ALIGN:
 				return createAlignFromString(eDataType, initialValue);
+			case MvcmetamodelPackage.OPERATION:
+				return createOperationFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -115,6 +119,8 @@ public class MvcmetamodelFactoryImpl extends EFactoryImpl implements Mvcmetamode
 				return convertSizeToString(eDataType, instanceValue);
 			case MvcmetamodelPackage.ALIGN:
 				return convertAlignToString(eDataType, instanceValue);
+			case MvcmetamodelPackage.OPERATION:
+				return convertOperationToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -145,9 +151,9 @@ public class MvcmetamodelFactoryImpl extends EFactoryImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Text createText() {
-		TextImpl text = new TextImpl();
-		return text;
+	public TextLabel createTextLabel() {
+		TextLabelImpl textLabel = new TextLabelImpl();
+		return textLabel;
 	}
 
 	/**
@@ -285,9 +291,9 @@ public class MvcmetamodelFactoryImpl extends EFactoryImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Paragraphe createParagraphe() {
-		ParagrapheImpl paragraphe = new ParagrapheImpl();
-		return paragraphe;
+	public Paragraph createParagraph() {
+		ParagraphImpl paragraph = new ParagraphImpl();
+		return paragraph;
 	}
 
 	/**
@@ -318,6 +324,26 @@ public class MvcmetamodelFactoryImpl extends EFactoryImpl implements Mvcmetamode
 	public Content createContent() {
 		ContentImpl content = new ContentImpl();
 		return content;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public mvcmetamodel.Container createContainer() {
+		ContainerImpl container = new ContainerImpl();
+		return container;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Final createFinal() {
+		FinalImpl final_ = new FinalImpl();
+		return final_;
 	}
 
 	/**
@@ -357,6 +383,26 @@ public class MvcmetamodelFactoryImpl extends EFactoryImpl implements Mvcmetamode
 	 * @generated
 	 */
 	public String convertAlignToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Operation createOperationFromString(EDataType eDataType, String initialValue) {
+		Operation result = Operation.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertOperationToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

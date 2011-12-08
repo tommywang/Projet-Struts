@@ -18,12 +18,9 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link mvcmetamodel.Form#getName <em>Name</em>}</li>
  *   <li>{@link mvcmetamodel.Form#getMethod <em>Method</em>}</li>
  *   <li>{@link mvcmetamodel.Form#getAction <em>Action</em>}</li>
- *   <li>{@link mvcmetamodel.Form#getInputs <em>Inputs</em>}</li>
  *   <li>{@link mvcmetamodel.Form#getComponents <em>Components</em>}</li>
- *   <li>{@link mvcmetamodel.Form#getTables <em>Tables</em>}</li>
  * </ul>
  * </p>
  *
@@ -32,32 +29,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Form extends Content {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see mvcmetamodel.MvcmetamodelPackage#getForm_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link mvcmetamodel.Form#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Method</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -111,22 +82,6 @@ public interface Form extends Content {
 	void setAction(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Inputs</b></em>' containment reference list.
-	 * The list contents are of type {@link mvcmetamodel.Input}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Inputs</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Inputs</em>' containment reference list.
-	 * @see mvcmetamodel.MvcmetamodelPackage#getForm_Inputs()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Input> getInputs();
-
-	/**
 	 * Returns the value of the '<em><b>Components</b></em>' containment reference list.
 	 * The list contents are of type {@link mvcmetamodel.Component}.
 	 * <!-- begin-user-doc -->
@@ -141,21 +96,5 @@ public interface Form extends Content {
 	 * @generated
 	 */
 	EList<Component> getComponents();
-
-	/**
-	 * Returns the value of the '<em><b>Tables</b></em>' containment reference list.
-	 * The list contents are of type {@link mvcmetamodel.Table}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Tables</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tables</em>' containment reference list.
-	 * @see mvcmetamodel.MvcmetamodelPackage#getForm_Tables()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Table> getTables();
 
 } // Form

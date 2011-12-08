@@ -59,7 +59,6 @@ public class CellImpl extends EObjectImpl implements Cell {
 	 * @ordered
 	 */
 	protected static final Align ALIGN_EDEFAULT = Align.LEFT;
-
 	/**
 	 * The cached value of the '{@link #getAlign() <em>Align</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -69,7 +68,6 @@ public class CellImpl extends EObjectImpl implements Cell {
 	 * @ordered
 	 */
 	protected Align align = ALIGN_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getColspan() <em>Colspan</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -79,7 +77,6 @@ public class CellImpl extends EObjectImpl implements Cell {
 	 * @ordered
 	 */
 	protected static final int COLSPAN_EDEFAULT = 0;
-
 	/**
 	 * The cached value of the '{@link #getColspan() <em>Colspan</em>}' attribute.
 	 * <!-- begin-user-doc -->

@@ -5,7 +5,24 @@
 <title>Main Page</title>
 </head>
 <body>
-<A HREF=ContactCreation.do> Ajouter un nouveau Contact en utilisant l'Action Form Validation
- </A>
+componentconta<html:form action="/AddContact">
+componentconta<table>
+<tr>
+<td align="center" >
+</td>
+</tr>
+<tr>
+<td align="right" >
+componentfinalFirst Name
+</td>
+<td align="left" >
+componentfinal</td>
+</tr>
+<tr>
+<td align="right" >
+componentfinal</td>
+</tr>
+</table>
+</html:form>
 </body>
 </html:html>

@@ -44,13 +44,13 @@ public interface MvcmetamodelFactory extends EFactory {
 	Page createPage();
 
 	/**
-	 * Returns a new object of class '<em>Text</em>'.
+	 * Returns a new object of class '<em>Text Label</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Text</em>'.
+	 * @return a new object of class '<em>Text Label</em>'.
 	 * @generated
 	 */
-	Text createText();
+	TextLabel createTextLabel();
 
 	/**
 	 * Returns a new object of class '<em>Web App</em>'.
@@ -170,13 +170,13 @@ public interface MvcmetamodelFactory extends EFactory {
 	SubmitButton createSubmitButton();
 
 	/**
-	 * Returns a new object of class '<em>Paragraphe</em>'.
+	 * Returns a new object of class '<em>Paragraph</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Paragraphe</em>'.
+	 * @return a new object of class '<em>Paragraph</em>'.
 	 * @generated
 	 */
-	Paragraphe createParagraphe();
+	Paragraph createParagraph();
 
 	/**
 	 * Returns a new object of class '<em>Cell</em>'.
@@ -204,6 +204,24 @@ public interface MvcmetamodelFactory extends EFactory {
 	 * @generated
 	 */
 	Content createContent();
+
+	/**
+	 * Returns a new object of class '<em>Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Container</em>'.
+	 * @generated
+	 */
+	Container createContainer();
+
+	/**
+	 * Returns a new object of class '<em>Final</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Final</em>'.
+	 * @generated
+	 */
+	Final createFinal();
 
 	/**
 	 * Returns the package supported by this factory.

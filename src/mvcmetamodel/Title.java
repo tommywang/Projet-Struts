@@ -23,7 +23,7 @@ package mvcmetamodel;
  * @model
  * @generated
  */
-public interface Title extends Component {
+public interface Title extends Container {
 	/**
 	 * Returns the value of the '<em><b>Size</b></em>' attribute.
 	 * The literals are from the enumeration {@link mvcmetamodel.Size}.

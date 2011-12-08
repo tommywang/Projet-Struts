@@ -21,14 +21,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link mvcmetamodel.impl.TextFieldImpl#getSize <em>Size</em>}</li>
- *   <li>{@link mvcmetamodel.impl.TextFieldImpl#getMaxLength <em>Max Length</em>}</li>
  *   <li>{@link mvcmetamodel.impl.TextFieldImpl#getName <em>Name</em>}</li>
+ *   <li>{@link mvcmetamodel.impl.TextFieldImpl#getMaxLength <em>Max Length</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class TextFieldImpl extends ComponentImpl implements TextField {
+public class TextFieldImpl extends InputImpl implements TextField {
 	/**
 	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -48,25 +48,6 @@ public class TextFieldImpl extends ComponentImpl implements TextField {
 	 */
 	protected int size = SIZE_EDEFAULT;
 	/**
-	 * The default value of the '{@link #getMaxLength() <em>Max Length</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMaxLength()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int MAX_LENGTH_EDEFAULT = 0;
-	/**
-	 * The cached value of the '{@link #getMaxLength() <em>Max Length</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMaxLength()
-	 * @generated
-	 * @ordered
-	 */
-	protected int maxLength = MAX_LENGTH_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -84,6 +65,24 @@ public class TextFieldImpl extends ComponentImpl implements TextField {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getMaxLength() <em>Max Length</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxLength()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int MAX_LENGTH_EDEFAULT = 0;
+	/**
+	 * The cached value of the '{@link #getMaxLength() <em>Max Length</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxLength()
+	 * @generated
+	 * @ordered
+	 */
+	protected int maxLength = MAX_LENGTH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -177,10 +176,10 @@ public class TextFieldImpl extends ComponentImpl implements TextField {
 		switch (featureID) {
 			case MvcmetamodelPackage.TEXT_FIELD__SIZE:
 				return getSize();
-			case MvcmetamodelPackage.TEXT_FIELD__MAX_LENGTH:
-				return getMaxLength();
 			case MvcmetamodelPackage.TEXT_FIELD__NAME:
 				return getName();
+			case MvcmetamodelPackage.TEXT_FIELD__MAX_LENGTH:
+				return getMaxLength();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -196,11 +195,11 @@ public class TextFieldImpl extends ComponentImpl implements TextField {
 			case MvcmetamodelPackage.TEXT_FIELD__SIZE:
 				setSize((Integer)newValue);
 				return;
-			case MvcmetamodelPackage.TEXT_FIELD__MAX_LENGTH:
-				setMaxLength((Integer)newValue);
-				return;
 			case MvcmetamodelPackage.TEXT_FIELD__NAME:
 				setName((String)newValue);
+				return;
+			case MvcmetamodelPackage.TEXT_FIELD__MAX_LENGTH:
+				setMaxLength((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -217,11 +216,11 @@ public class TextFieldImpl extends ComponentImpl implements TextField {
 			case MvcmetamodelPackage.TEXT_FIELD__SIZE:
 				setSize(SIZE_EDEFAULT);
 				return;
-			case MvcmetamodelPackage.TEXT_FIELD__MAX_LENGTH:
-				setMaxLength(MAX_LENGTH_EDEFAULT);
-				return;
 			case MvcmetamodelPackage.TEXT_FIELD__NAME:
 				setName(NAME_EDEFAULT);
+				return;
+			case MvcmetamodelPackage.TEXT_FIELD__MAX_LENGTH:
+				setMaxLength(MAX_LENGTH_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -237,10 +236,10 @@ public class TextFieldImpl extends ComponentImpl implements TextField {
 		switch (featureID) {
 			case MvcmetamodelPackage.TEXT_FIELD__SIZE:
 				return size != SIZE_EDEFAULT;
-			case MvcmetamodelPackage.TEXT_FIELD__MAX_LENGTH:
-				return maxLength != MAX_LENGTH_EDEFAULT;
 			case MvcmetamodelPackage.TEXT_FIELD__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case MvcmetamodelPackage.TEXT_FIELD__MAX_LENGTH:
+				return maxLength != MAX_LENGTH_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -257,10 +256,10 @@ public class TextFieldImpl extends ComponentImpl implements TextField {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (size: ");
 		result.append(size);
-		result.append(", maxLength: ");
-		result.append(maxLength);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", maxLength: ");
+		result.append(maxLength);
 		result.append(')');
 		return result.toString();
 	}

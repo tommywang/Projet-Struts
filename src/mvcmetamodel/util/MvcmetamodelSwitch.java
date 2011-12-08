@@ -100,11 +100,12 @@ public class MvcmetamodelSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MvcmetamodelPackage.TEXT: {
-				Text text = (Text)theEObject;
-				T result = caseText(text);
-				if (result == null) result = caseComponent(text);
-				if (result == null) result = caseContent(text);
+			case MvcmetamodelPackage.TEXT_LABEL: {
+				TextLabel textLabel = (TextLabel)theEObject;
+				T result = caseTextLabel(textLabel);
+				if (result == null) result = caseFinal(textLabel);
+				if (result == null) result = caseComponent(textLabel);
+				if (result == null) result = caseContent(textLabel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -117,6 +118,8 @@ public class MvcmetamodelSwitch<T> {
 			case MvcmetamodelPackage.TABLE: {
 				Table table = (Table)theEObject;
 				T result = caseTable(table);
+				if (result == null) result = caseContainer(table);
+				if (result == null) result = caseComponent(table);
 				if (result == null) result = caseContent(table);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -124,6 +127,7 @@ public class MvcmetamodelSwitch<T> {
 			case MvcmetamodelPackage.LINK: {
 				Link link = (Link)theEObject;
 				T result = caseLink(link);
+				if (result == null) result = caseContainer(link);
 				if (result == null) result = caseComponent(link);
 				if (result == null) result = caseContent(link);
 				if (result == null) result = defaultCase(theEObject);
@@ -139,6 +143,9 @@ public class MvcmetamodelSwitch<T> {
 			case MvcmetamodelPackage.INPUT: {
 				Input input = (Input)theEObject;
 				T result = caseInput(input);
+				if (result == null) result = caseFinal(input);
+				if (result == null) result = caseComponent(input);
+				if (result == null) result = caseContent(input);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -157,6 +164,7 @@ public class MvcmetamodelSwitch<T> {
 			case MvcmetamodelPackage.TITLE: {
 				Title title = (Title)theEObject;
 				T result = caseTitle(title);
+				if (result == null) result = caseContainer(title);
 				if (result == null) result = caseComponent(title);
 				if (result == null) result = caseContent(title);
 				if (result == null) result = defaultCase(theEObject);
@@ -165,6 +173,8 @@ public class MvcmetamodelSwitch<T> {
 			case MvcmetamodelPackage.TEXT_FIELD: {
 				TextField textField = (TextField)theEObject;
 				T result = caseTextField(textField);
+				if (result == null) result = caseInput(textField);
+				if (result == null) result = caseFinal(textField);
 				if (result == null) result = caseComponent(textField);
 				if (result == null) result = caseContent(textField);
 				if (result == null) result = defaultCase(theEObject);
@@ -173,6 +183,8 @@ public class MvcmetamodelSwitch<T> {
 			case MvcmetamodelPackage.PASSWORD: {
 				Password password = (Password)theEObject;
 				T result = casePassword(password);
+				if (result == null) result = caseInput(password);
+				if (result == null) result = caseFinal(password);
 				if (result == null) result = caseComponent(password);
 				if (result == null) result = caseContent(password);
 				if (result == null) result = defaultCase(theEObject);
@@ -182,6 +194,9 @@ public class MvcmetamodelSwitch<T> {
 				RadioButton radioButton = (RadioButton)theEObject;
 				T result = caseRadioButton(radioButton);
 				if (result == null) result = caseInput(radioButton);
+				if (result == null) result = caseFinal(radioButton);
+				if (result == null) result = caseComponent(radioButton);
+				if (result == null) result = caseContent(radioButton);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -189,6 +204,9 @@ public class MvcmetamodelSwitch<T> {
 				CheckBox checkBox = (CheckBox)theEObject;
 				T result = caseCheckBox(checkBox);
 				if (result == null) result = caseInput(checkBox);
+				if (result == null) result = caseFinal(checkBox);
+				if (result == null) result = caseComponent(checkBox);
+				if (result == null) result = caseContent(checkBox);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -196,14 +214,18 @@ public class MvcmetamodelSwitch<T> {
 				SubmitButton submitButton = (SubmitButton)theEObject;
 				T result = caseSubmitButton(submitButton);
 				if (result == null) result = caseInput(submitButton);
+				if (result == null) result = caseFinal(submitButton);
+				if (result == null) result = caseComponent(submitButton);
+				if (result == null) result = caseContent(submitButton);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MvcmetamodelPackage.PARAGRAPHE: {
-				Paragraphe paragraphe = (Paragraphe)theEObject;
-				T result = caseParagraphe(paragraphe);
-				if (result == null) result = caseComponent(paragraphe);
-				if (result == null) result = caseContent(paragraphe);
+			case MvcmetamodelPackage.PARAGRAPH: {
+				Paragraph paragraph = (Paragraph)theEObject;
+				T result = caseParagraph(paragraph);
+				if (result == null) result = caseContainer(paragraph);
+				if (result == null) result = caseComponent(paragraph);
+				if (result == null) result = caseContent(paragraph);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -222,6 +244,22 @@ public class MvcmetamodelSwitch<T> {
 			case MvcmetamodelPackage.CONTENT: {
 				Content content = (Content)theEObject;
 				T result = caseContent(content);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MvcmetamodelPackage.CONTAINER: {
+				Container container = (Container)theEObject;
+				T result = caseContainer(container);
+				if (result == null) result = caseComponent(container);
+				if (result == null) result = caseContent(container);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MvcmetamodelPackage.FINAL: {
+				Final final_ = (Final)theEObject;
+				T result = caseFinal(final_);
+				if (result == null) result = caseComponent(final_);
+				if (result == null) result = caseContent(final_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -260,17 +298,17 @@ public class MvcmetamodelSwitch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Text</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Text Label</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Text</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Text Label</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseText(Text object) {
+	public T caseTextLabel(TextLabel object) {
 		return null;
 	}
 
@@ -365,17 +403,17 @@ public class MvcmetamodelSwitch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Paragraphe</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Paragraph</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Paragraphe</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Paragraph</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParagraphe(Paragraphe object) {
+	public T caseParagraph(Paragraph object) {
 		return null;
 	}
 
@@ -421,6 +459,36 @@ public class MvcmetamodelSwitch<T> {
 	 * @generated
 	 */
 	public T caseContent(Content object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Container</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseContainer(Container object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Final</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Final</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFinal(Final object) {
 		return null;
 	}
 

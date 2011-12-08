@@ -10,11 +10,8 @@ import java.util.Collection;
 
 import mvcmetamodel.Body;
 import mvcmetamodel.Content;
-import mvcmetamodel.Component;
-import mvcmetamodel.Form;
 import mvcmetamodel.MvcmetamodelPackage;
 
-import mvcmetamodel.Table;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;

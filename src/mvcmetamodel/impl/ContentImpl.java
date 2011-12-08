@@ -8,11 +8,8 @@ package mvcmetamodel.impl;
 
 import java.util.Collection;
 
-import mvcmetamodel.Component;
 import mvcmetamodel.Content;
-import mvcmetamodel.Form;
 import mvcmetamodel.MvcmetamodelPackage;
-import mvcmetamodel.Table;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 

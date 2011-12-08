@@ -80,8 +80,8 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 				return createPageAdapter();
 			}
 			@Override
-			public Adapter caseText(Text object) {
-				return createTextAdapter();
+			public Adapter caseTextLabel(TextLabel object) {
+				return createTextLabelAdapter();
 			}
 			@Override
 			public Adapter caseWebApp(WebApp object) {
@@ -136,8 +136,8 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 				return createSubmitButtonAdapter();
 			}
 			@Override
-			public Adapter caseParagraphe(Paragraphe object) {
-				return createParagrapheAdapter();
+			public Adapter caseParagraph(Paragraph object) {
+				return createParagraphAdapter();
 			}
 			@Override
 			public Adapter caseCell(Cell object) {
@@ -150,6 +150,14 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseContent(Content object) {
 				return createContentAdapter();
+			}
+			@Override
+			public Adapter caseContainer(Container object) {
+				return createContainerAdapter();
+			}
+			@Override
+			public Adapter caseFinal(Final object) {
+				return createFinalAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -200,16 +208,16 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Text <em>Text</em>}'.
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.TextLabel <em>Text Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mvcmetamodel.Text
+	 * @see mvcmetamodel.TextLabel
 	 * @generated
 	 */
-	public Adapter createTextAdapter() {
+	public Adapter createTextLabelAdapter() {
 		return null;
 	}
 
@@ -298,16 +306,16 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Paragraphe <em>Paragraphe</em>}'.
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Paragraph <em>Paragraph</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see mvcmetamodel.Paragraphe
+	 * @see mvcmetamodel.Paragraph
 	 * @generated
 	 */
-	public Adapter createParagrapheAdapter() {
+	public Adapter createParagraphAdapter() {
 		return null;
 	}
 
@@ -350,6 +358,34 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createContentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Container <em>Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see mvcmetamodel.Container
+	 * @generated
+	 */
+	public Adapter createContainerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.Final <em>Final</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see mvcmetamodel.Final
+	 * @generated
+	 */
+	public Adapter createFinalAdapter() {
 		return null;
 	}
 

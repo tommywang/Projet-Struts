@@ -38,7 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class TableImpl extends ContentImpl implements Table {
+public class TableImpl extends ContainerImpl implements Table {
 	/**
 	 * The cached value of the '{@link #getLines() <em>Lines</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

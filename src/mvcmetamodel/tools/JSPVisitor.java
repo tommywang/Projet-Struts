@@ -24,27 +24,6 @@ public class JSPVisitor implements Visitor {
 		result+="</html:html>";
 		//header+="<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd>\"\n";
 		return header+result;
-		/*
-		String result="";
-		result+="<%@ page language=\"java\" contentType=\"text/html; charset=ISO-8859-1\" pageEncoding=\"ISO-8859-1\"%>\n" +
-				"<%@ taglib prefix=\"html\" uri=\"http://struts.apache.org/tags-html\" %>\n" +
-				"<%@ taglib prefix=\"bean\" uri=\"http://struts.apache.org/tags-bean\" %>\n" +
-				"<%@ taglib prefix=\"logic\" uri=\"http://struts.apache.org/tags-logic\" %>\n" +
-				"<%@ taglib prefix=\"nested\" uri=\"http://struts.apache.org/tags-nested\" %>\n" +
-				"<html:html>\n" +
-				"<head>\n";
-				if (!(page.getTitle().equals(""))){
-					result+="<title><bean:message key=" + page.getTitle() + "/></title>\n";
-				}
-				result+="</head>\n";
-				if (page.getComponents()!=null){
-					@SuppressWarnings("unchecked")
-					EList<Component> listComponents = page.getComponents();
-					for (Component component : listComponents) {
-						result+=page.accept(component);
-					}
-				}
-		return result;*/
 	}
 
 	@Override
@@ -87,14 +66,13 @@ public class JSPVisitor implements Visitor {
 	@Override
 	public String visit(Component component) {
 		String result="";
-		if (component instanceof Link){
-			result+=this.visit((Link) component);
+		if (component instanceof Final){
+			System.out.println("hell");
+			result+=this.visit((Final) component);
 		}
-		else if (component instanceof Text){
-			result+=this.visit((Text) component);
-		}
-		else if (component instanceof TextField){
-			result+=this.visit((TextField) component);
+		else if (component instanceof Container){
+			System.out.println("hell");
+			result+=this.visit((Container) component);
 		}
 		return result;
 	}
@@ -102,18 +80,10 @@ public class JSPVisitor implements Visitor {
 	@Override
 	public String visit(Form form) {
 		String result="";
-
 		result+="<html:form "+ "action=\"/" +form.getAction()+ "\">\n";
 		for (Component c:form.getComponents()){
 			result+=this.visit(c);
 		}
-		for (Table t:form.getTables()){
-			result+=this.visit(t);
-		}
-		for (Input c:form.getInputs()){
-			result+=this.visit(c);
-		}
-
 		result+="</html:form>\n";
 		return result;
 	}
@@ -124,20 +94,30 @@ public class JSPVisitor implements Visitor {
 		result+="<head>\n";
 		if (!(head.getTitle().equals(""))){
 			result+="<title>" + head.getTitle() + "</title>\n";
-		}/*
-		if (!head.getComponents().isEmpty()){
-			for (Component c:head.getComponents()){
-				result+=this.visit(c);
-			}
-		}*/
+		}
 		result+="</head>\n";
 		return result;
 	}
 
 	@Override
 	public String visit(Input input) {
-		// TODO Auto-generated method stub
-		return null;
+		String result="";
+		if (input instanceof RadioButton){
+			result+=this.visit((RadioButton) input);
+		}
+		else if (input instanceof TextField){
+			result+=this.visit((TextField) input);
+		}
+		else if (input instanceof Password){
+			result+=this.visit((Password) input);
+		}
+		else if (input instanceof CheckBox){
+			result+=this.visit((CheckBox) input);
+		}
+		else if (input instanceof SubmitButton){
+			result+=this.visit((SubmitButton) input);
+		}
+		return result;
 	}
 
 	@Override
@@ -153,15 +133,11 @@ public class JSPVisitor implements Visitor {
 	}
 
 	@Override
-	public String visit(Paragraphe paragraphe) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public String visit(Password password) {
-		// TODO Auto-generated method stub
-		return null;
+		String result="";
+		result+="<html:password property=\""+password.getName()+"\" size=\""+password.getSize()
+		+"\" maxlength=\""+password.getMaxLength()+"\"/>\n";
+		return result;
 	}
 
 	@Override
@@ -172,8 +148,9 @@ public class JSPVisitor implements Visitor {
 
 	@Override
 	public String visit(SubmitButton submitButton) {
-		// TODO Auto-generated method stub
-		return null;
+		String result="";
+		result+="<html:submit>"+submitButton.getValue()+"</html:submit>\n";
+		return result;
 	}
 
 	@Override
@@ -192,13 +169,6 @@ public class JSPVisitor implements Visitor {
 		String result="";
 		result+="<html:text property=\""+textField.getName()+"\" size=\""+textField.getSize()
 		+"\" maxlength=\""+textField.getMaxLength()+"\"/>\n";
-		return result;
-	}
-
-	@Override
-	public String visit(Text text) {
-		String result="";
-		result=text.getValue()+"\n";
 		return result;
 	}
 
@@ -258,6 +228,58 @@ public class JSPVisitor implements Visitor {
 			System.out.println("table");
 			result+=this.visit((Table) content);
 		}
+		return result;
+	}
+
+	@Override
+	public String visit(Container container) {
+		String result="conta";
+		if (container instanceof Link){
+			result+=this.visit((Link) container);
+		}
+		else if (container instanceof TextField){
+			result+=this.visit((TextField) container);
+		}
+		else if (container instanceof Table){
+			result+=this.visit((Table) container);
+		}
+		else if (container instanceof Title){
+			result+=this.visit((Title) container);
+		}
+		else if (container instanceof Paragraph){
+			result+=this.visit((Paragraph) container);
+		}
+		return result;
+	}
+
+	@Override
+	public String visit(Final mFinal) {
+		String result="final";
+		if (mFinal instanceof TextLabel){
+			result+=this.visit((TextLabel) mFinal);
+		}
+		else if (mFinal instanceof Input){
+			result+=this.visit((Input) mFinal);
+		}
+		
+		return result;
+	}
+
+	@Override
+	public String visit(Paragraph paragraph) {
+		String result="";
+		result+="<p>\n";
+		for (Component c:paragraph.getComponents()){
+			result+=this.visit(c);
+		}
+		result+="</p>\n";
+		return null;
+	}
+
+	@Override
+	public String visit(TextLabel textLabel) {
+		String result="testLabel";
+		result=textLabel.getValue()+"\n";
 		return result;
 	}
 

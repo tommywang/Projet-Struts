@@ -23,7 +23,7 @@ package mvcmetamodel;
  * @model
  * @generated
  */
-public interface Link extends Component {
+public interface Link extends Container {
 	/**
 	 * Returns the value of the '<em><b>Url</b></em>' attribute.
 	 * <!-- begin-user-doc -->

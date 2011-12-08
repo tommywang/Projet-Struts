@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Table extends Content {
+public interface Table extends Container {
 	/**
 	 * Returns the value of the '<em><b>Lines</b></em>' containment reference list.
 	 * The list contents are of type {@link mvcmetamodel.Line}.

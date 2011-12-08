@@ -16,8 +16,8 @@ package mvcmetamodel;
  * The following features are supported:
  * <ul>
  *   <li>{@link mvcmetamodel.TextField#getSize <em>Size</em>}</li>
- *   <li>{@link mvcmetamodel.TextField#getMaxLength <em>Max Length</em>}</li>
  *   <li>{@link mvcmetamodel.TextField#getName <em>Name</em>}</li>
+ *   <li>{@link mvcmetamodel.TextField#getMaxLength <em>Max Length</em>}</li>
  * </ul>
  * </p>
  *
@@ -25,7 +25,7 @@ package mvcmetamodel;
  * @model
  * @generated
  */
-public interface TextField extends Component {
+public interface TextField extends Input {
 
 	/**
 	 * Returns the value of the '<em><b>Size</b></em>' attribute.
