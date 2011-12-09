@@ -21,6 +21,8 @@ public interface Visitor {
 	public String visit(Form form);
 	
 	public String visit(Head head);
+
+	public String visit(HeadTitle headTitle);
 	
 	public String visit(Input input);
 	

@@ -83,6 +83,7 @@ public class MvcmetamodelFactoryImpl extends EFactoryImpl implements Mvcmetamode
 			case MvcmetamodelPackage.CONTENT: return createContent();
 			case MvcmetamodelPackage.CONTAINER: return createContainer();
 			case MvcmetamodelPackage.FINAL: return createFinal();
+			case MvcmetamodelPackage.HEAD_TITLE: return createHeadTitle();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -344,6 +345,16 @@ public class MvcmetamodelFactoryImpl extends EFactoryImpl implements Mvcmetamode
 	public Final createFinal() {
 		FinalImpl final_ = new FinalImpl();
 		return final_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HeadTitle createHeadTitle() {
+		HeadTitleImpl headTitle = new HeadTitleImpl();
+		return headTitle;
 	}
 
 	/**

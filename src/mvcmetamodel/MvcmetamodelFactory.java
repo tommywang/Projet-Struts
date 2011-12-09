@@ -224,6 +224,15 @@ public interface MvcmetamodelFactory extends EFactory {
 	Final createFinal();
 
 	/**
+	 * Returns a new object of class '<em>Head Title</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Head Title</em>'.
+	 * @generated
+	 */
+	HeadTitle createHeadTitle();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

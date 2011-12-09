@@ -378,13 +378,31 @@ public interface MvcmetamodelPackage extends EPackage {
 	int TEXT_LABEL__VALUE = FINAL_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Check Ressource</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_LABEL__CHECK_RESSOURCE = FINAL_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_LABEL__KEY = FINAL_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Text Label</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_LABEL_FEATURE_COUNT = FINAL_FEATURE_COUNT + 1;
+	int TEXT_LABEL_FEATURE_COUNT = FINAL_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -487,13 +505,22 @@ public interface MvcmetamodelPackage extends EPackage {
 	int LINK__COMPONENTS = CONTAINER__COMPONENTS;
 
 	/**
-	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * The feature id for the '<em><b>Page Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__URL = CONTAINER_FEATURE_COUNT + 0;
+	int LINK__PAGE_NAME = CONTAINER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Page Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__PAGE_TYPE = CONTAINER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Link</em>' class.
@@ -502,7 +529,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_FEATURE_COUNT = CONTAINER_FEATURE_COUNT + 1;
+	int LINK_FEATURE_COUNT = CONTAINER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Input</em>' class.
@@ -532,22 +559,22 @@ public interface MvcmetamodelPackage extends EPackage {
 	int BODY_FEATURE_COUNT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HEAD__TITLE = 0;
-
-	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HEAD__COMPONENTS = 1;
+	int HEAD__COMPONENTS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Head Title</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HEAD__HEAD_TITLE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Head</em>' class.
@@ -613,13 +640,22 @@ public interface MvcmetamodelPackage extends EPackage {
 	int TEXT_FIELD__MAX_LENGTH = INPUT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Error Text</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FIELD__ERROR_TEXT = INPUT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Text Field</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_FIELD_FEATURE_COUNT = INPUT_FEATURE_COUNT + 3;
+	int TEXT_FIELD_FEATURE_COUNT = INPUT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -649,13 +685,22 @@ public interface MvcmetamodelPackage extends EPackage {
 	int PASSWORD__MAX_LENGTH = INPUT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Error Password</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PASSWORD__ERROR_PASSWORD = INPUT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Password</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PASSWORD_FEATURE_COUNT = INPUT_FEATURE_COUNT + 3;
+	int PASSWORD_FEATURE_COUNT = INPUT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -721,13 +766,31 @@ public interface MvcmetamodelPackage extends EPackage {
 	int SUBMIT_BUTTON__ERROR_TARGET = INPUT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Success Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMIT_BUTTON__SUCCESS_TYPE = INPUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Error Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMIT_BUTTON__ERROR_TYPE = INPUT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Submit Button</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBMIT_BUTTON_FEATURE_COUNT = INPUT_FEATURE_COUNT + 3;
+	int SUBMIT_BUTTON_FEATURE_COUNT = INPUT_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.impl.ParagraphImpl <em>Paragraph</em>}' class.
@@ -812,6 +875,34 @@ public interface MvcmetamodelPackage extends EPackage {
 	int LINE_FEATURE_COUNT = 1;
 
 	/**
+	 * The meta object id for the '{@link mvcmetamodel.impl.HeadTitleImpl <em>Head Title</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see mvcmetamodel.impl.HeadTitleImpl
+	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getHeadTitle()
+	 * @generated
+	 */
+	int HEAD_TITLE = 22;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HEAD_TITLE__TEXT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Head Title</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HEAD_TITLE_FEATURE_COUNT = 1;
+
+	/**
 	 * The meta object id for the '{@link mvcmetamodel.Size <em>Size</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -819,7 +910,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getSize()
 	 * @generated
 	 */
-	int SIZE = 22;
+	int SIZE = 23;
 
 	/**
 	 * The meta object id for the '{@link mvcmetamodel.Align <em>Align</em>}' enum.
@@ -829,7 +920,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getAlign()
 	 * @generated
 	 */
-	int ALIGN = 23;
+	int ALIGN = 24;
 
 
 	/**
@@ -840,7 +931,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getOperation()
 	 * @generated
 	 */
-	int OPERATION = 24;
+	int OPERATION = 25;
 
 
 	/**
@@ -962,6 +1053,28 @@ public interface MvcmetamodelPackage extends EPackage {
 	EAttribute getTextLabel_Value();
 
 	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.TextLabel#isCheckRessource <em>Check Ressource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Check Ressource</em>'.
+	 * @see mvcmetamodel.TextLabel#isCheckRessource()
+	 * @see #getTextLabel()
+	 * @generated
+	 */
+	EAttribute getTextLabel_CheckRessource();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.TextLabel#getKey <em>Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Key</em>'.
+	 * @see mvcmetamodel.TextLabel#getKey()
+	 * @see #getTextLabel()
+	 * @generated
+	 */
+	EAttribute getTextLabel_Key();
+
+	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.WebApp <em>Web App</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1036,15 +1149,26 @@ public interface MvcmetamodelPackage extends EPackage {
 	EClass getLink();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.Link#getUrl <em>Url</em>}'.
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.Link#getPageName <em>Page Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Url</em>'.
-	 * @see mvcmetamodel.Link#getUrl()
+	 * @return the meta object for the attribute '<em>Page Name</em>'.
+	 * @see mvcmetamodel.Link#getPageName()
 	 * @see #getLink()
 	 * @generated
 	 */
-	EAttribute getLink_Url();
+	EAttribute getLink_PageName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.Link#getPageType <em>Page Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Page Type</em>'.
+	 * @see mvcmetamodel.Link#getPageType()
+	 * @see #getLink()
+	 * @generated
+	 */
+	EAttribute getLink_PageType();
 
 	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Component <em>Component</em>}'.
@@ -1098,17 +1222,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	EClass getHead();
 
 	/**
-	 * Returns the meta object for the attribute '{@link mvcmetamodel.Head#getTitle <em>Title</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Title</em>'.
-	 * @see mvcmetamodel.Head#getTitle()
-	 * @see #getHead()
-	 * @generated
-	 */
-	EAttribute getHead_Title();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Head#getComponents <em>Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1118,6 +1231,17 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getHead_Components();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link mvcmetamodel.Head#getHeadTitle <em>Head Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Head Title</em>'.
+	 * @see mvcmetamodel.Head#getHeadTitle()
+	 * @see #getHead()
+	 * @generated
+	 */
+	EReference getHead_HeadTitle();
 
 	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Title <em>Title</em>}'.
@@ -1173,6 +1297,17 @@ public interface MvcmetamodelPackage extends EPackage {
 	EAttribute getTextField_MaxLength();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link mvcmetamodel.TextField#getErrorText <em>Error Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Error Text</em>'.
+	 * @see mvcmetamodel.TextField#getErrorText()
+	 * @see #getTextField()
+	 * @generated
+	 */
+	EReference getTextField_ErrorText();
+
+	/**
 	 * Returns the meta object for the attribute '{@link mvcmetamodel.TextField#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1225,6 +1360,17 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPassword_MaxLength();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link mvcmetamodel.Password#getErrorPassword <em>Error Password</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Error Password</em>'.
+	 * @see mvcmetamodel.Password#getErrorPassword()
+	 * @see #getPassword()
+	 * @generated
+	 */
+	EReference getPassword_ErrorPassword();
 
 	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.RadioButton <em>Radio Button</em>}'.
@@ -1310,6 +1456,28 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSubmitButton_ErrorTarget();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.SubmitButton#getSuccessType <em>Success Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Success Type</em>'.
+	 * @see mvcmetamodel.SubmitButton#getSuccessType()
+	 * @see #getSubmitButton()
+	 * @generated
+	 */
+	EAttribute getSubmitButton_SuccessType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link mvcmetamodel.SubmitButton#getErrorType <em>Error Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Error Type</em>'.
+	 * @see mvcmetamodel.SubmitButton#getErrorType()
+	 * @see #getSubmitButton()
+	 * @generated
+	 */
+	EAttribute getSubmitButton_ErrorType();
 
 	/**
 	 * Returns the meta object for class '{@link mvcmetamodel.Paragraph <em>Paragraph</em>}'.
@@ -1425,6 +1593,27 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFinal();
+
+	/**
+	 * Returns the meta object for class '{@link mvcmetamodel.HeadTitle <em>Head Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Head Title</em>'.
+	 * @see mvcmetamodel.HeadTitle
+	 * @generated
+	 */
+	EClass getHeadTitle();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link mvcmetamodel.HeadTitle#getText <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Text</em>'.
+	 * @see mvcmetamodel.HeadTitle#getText()
+	 * @see #getHeadTitle()
+	 * @generated
+	 */
+	EReference getHeadTitle_Text();
 
 	/**
 	 * Returns the meta object for enum '{@link mvcmetamodel.Size <em>Size</em>}'.
@@ -1573,6 +1762,22 @@ public interface MvcmetamodelPackage extends EPackage {
 		EAttribute TEXT_LABEL__VALUE = eINSTANCE.getTextLabel_Value();
 
 		/**
+		 * The meta object literal for the '<em><b>Check Ressource</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_LABEL__CHECK_RESSOURCE = eINSTANCE.getTextLabel_CheckRessource();
+
+		/**
+		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_LABEL__KEY = eINSTANCE.getTextLabel_Key();
+
+		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.WebAppImpl <em>Web App</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1635,12 +1840,20 @@ public interface MvcmetamodelPackage extends EPackage {
 		EClass LINK = eINSTANCE.getLink();
 
 		/**
-		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Page Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LINK__URL = eINSTANCE.getLink_Url();
+		EAttribute LINK__PAGE_NAME = eINSTANCE.getLink_PageName();
+
+		/**
+		 * The meta object literal for the '<em><b>Page Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LINK__PAGE_TYPE = eINSTANCE.getLink_PageType();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.ComponentImpl <em>Component</em>}' class.
@@ -1691,20 +1904,20 @@ public interface MvcmetamodelPackage extends EPackage {
 		EClass HEAD = eINSTANCE.getHead();
 
 		/**
-		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute HEAD__TITLE = eINSTANCE.getHead_Title();
-
-		/**
 		 * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference HEAD__COMPONENTS = eINSTANCE.getHead_Components();
+
+		/**
+		 * The meta object literal for the '<em><b>Head Title</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference HEAD__HEAD_TITLE = eINSTANCE.getHead_HeadTitle();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.TitleImpl <em>Title</em>}' class.
@@ -1751,6 +1964,14 @@ public interface MvcmetamodelPackage extends EPackage {
 		EAttribute TEXT_FIELD__MAX_LENGTH = eINSTANCE.getTextField_MaxLength();
 
 		/**
+		 * The meta object literal for the '<em><b>Error Text</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEXT_FIELD__ERROR_TEXT = eINSTANCE.getTextField_ErrorText();
+
+		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1791,6 +2012,14 @@ public interface MvcmetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PASSWORD__MAX_LENGTH = eINSTANCE.getPassword_MaxLength();
+
+		/**
+		 * The meta object literal for the '<em><b>Error Password</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PASSWORD__ERROR_PASSWORD = eINSTANCE.getPassword_ErrorPassword();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.RadioButtonImpl <em>Radio Button</em>}' class.
@@ -1861,6 +2090,22 @@ public interface MvcmetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SUBMIT_BUTTON__ERROR_TARGET = eINSTANCE.getSubmitButton_ErrorTarget();
+
+		/**
+		 * The meta object literal for the '<em><b>Success Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUBMIT_BUTTON__SUCCESS_TYPE = eINSTANCE.getSubmitButton_SuccessType();
+
+		/**
+		 * The meta object literal for the '<em><b>Error Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUBMIT_BUTTON__ERROR_TYPE = eINSTANCE.getSubmitButton_ErrorType();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.impl.ParagraphImpl <em>Paragraph</em>}' class.
@@ -1961,6 +2206,24 @@ public interface MvcmetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FINAL = eINSTANCE.getFinal();
+
+		/**
+		 * The meta object literal for the '{@link mvcmetamodel.impl.HeadTitleImpl <em>Head Title</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see mvcmetamodel.impl.HeadTitleImpl
+		 * @see mvcmetamodel.impl.MvcmetamodelPackageImpl#getHeadTitle()
+		 * @generated
+		 */
+		EClass HEAD_TITLE = eINSTANCE.getHeadTitle();
+
+		/**
+		 * The meta object literal for the '<em><b>Text</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference HEAD_TITLE__TEXT = eINSTANCE.getHeadTitle_Text();
 
 		/**
 		 * The meta object literal for the '{@link mvcmetamodel.Size <em>Size</em>}' enum.

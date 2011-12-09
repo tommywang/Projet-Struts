@@ -9,8 +9,11 @@ package mvcmetamodel.impl;
 import mvcmetamodel.MvcmetamodelPackage;
 import mvcmetamodel.TextField;
 
+import mvcmetamodel.TextLabel;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -23,6 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link mvcmetamodel.impl.TextFieldImpl#getSize <em>Size</em>}</li>
  *   <li>{@link mvcmetamodel.impl.TextFieldImpl#getName <em>Name</em>}</li>
  *   <li>{@link mvcmetamodel.impl.TextFieldImpl#getMaxLength <em>Max Length</em>}</li>
+ *   <li>{@link mvcmetamodel.impl.TextFieldImpl#getErrorText <em>Error Text</em>}</li>
  * </ul>
  * </p>
  *
@@ -83,6 +87,16 @@ public class TextFieldImpl extends InputImpl implements TextField {
 	 * @ordered
 	 */
 	protected int maxLength = MAX_LENGTH_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getErrorText() <em>Error Text</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getErrorText()
+	 * @generated
+	 * @ordered
+	 */
+	protected TextLabel errorText;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -150,6 +164,63 @@ public class TextFieldImpl extends InputImpl implements TextField {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public TextLabel getErrorText() {
+		return errorText;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetErrorText(TextLabel newErrorText, NotificationChain msgs) {
+		TextLabel oldErrorText = errorText;
+		errorText = newErrorText;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.TEXT_FIELD__ERROR_TEXT, oldErrorText, newErrorText);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setErrorText(TextLabel newErrorText) {
+		if (newErrorText != errorText) {
+			NotificationChain msgs = null;
+			if (errorText != null)
+				msgs = ((InternalEObject)errorText).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MvcmetamodelPackage.TEXT_FIELD__ERROR_TEXT, null, msgs);
+			if (newErrorText != null)
+				msgs = ((InternalEObject)newErrorText).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MvcmetamodelPackage.TEXT_FIELD__ERROR_TEXT, null, msgs);
+			msgs = basicSetErrorText(newErrorText, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.TEXT_FIELD__ERROR_TEXT, newErrorText, newErrorText));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case MvcmetamodelPackage.TEXT_FIELD__ERROR_TEXT:
+				return basicSetErrorText(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getName() {
 		return name;
 	}
@@ -180,6 +251,8 @@ public class TextFieldImpl extends InputImpl implements TextField {
 				return getName();
 			case MvcmetamodelPackage.TEXT_FIELD__MAX_LENGTH:
 				return getMaxLength();
+			case MvcmetamodelPackage.TEXT_FIELD__ERROR_TEXT:
+				return getErrorText();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -200,6 +273,9 @@ public class TextFieldImpl extends InputImpl implements TextField {
 				return;
 			case MvcmetamodelPackage.TEXT_FIELD__MAX_LENGTH:
 				setMaxLength((Integer)newValue);
+				return;
+			case MvcmetamodelPackage.TEXT_FIELD__ERROR_TEXT:
+				setErrorText((TextLabel)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -222,6 +298,9 @@ public class TextFieldImpl extends InputImpl implements TextField {
 			case MvcmetamodelPackage.TEXT_FIELD__MAX_LENGTH:
 				setMaxLength(MAX_LENGTH_EDEFAULT);
 				return;
+			case MvcmetamodelPackage.TEXT_FIELD__ERROR_TEXT:
+				setErrorText((TextLabel)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -240,6 +319,8 @@ public class TextFieldImpl extends InputImpl implements TextField {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case MvcmetamodelPackage.TEXT_FIELD__MAX_LENGTH:
 				return maxLength != MAX_LENGTH_EDEFAULT;
+			case MvcmetamodelPackage.TEXT_FIELD__ERROR_TEXT:
+				return errorText != null;
 		}
 		return super.eIsSet(featureID);
 	}

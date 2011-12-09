@@ -38,6 +38,8 @@
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//TextLabel">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//TextLabel/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//TextLabel/checkRessource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//TextLabel/key"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//WebApp">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//WebApp/name"/>
@@ -48,7 +50,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Table/lines"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Link">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Link/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Link/pageName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Link/pageType"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Component"/>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Input"/>
@@ -56,8 +59,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Body/contents"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Head">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Head/title"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Head/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Head/headTitle"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Title">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Title/size"/>
@@ -66,11 +69,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//TextField/size"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//TextField/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//TextField/maxLength"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//TextField/errorText"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Password">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Password/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Password/size"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//Password/maxLength"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Password/errorPassword"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//RadioButton">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//RadioButton/value"/>
@@ -82,6 +87,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//SubmitButton/value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//SubmitButton/successTarget"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//SubmitButton/errorTarget"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//SubmitButton/successType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mvcmetamodel.ecore#//SubmitButton/errorType"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Paragraph"/>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Cell">
@@ -97,5 +104,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Container/components"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Final"/>
+    <genClasses ecoreClass="mvcmetamodel.ecore#//HeadTitle">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//HeadTitle/text"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

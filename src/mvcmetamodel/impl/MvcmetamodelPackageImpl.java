@@ -12,9 +12,11 @@ import mvcmetamodel.Cell;
 import mvcmetamodel.CheckBox;
 import mvcmetamodel.Component;
 import mvcmetamodel.Content;
+import mvcmetamodel.EClass0;
 import mvcmetamodel.Final;
 import mvcmetamodel.Form;
 import mvcmetamodel.Head;
+import mvcmetamodel.HeadTitle;
 import mvcmetamodel.Input;
 import mvcmetamodel.Line;
 import mvcmetamodel.Link;
@@ -207,6 +209,13 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass headTitleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum sizeEEnum = null;
 
 	/**
@@ -388,6 +397,24 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTextLabel_CheckRessource() {
+		return (EAttribute)textLabelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTextLabel_Key() {
+		return (EAttribute)textLabelEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getWebApp() {
 		return webAppEClass;
 	}
@@ -451,8 +478,17 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLink_Url() {
+	public EAttribute getLink_PageName() {
 		return (EAttribute)linkEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLink_PageType() {
+		return (EAttribute)linkEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -505,8 +541,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getHead_Title() {
-		return (EAttribute)headEClass.getEStructuralFeatures().get(0);
+	public EReference getHead_Components() {
+		return (EReference)headEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -514,7 +550,7 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getHead_Components() {
+	public EReference getHead_HeadTitle() {
 		return (EReference)headEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -568,6 +604,15 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTextField_ErrorText() {
+		return (EReference)textFieldEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getTextField_Name() {
 		return (EAttribute)textFieldEClass.getEStructuralFeatures().get(1);
 	}
@@ -606,6 +651,15 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 */
 	public EAttribute getPassword_MaxLength() {
 		return (EAttribute)passwordEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPassword_ErrorPassword() {
+		return (EReference)passwordEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -678,6 +732,24 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 */
 	public EAttribute getSubmitButton_ErrorTarget() {
 		return (EAttribute)submitButtonEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSubmitButton_SuccessType() {
+		return (EAttribute)submitButtonEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSubmitButton_ErrorType() {
+		return (EAttribute)submitButtonEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -784,6 +856,24 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getHeadTitle() {
+		return headTitleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getHeadTitle_Text() {
+		return (EReference)headTitleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getSize() {
 		return sizeEEnum;
 	}
@@ -847,6 +937,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 
 		textLabelEClass = createEClass(TEXT_LABEL);
 		createEAttribute(textLabelEClass, TEXT_LABEL__VALUE);
+		createEAttribute(textLabelEClass, TEXT_LABEL__CHECK_RESSOURCE);
+		createEAttribute(textLabelEClass, TEXT_LABEL__KEY);
 
 		webAppEClass = createEClass(WEB_APP);
 		createEAttribute(webAppEClass, WEB_APP__NAME);
@@ -857,7 +949,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		createEReference(tableEClass, TABLE__LINES);
 
 		linkEClass = createEClass(LINK);
-		createEAttribute(linkEClass, LINK__URL);
+		createEAttribute(linkEClass, LINK__PAGE_NAME);
+		createEAttribute(linkEClass, LINK__PAGE_TYPE);
 
 		componentEClass = createEClass(COMPONENT);
 
@@ -867,8 +960,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		createEReference(bodyEClass, BODY__CONTENTS);
 
 		headEClass = createEClass(HEAD);
-		createEAttribute(headEClass, HEAD__TITLE);
 		createEReference(headEClass, HEAD__COMPONENTS);
+		createEReference(headEClass, HEAD__HEAD_TITLE);
 
 		titleEClass = createEClass(TITLE);
 		createEAttribute(titleEClass, TITLE__SIZE);
@@ -877,11 +970,13 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		createEAttribute(textFieldEClass, TEXT_FIELD__SIZE);
 		createEAttribute(textFieldEClass, TEXT_FIELD__NAME);
 		createEAttribute(textFieldEClass, TEXT_FIELD__MAX_LENGTH);
+		createEReference(textFieldEClass, TEXT_FIELD__ERROR_TEXT);
 
 		passwordEClass = createEClass(PASSWORD);
 		createEAttribute(passwordEClass, PASSWORD__NAME);
 		createEAttribute(passwordEClass, PASSWORD__SIZE);
 		createEAttribute(passwordEClass, PASSWORD__MAX_LENGTH);
+		createEReference(passwordEClass, PASSWORD__ERROR_PASSWORD);
 
 		radioButtonEClass = createEClass(RADIO_BUTTON);
 		createEAttribute(radioButtonEClass, RADIO_BUTTON__VALUE);
@@ -893,6 +988,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		createEAttribute(submitButtonEClass, SUBMIT_BUTTON__VALUE);
 		createEAttribute(submitButtonEClass, SUBMIT_BUTTON__SUCCESS_TARGET);
 		createEAttribute(submitButtonEClass, SUBMIT_BUTTON__ERROR_TARGET);
+		createEAttribute(submitButtonEClass, SUBMIT_BUTTON__SUCCESS_TYPE);
+		createEAttribute(submitButtonEClass, SUBMIT_BUTTON__ERROR_TYPE);
 
 		paragraphEClass = createEClass(PARAGRAPH);
 
@@ -910,6 +1007,9 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		createEReference(containerEClass, CONTAINER__COMPONENTS);
 
 		finalEClass = createEClass(FINAL);
+
+		headTitleEClass = createEClass(HEAD_TITLE);
+		createEReference(headTitleEClass, HEAD_TITLE__TEXT);
 
 		// Create enums
 		sizeEEnum = createEEnum(SIZE);
@@ -975,6 +1075,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 
 		initEClass(textLabelEClass, TextLabel.class, "TextLabel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTextLabel_Value(), ecorePackage.getEString(), "value", null, 0, 1, TextLabel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextLabel_CheckRessource(), ecorePackage.getEBoolean(), "checkRessource", null, 0, 1, TextLabel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextLabel_Key(), ecorePackage.getEString(), "key", null, 0, 1, TextLabel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(webAppEClass, WebApp.class, "WebApp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getWebApp_Name(), ecorePackage.getEString(), "name", null, 0, 1, WebApp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -985,7 +1087,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		initEReference(getTable_Lines(), this.getLine(), null, "lines", null, 0, -1, Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLink_Url(), ecorePackage.getEString(), "url", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLink_PageName(), ecorePackage.getEString(), "pageName", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLink_PageType(), ecorePackage.getEString(), "pageType", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -995,8 +1098,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		initEReference(getBody_Contents(), this.getContent(), null, "contents", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(headEClass, Head.class, "Head", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getHead_Title(), ecorePackage.getEString(), "title", null, 0, 1, Head.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getHead_Components(), this.getComponent(), null, "components", null, 0, -1, Head.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHead_HeadTitle(), this.getHeadTitle(), null, "headTitle", null, 1, 1, Head.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(titleEClass, Title.class, "Title", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTitle_Size(), this.getSize(), "size", null, 0, 1, Title.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1005,11 +1108,13 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		initEAttribute(getTextField_Size(), ecorePackage.getEInt(), "size", null, 0, 1, TextField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTextField_Name(), ecorePackage.getEString(), "name", null, 0, 1, TextField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTextField_MaxLength(), ecorePackage.getEInt(), "maxLength", null, 0, 1, TextField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTextField_ErrorText(), this.getTextLabel(), null, "errorText", null, 1, 1, TextField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(passwordEClass, Password.class, "Password", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPassword_Name(), ecorePackage.getEString(), "name", null, 0, 1, Password.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPassword_Size(), ecorePackage.getEInt(), "size", null, 0, 1, Password.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPassword_MaxLength(), ecorePackage.getEInt(), "maxLength", null, 0, 1, Password.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPassword_ErrorPassword(), this.getTextLabel(), null, "errorPassword", null, 1, 1, Password.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(radioButtonEClass, RadioButton.class, "RadioButton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRadioButton_Value(), ecorePackage.getEString(), "value", null, 0, 1, RadioButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1021,6 +1126,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		initEAttribute(getSubmitButton_Value(), ecorePackage.getEString(), "value", null, 0, 1, SubmitButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSubmitButton_SuccessTarget(), ecorePackage.getEString(), "successTarget", null, 0, 1, SubmitButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSubmitButton_ErrorTarget(), ecorePackage.getEString(), "errorTarget", null, 0, 1, SubmitButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSubmitButton_SuccessType(), ecorePackage.getEString(), "successType", null, 0, 1, SubmitButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSubmitButton_ErrorType(), ecorePackage.getEString(), "errorType", null, 0, 1, SubmitButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(paragraphEClass, Paragraph.class, "Paragraph", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1038,6 +1145,9 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		initEReference(getContainer_Components(), this.getComponent(), null, "components", null, 0, -1, mvcmetamodel.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(finalEClass, Final.class, "Final", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(headTitleEClass, HeadTitle.class, "HeadTitle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getHeadTitle_Text(), this.getTextLabel(), null, "text", null, 1, 1, HeadTitle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(sizeEEnum, Size.class, "Size");

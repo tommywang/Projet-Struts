@@ -18,6 +18,7 @@ package mvcmetamodel;
  *   <li>{@link mvcmetamodel.Password#getName <em>Name</em>}</li>
  *   <li>{@link mvcmetamodel.Password#getSize <em>Size</em>}</li>
  *   <li>{@link mvcmetamodel.Password#getMaxLength <em>Max Length</em>}</li>
+ *   <li>{@link mvcmetamodel.Password#getErrorPassword <em>Error Password</em>}</li>
  * </ul>
  * </p>
  *
@@ -104,4 +105,30 @@ public interface Password extends Input {
 	 * @generated
 	 */
 	void setMaxLength(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Error Password</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Error Password</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Error Password</em>' containment reference.
+	 * @see #setErrorPassword(TextLabel)
+	 * @see mvcmetamodel.MvcmetamodelPackage#getPassword_ErrorPassword()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	TextLabel getErrorPassword();
+
+	/**
+	 * Sets the value of the '{@link mvcmetamodel.Password#getErrorPassword <em>Error Password</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Error Password</em>' containment reference.
+	 * @see #getErrorPassword()
+	 * @generated
+	 */
+	void setErrorPassword(TextLabel value);
 } // Password

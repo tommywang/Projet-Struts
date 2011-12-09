@@ -17,8 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link mvcmetamodel.Head#getTitle <em>Title</em>}</li>
  *   <li>{@link mvcmetamodel.Head#getComponents <em>Components</em>}</li>
+ *   <li>{@link mvcmetamodel.Head#getHeadTitle <em>Head Title</em>}</li>
  * </ul>
  * </p>
  *
@@ -27,32 +27,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Head extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Title</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Title</em>' attribute.
-	 * @see #setTitle(String)
-	 * @see mvcmetamodel.MvcmetamodelPackage#getHead_Title()
-	 * @model
-	 * @generated
-	 */
-	String getTitle();
-
-	/**
-	 * Sets the value of the '{@link mvcmetamodel.Head#getTitle <em>Title</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Title</em>' attribute.
-	 * @see #getTitle()
-	 * @generated
-	 */
-	void setTitle(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Components</b></em>' containment reference list.
 	 * The list contents are of type {@link mvcmetamodel.Component}.
@@ -68,5 +42,31 @@ public interface Head extends EObject {
 	 * @generated
 	 */
 	EList<Component> getComponents();
+
+	/**
+	 * Returns the value of the '<em><b>Head Title</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Head Title</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Head Title</em>' containment reference.
+	 * @see #setHeadTitle(HeadTitle)
+	 * @see mvcmetamodel.MvcmetamodelPackage#getHead_HeadTitle()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	HeadTitle getHeadTitle();
+
+	/**
+	 * Sets the value of the '{@link mvcmetamodel.Head#getHeadTitle <em>Head Title</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Head Title</em>' containment reference.
+	 * @see #getHeadTitle()
+	 * @generated
+	 */
+	void setHeadTitle(HeadTitle value);
 
 } // Head

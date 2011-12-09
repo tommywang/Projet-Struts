@@ -18,6 +18,8 @@ package mvcmetamodel;
  *   <li>{@link mvcmetamodel.SubmitButton#getValue <em>Value</em>}</li>
  *   <li>{@link mvcmetamodel.SubmitButton#getSuccessTarget <em>Success Target</em>}</li>
  *   <li>{@link mvcmetamodel.SubmitButton#getErrorTarget <em>Error Target</em>}</li>
+ *   <li>{@link mvcmetamodel.SubmitButton#getSuccessType <em>Success Type</em>}</li>
+ *   <li>{@link mvcmetamodel.SubmitButton#getErrorType <em>Error Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -103,5 +105,57 @@ public interface SubmitButton extends Input {
 	 * @generated
 	 */
 	void setErrorTarget(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Success Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Success Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Success Type</em>' attribute.
+	 * @see #setSuccessType(String)
+	 * @see mvcmetamodel.MvcmetamodelPackage#getSubmitButton_SuccessType()
+	 * @model
+	 * @generated
+	 */
+	String getSuccessType();
+
+	/**
+	 * Sets the value of the '{@link mvcmetamodel.SubmitButton#getSuccessType <em>Success Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Success Type</em>' attribute.
+	 * @see #getSuccessType()
+	 * @generated
+	 */
+	void setSuccessType(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Error Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Error Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Error Type</em>' attribute.
+	 * @see #setErrorType(String)
+	 * @see mvcmetamodel.MvcmetamodelPackage#getSubmitButton_ErrorType()
+	 * @model
+	 * @generated
+	 */
+	String getErrorType();
+
+	/**
+	 * Sets the value of the '{@link mvcmetamodel.SubmitButton#getErrorType <em>Error Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Error Type</em>' attribute.
+	 * @see #getErrorType()
+	 * @generated
+	 */
+	void setErrorType(String value);
 
 } // SubmitButton

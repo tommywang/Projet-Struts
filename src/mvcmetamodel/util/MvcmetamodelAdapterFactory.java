@@ -160,6 +160,10 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 				return createFinalAdapter();
 			}
 			@Override
+			public Adapter caseHeadTitle(HeadTitle object) {
+				return createHeadTitleAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -386,6 +390,20 @@ public class MvcmetamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFinalAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link mvcmetamodel.HeadTitle <em>Head Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see mvcmetamodel.HeadTitle
+	 * @generated
+	 */
+	public Adapter createHeadTitleAdapter() {
 		return null;
 	}
 

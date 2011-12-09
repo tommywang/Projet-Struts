@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="SuperWebApp" basedir="." default="deploy">
+ <property file="build.properties" />
+ 
+ 	<property name="build.dir" value="build" />
+ 	
+ 	<property name="lib.dir" value="lib" />
+	
+	<property name="src.dir" value="Generated/src" />
+	
+	<property name="web.dir" value="WebContent" />
+
+	<property name="test.build.dir" value="${build.dir}/test" />
+
+	<property name="deploy.dir" value="/Users/shiyue/Documents/workspace J2EE/apache-tomcat-7.0.22" />
+
+	<path id="classpath.build">
+		<fileset dir="${lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="C:\Sun\SDK\lib">
+			<include name="javaee.jar" />
+		</fileset>
+	</path>
+	
+	<target name="init">
+		<delete>
+			<fileset dir="${build.dir}" includes="**/*"/>
+		</delete>
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${build.dir}/classes" />
+		<mkdir dir="${build.dir}/WEB-INF/lib" />
+		<mkdir dir="${build.dir}/WEB-INF/classes" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${src.dir}" destdir="${build.dir}/WEB-INF/classes" fork="yes" classpathref="classpath.build" />
+	</target>
+
+	<target name="deploy" depends="war,jar" description="Generates the ear file and deploys to deploy directory">
+		<copy todir="${deploy.dir}" file="${build.dir}/${ant.project.name}.war" overwrite="true" />
+	</target>
+
+	<target name="war" depends="pre-war">
+		<war destfile="${build.dir}/${ant.project.name}.war" webxml="${build.dir}/WEB-INF/web.xml">
+			<fileset dir="${build.dir}">
+				<include name="WEB-INF/**" />
+			</fileset>
+			<fileset dir="${web.dir}">
+				<include name="**/*.jsp" />
+			</fileset>
+		</war>
+	</target>
+
+	<!-- BUILD THE JAR FILE -->
+	<target name="jar" depends="init,compile">
+		<jar destfile="${build.dir}/${ant.project.name}.jar">
+			<fileset dir="${build.dir}/classes/" />
+			<fileset dir="${lib.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${web.dir}">
+				<include name="META-INF/**" />
+			</fileset>
+		</jar>
+	</target>
+	<target name="pre-war" depends="compile">
+		<copy todir="${build.dir}/WEB-INF/lib">
+			<fileset dir="${lib.dir}">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+		<copy todir="${build.dir}/WEB-INF">
+			<fileset dir="${web.dir}/WEB-INF">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+	</target>
+</project>

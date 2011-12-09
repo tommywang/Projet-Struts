@@ -18,6 +18,7 @@ package mvcmetamodel;
  *   <li>{@link mvcmetamodel.TextField#getSize <em>Size</em>}</li>
  *   <li>{@link mvcmetamodel.TextField#getName <em>Name</em>}</li>
  *   <li>{@link mvcmetamodel.TextField#getMaxLength <em>Max Length</em>}</li>
+ *   <li>{@link mvcmetamodel.TextField#getErrorText <em>Error Text</em>}</li>
  * </ul>
  * </p>
  *
@@ -78,6 +79,32 @@ public interface TextField extends Input {
 	 * @generated
 	 */
 	void setMaxLength(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Error Text</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Error Text</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Error Text</em>' containment reference.
+	 * @see #setErrorText(TextLabel)
+	 * @see mvcmetamodel.MvcmetamodelPackage#getTextField_ErrorText()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	TextLabel getErrorText();
+
+	/**
+	 * Sets the value of the '{@link mvcmetamodel.TextField#getErrorText <em>Error Text</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Error Text</em>' containment reference.
+	 * @see #getErrorText()
+	 * @generated
+	 */
+	void setErrorText(TextLabel value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

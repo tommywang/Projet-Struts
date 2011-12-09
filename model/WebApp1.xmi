@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mvcmetamodel:WebApp xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvcmetamodel="http://mvcmetamodel/1.0" name="Contact Gestion">
+  <pages name="creationContact" type="jsp">
+    <body>
+      <contents xsi:type="mvcmetamodel:Form" action="AddContact">
+        <components xsi:type="mvcmetamodel:Table">
+          <lines>
+            <cells align="CENTER" colspan="2">
+              <components xsi:type="mvcmetamodel:TextLabel" value="Please Enter the Following Details"/>
+            </cells>
+          </lines>
+          <lines>
+            <cells align="RIGHT">
+              <components xsi:type="mvcmetamodel:TextLabel" value="First Name"/>
+            </cells>
+            <cells>
+              <components xsi:type="mvcmetamodel:TextField" size="30" name="firstName" maxLength="30"/>
+            </cells>
+          </lines>
+          <lines>
+            <cells align="RIGHT">
+              <components xsi:type="mvcmetamodel:TextLabel" value="Last Name"/>
+            </cells>
+            <cells>
+              <components xsi:type="mvcmetamodel:TextField" size="30" name="lastName" maxLength="30">
+                <errorText/>
+              </components>
+            </cells>
+          </lines>
+          <lines>
+            <cells align="RIGHT">
+              <components xsi:type="mvcmetamodel:TextLabel" value="E-mail address"/>
+            </cells>
+            <cells>
+              <components xsi:type="mvcmetamodel:TextField" size="30" name="email" maxLength="30"/>
+            </cells>
+          </lines>
+          <lines>
+            <cells>
+              <components xsi:type="mvcmetamodel:SubmitButton" value="Save" successTarget="success" errorTarget="error" successType="jsp" errorType="jsp"/>
+            </cells>
+          </lines>
+        </components>
+      </contents>
+    </body>
+    <head />
+  </pages>
+  <pages name="success" type="jsp">
+    <body>
+      <contents xsi:type="mvcmetamodel:TextLabel" value="Contact is properly added into the database!" checkRessource="true" key="contact.add"/>
+    </body>
+    <head title="success!"/>
+  </pages>
+  <pages name="error" type="jsp">
+    <body>
+      <contents xsi:type="mvcmetamodel:TextLabel" value="Contact is not added into the database!" checkRessource="true" key="contact.error"/>
+    </body>
+    <head title="error!"/>
+  </pages>
+  <startPage name="index" type="jsp">
+    <body>
+      <contents xsi:type="mvcmetamodel:Title">
+        <components xsi:type="mvcmetamodel:TextLabel" value="Hello Struts!" checkRessource="true" key="label.menu"/>
+      </contents>
+      <contents xsi:type="mvcmetamodel:Link" pageName="creationContact" pageType="jsp">
+        <components xsi:type="mvcmetamodel:TextLabel" value="Ajouter un nouveau Contact en utilisant l'Action Form Validation"/>
+      </contents>
+    </body>
+    <head />
+  </startPage>
+</mvcmetamodel:WebApp>

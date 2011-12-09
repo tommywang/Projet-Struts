@@ -9,8 +9,11 @@ package mvcmetamodel.impl;
 import mvcmetamodel.MvcmetamodelPackage;
 import mvcmetamodel.Password;
 
+import mvcmetamodel.TextLabel;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -23,6 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link mvcmetamodel.impl.PasswordImpl#getName <em>Name</em>}</li>
  *   <li>{@link mvcmetamodel.impl.PasswordImpl#getSize <em>Size</em>}</li>
  *   <li>{@link mvcmetamodel.impl.PasswordImpl#getMaxLength <em>Max Length</em>}</li>
+ *   <li>{@link mvcmetamodel.impl.PasswordImpl#getErrorPassword <em>Error Password</em>}</li>
  * </ul>
  * </p>
  *
@@ -83,6 +87,16 @@ public class PasswordImpl extends InputImpl implements Password {
 	 * @ordered
 	 */
 	protected int maxLength = MAX_LENGTH_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getErrorPassword() <em>Error Password</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getErrorPassword()
+	 * @generated
+	 * @ordered
+	 */
+	protected TextLabel errorPassword;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -171,6 +185,63 @@ public class PasswordImpl extends InputImpl implements Password {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public TextLabel getErrorPassword() {
+		return errorPassword;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetErrorPassword(TextLabel newErrorPassword, NotificationChain msgs) {
+		TextLabel oldErrorPassword = errorPassword;
+		errorPassword = newErrorPassword;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.PASSWORD__ERROR_PASSWORD, oldErrorPassword, newErrorPassword);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setErrorPassword(TextLabel newErrorPassword) {
+		if (newErrorPassword != errorPassword) {
+			NotificationChain msgs = null;
+			if (errorPassword != null)
+				msgs = ((InternalEObject)errorPassword).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MvcmetamodelPackage.PASSWORD__ERROR_PASSWORD, null, msgs);
+			if (newErrorPassword != null)
+				msgs = ((InternalEObject)newErrorPassword).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MvcmetamodelPackage.PASSWORD__ERROR_PASSWORD, null, msgs);
+			msgs = basicSetErrorPassword(newErrorPassword, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MvcmetamodelPackage.PASSWORD__ERROR_PASSWORD, newErrorPassword, newErrorPassword));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case MvcmetamodelPackage.PASSWORD__ERROR_PASSWORD:
+				return basicSetErrorPassword(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -180,6 +251,8 @@ public class PasswordImpl extends InputImpl implements Password {
 				return getSize();
 			case MvcmetamodelPackage.PASSWORD__MAX_LENGTH:
 				return getMaxLength();
+			case MvcmetamodelPackage.PASSWORD__ERROR_PASSWORD:
+				return getErrorPassword();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -200,6 +273,9 @@ public class PasswordImpl extends InputImpl implements Password {
 				return;
 			case MvcmetamodelPackage.PASSWORD__MAX_LENGTH:
 				setMaxLength((Integer)newValue);
+				return;
+			case MvcmetamodelPackage.PASSWORD__ERROR_PASSWORD:
+				setErrorPassword((TextLabel)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -222,6 +298,9 @@ public class PasswordImpl extends InputImpl implements Password {
 			case MvcmetamodelPackage.PASSWORD__MAX_LENGTH:
 				setMaxLength(MAX_LENGTH_EDEFAULT);
 				return;
+			case MvcmetamodelPackage.PASSWORD__ERROR_PASSWORD:
+				setErrorPassword((TextLabel)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -240,6 +319,8 @@ public class PasswordImpl extends InputImpl implements Password {
 				return size != SIZE_EDEFAULT;
 			case MvcmetamodelPackage.PASSWORD__MAX_LENGTH:
 				return maxLength != MAX_LENGTH_EDEFAULT;
+			case MvcmetamodelPackage.PASSWORD__ERROR_PASSWORD:
+				return errorPassword != null;
 		}
 		return super.eIsSet(featureID);
 	}
