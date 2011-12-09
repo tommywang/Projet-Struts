@@ -13,21 +13,18 @@
 
 	<property name="test.build.dir" value="${build.dir}/test" />
 
-	<property name="deploy.dir" value="/Users/shiyue/Documents/workspace J2EE/apache-tomcat-7.0.22" />
+	<property name="deploy.dir" value="/Users/shiyue/Documents/workspace J2EE/apache-tomcat-7.0.22/webapps" />
 
 	<path id="classpath.build">
 		<fileset dir="${lib.dir}">
 			<include name="*.jar" />
 		</fileset>
-		<fileset dir="C:\Sun\SDK\lib">
-			<include name="javaee.jar" />
+		<fileset dir="/Users/shiyue/Documents/workspace J2EE/TutorialStruts/WebContent/WEB-INF/lib">
+			<include name="*.jar" />
 		</fileset>
 	</path>
 	
 	<target name="init">
-		<delete>
-			<fileset dir="${build.dir}" includes="**/*"/>
-		</delete>
 		<mkdir dir="${build.dir}" />
 		<mkdir dir="${build.dir}/classes" />
 		<mkdir dir="${build.dir}/WEB-INF/lib" />

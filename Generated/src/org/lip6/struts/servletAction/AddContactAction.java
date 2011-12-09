@@ -1,3 +1,4 @@
+package org.lip6.struts.servletAction;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.Globals;

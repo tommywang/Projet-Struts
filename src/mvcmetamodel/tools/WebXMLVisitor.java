@@ -105,14 +105,14 @@ public class WebXMLVisitor implements Visitor {
 		"id=\"WebApp_ID\" version=\"2.5\">\n" +
 		"<display-name>"+webApp.getName()+"</display-name>\n" +
 		"<welcome-file-list>\n" +
-			"<welcome-file>" + webApp.getStartPage().getName() +"." + webApp.getStartPage().getType()+ "</welcome-file>\n" +
+			"<welcome-file>" + "pages/"+webApp.getStartPage().getName() +"." + webApp.getStartPage().getType()+ "</welcome-file>\n" +
 		"</welcome-file-list>\n" +	
 		"<servlet>\n" +
 		"<servlet-name>action</servlet-name>\n" +
-		"<servlet-class>action.ActionServlet</servlet-class>\n" +
+		"<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>\n" +
 		"<init-param>\n" +
 			"<param-name>config</param-name>\n" +
-			"<param-value>struts-config.xml</param-value>\n" +
+			"<param-value>/WEB-INF/struts-config.xml</param-value>\n" +
 		"</init-param>\n" +
 		"<load-on-startup>1</load-on-startup>\n" +
 		"</servlet>\n" +

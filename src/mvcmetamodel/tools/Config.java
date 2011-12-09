@@ -118,11 +118,11 @@ public class Config implements Visitor{
 	public String visit(Form form) {
 		
 		String actionName=form.getAction();
-		formBean+="<form-bean name=\""+actionName+"ValidationForm\" type=\"actionForm."+actionName+"ValidationForm\"/>\n";
+		formBean+="<form-bean name=\""+actionName+"ValidationForm\" type=\"org.lip6.struts.actionForm."+actionName+"ValidationForm\"/>\n";
 		actionMapping+="<action path=\"/"+actionName;
-		actionMapping+="\" type=\"servletAction."+actionName+"Action\"";
+		actionMapping+="\" type=\"org.lip6.struts.servletAction."+actionName+"Action\"";
 		actionMapping+=" name=\""+actionName+"ValidationForm\" scope=\"request\"";
-		actionMapping+=" input=\""+pageName+"\">\n";
+		actionMapping+=" input=\"/pages/"+pageName+"\">\n";
 		for (Component c:form.getComponents()){
 			this.visit(c);
 		}
@@ -166,7 +166,7 @@ public class Config implements Visitor{
 
 	@Override
 	public String visit(Link link) {
-		actionMapping+="<action path=\"/"+upperFirstCase(link.getPageName())+"\" forward=\""+link.getPageName()+"."+link.getPageType()+"\" />\n";
+		actionMapping+="<action path=\"/"+upperFirstCase(link.getPageName())+"\" forward=\"/pages/"+link.getPageName()+"."+link.getPageType()+"\" />\n";
 		for (Component c:link.getComponents()){
 			this.visit(c);
 		}
@@ -202,9 +202,9 @@ public class Config implements Visitor{
 	@Override
 	public String visit(SubmitButton submitButton) {
 		actionMapping+="<forward name=\""+submitButton.getSuccessTarget()+
-			"\" path=\""+submitButton.getSuccessTarget()+"."+submitButton.getSuccessType()+"\" />\n";
+			"\" path=\"/pages/"+submitButton.getSuccessTarget()+"."+submitButton.getSuccessType()+"\" />\n";
 		actionMapping+="<forward name=\""+submitButton.getErrorTarget()+
-			"\" path=\""+submitButton.getErrorTarget()+"."+submitButton.getErrorType()+"\" />\n";
+			"\" path=\"/pages/"+submitButton.getErrorTarget()+"."+submitButton.getErrorType()+"\" />\n";
 		actionMapping+="</action>\n";
 		return null;
 	}

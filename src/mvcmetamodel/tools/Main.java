@@ -160,8 +160,8 @@ public class Main {
 					{
 						resultAction=(new ActionVisitor()).visit((Form)content);
 						resultActionForm=(new ActionFormVisitor()).doAll((Form)content);
-						String pageNameAction="Generated/src/servletAction/" + ((Form)content).getAction() + "Action.java";
-						String pageNameActionForm="Generated/src/actionForm/" + ((Form)content).getAction() + "ValidationForm.java";
+						String pageNameAction="Generated/src/org/lip6/struts/servletAction/" + ((Form)content).getAction() + "Action.java";
+						String pageNameActionForm="Generated/src/org/lip6/struts/actionForm/" + ((Form)content).getAction() + "ValidationForm.java";
 						actionFile = new File(pageNameAction);
 						actionFormFile = new File(pageNameActionForm);
 						actionFile.createNewFile();

@@ -55,7 +55,8 @@ public class ActionVisitor implements Visitor {
 	@Override
 	public String visit(Form form) {
 		String s="";
-		s+="import javax.servlet.http.HttpServletRequest;\n" +
+		s+="package org.lip6.struts.servletAction;\n"+
+		"import javax.servlet.http.HttpServletRequest;\n" +
 		"import javax.servlet.http.HttpServletResponse;\n" +
 		"import org.apache.struts.Globals;\n" +
 		"import org.apache.struts.action.Action;\n" +

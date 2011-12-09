@@ -28,7 +28,8 @@ import mvcmetamodel.WebApp;
 
 public class ActionFormVisitor implements Visitor {
 
-	String fieldGetSet= "import javax.servlet.http.HttpServletRequest;\n" +
+	String fieldGetSet="package org.lip6.struts.actionForm;\n"+ 
+			"import javax.servlet.http.HttpServletRequest;\n" +
 			"import org.apache.struts.action.ActionErrors;\n" +
 			"import org.apache.struts.action.ActionForm;\n" +
 			"import org.apache.struts.action.ActionMapping;\n" +

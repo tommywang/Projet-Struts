@@ -15,7 +15,7 @@
             </cells>
             <cells>
               <components xsi:type="mvcmetamodel:TextField" size="30" name="firstName" maxLength="30">
-                <errorText value="Contact's fist name is required " checkRessource="true" key="creation.fn.error.required"/>
+                <errorText value=" Contact's fist name is required " checkRessource="true" key="creation.fn.error.required"/>
               </components>
             </cells>
           </lines>
@@ -25,7 +25,7 @@
             </cells>
             <cells>
               <components xsi:type="mvcmetamodel:TextField" size="30" name="lastName" maxLength="30">
-                <errorText value="Contact's last name is required" checkRessource="true" key="creation.ln.error.required"/>
+                <errorText value=" Contact's last name is required" checkRessource="true" key="creation.ln.error.required"/>
               </components>
             </cells>
           </lines>
@@ -35,7 +35,7 @@
             </cells>
             <cells>
               <components xsi:type="mvcmetamodel:TextField" size="30" name="email" maxLength="30">
-                <errorText value="Contact's email is required" checkRessource="true" key="creation.email.error.required"/>
+                <errorText value=" Contact's email is required" checkRessource="true" key="creation.email.error.required"/>
               </components>
             </cells>
           </lines>
