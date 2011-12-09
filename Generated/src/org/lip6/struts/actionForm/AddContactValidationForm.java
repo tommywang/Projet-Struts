@@ -8,14 +8,14 @@ import org.apache.struts.action.ActionMessage;
 public class AddContactValidationForm extends ActionForm {
 
 private static final long serialVersionUID = 1L;
-private String firstName=null;
+private String toto=null;
 
-public String getFirstName() {
-return firstName;
+public String getToto() {
+return toto;
 }
 
-public void setFirstName(String firstName) {
-this.firstName = firstName;
+public void setToto(String toto) {
+this.toto = toto;
 }
 
 private String lastName=null;
@@ -38,24 +38,38 @@ public void setEmail(String email) {
 this.email = email;
 }
 
+private String password=null;
+
+public String getPassword() {
+return password;
+}
+
+public void setPassword(String password) {
+this.password = password;
+}
+
 public void reset(ActionMapping mapping, HttpServletRequest request) {
-this.firstName=null;
+this.toto=null;
 this.lastName=null;
 this.email=null;
+this.password=null;
 }
 
 @Override
 public ActionErrors validate(ActionMapping mapping, HttpServletRequest request ) {
 ActionErrors errors = new ActionErrors();
 
-if( getFirstName()== null || getFirstName().length() < 1 ) {
-errors.add("firstName",new ActionMessage("creation.fn.error.required"));
+if( getToto()== null || getToto().length() < 1 ) {
+errors.add("toto",new ActionMessage("creation.fn.error.required"));
 }
 if( getLastName()== null || getLastName().length() < 1 ) {
 errors.add("lastName",new ActionMessage("creation.ln.error.required"));
 }
 if( getEmail()== null || getEmail().length() < 1 ) {
 errors.add("email",new ActionMessage("creation.email.error.required"));
+}
+if( getPassword()== null || getPassword().length() < 1 ) {
+errors.add("password",new ActionMessage("creation.password.error.required"));
 }
 return errors;
 }

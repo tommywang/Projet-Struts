@@ -6,7 +6,6 @@
  */
 package mvcmetamodel;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -17,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link mvcmetamodel.Head#getComponents <em>Components</em>}</li>
  *   <li>{@link mvcmetamodel.Head#getHeadTitle <em>Head Title</em>}</li>
  * </ul>
  * </p>
@@ -27,22 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Head extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Components</b></em>' containment reference list.
-	 * The list contents are of type {@link mvcmetamodel.Component}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Components</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Components</em>' containment reference list.
-	 * @see mvcmetamodel.MvcmetamodelPackage#getHead_Components()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Component> getComponents();
-
 	/**
 	 * Returns the value of the '<em><b>Head Title</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

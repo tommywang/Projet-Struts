@@ -1,9 +1,6 @@
 package mvcmetamodel.tools;
 
-import org.eclipse.emf.common.util.EList;
-
 import mvcmetamodel.*;
-import mvcmetamodel.tools.*;
 
 public class JSPVisitor implements Visitor {
 	private String contentResource = "";
@@ -22,13 +19,12 @@ public class JSPVisitor implements Visitor {
 		String header = "<%@ page language=\"java\" contentType=\"text/html; charset=ISO-8859-1\" pageEncoding=\"ISO-8859-1\"%>\n";
 		String result = "";
 
-		header += tagHtml + tagBean;
+		header += tagHtml + tagBean + tagLogic + tagNested;
 
 		result += "<html:html>\n";
 		result += this.visit(page.getHead());
 		result += this.visit(page.getBody());
 		result += "</html:html>";
-		// header+="<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd>\"\n";
 		return header + result;
 	}
 
@@ -131,6 +127,7 @@ public class JSPVisitor implements Visitor {
 
 	@Override
 	public String visit(Password password) {
+		this.visit(password.getErrorPassword());
 		String result = "";
 		result += "<html:password property=\"" + password.getName()
 				+ "\" size=\"" + password.getSize() + "\" maxlength=\""

@@ -11,17 +11,17 @@
           </lines>
           <lines>
             <cells align="RIGHT">
-              <components xsi:type="mvcmetamodel:TextLabel" value="First Name"/>
+              <components xsi:type="mvcmetamodel:TextLabel" value="First Name" checkRessource="true" key="firstName.field"/>
             </cells>
             <cells>
-              <components xsi:type="mvcmetamodel:TextField" size="30" name="firstName" maxLength="30">
+              <components xsi:type="mvcmetamodel:TextField" size="30" name="toto" maxLength="30">
                 <errorText value=" Contact's fist name is required " checkRessource="true" key="creation.fn.error.required"/>
               </components>
             </cells>
           </lines>
           <lines>
             <cells align="RIGHT">
-              <components xsi:type="mvcmetamodel:TextLabel" value="Last Name"/>
+              <components xsi:type="mvcmetamodel:TextLabel" value="Last Name" checkRessource="true" key="lastName.field"/>
             </cells>
             <cells>
               <components xsi:type="mvcmetamodel:TextField" size="30" name="lastName" maxLength="30">
@@ -31,11 +31,21 @@
           </lines>
           <lines>
             <cells align="RIGHT">
-              <components xsi:type="mvcmetamodel:TextLabel" value="E-mail address"/>
+              <components xsi:type="mvcmetamodel:TextLabel" value="E-mail address" checkRessource="true" key="email.field"/>
             </cells>
             <cells>
               <components xsi:type="mvcmetamodel:TextField" size="30" name="email" maxLength="30">
                 <errorText value=" Contact's email is required" checkRessource="true" key="creation.email.error.required"/>
+              </components>
+            </cells>
+          </lines>
+          <lines>
+            <cells align="RIGHT">
+              <components xsi:type="mvcmetamodel:TextLabel" value="Password" checkRessource="true" key="password.field"/>
+            </cells>
+            <cells>
+              <components xsi:type="mvcmetamodel:Password" name="password" size="20" maxLength="20">
+                <errorPassword value=" Contact's password is required" checkRessource="true" key="creation.password.error.required"/>
               </components>
             </cells>
           </lines>

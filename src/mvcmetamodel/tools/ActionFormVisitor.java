@@ -1,7 +1,5 @@
 package mvcmetamodel.tools;
 
-import javax.jws.WebParam;
-
 import mvcmetamodel.Body;
 import mvcmetamodel.Cell;
 import mvcmetamodel.CheckBox;
@@ -193,7 +191,7 @@ public class ActionFormVisitor implements Visitor {
 		reset+="this."+ password.getName() +"=null;\n";
 
 		validate+="if( get"+ UsefulFunctions.setFirstCharToUpper(password.getName()) +"()== null || get"+ UsefulFunctions.setFirstCharToUpper(password.getName()) +"().length() < 1 ) {\n" +
-				"errors.add(\""+ password.getName() +"\",new ActionMessage(\"Contact's fist name is required\"));\n" +
+				"errors.add(\""+ password.getName() +"\",new ActionMessage(\""+password.getErrorPassword().getKey()+"\"));\n" +
 				"}\n";
 		return null;
 	}

@@ -59,7 +59,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Body/contents"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Head">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Head/components"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mvcmetamodel.ecore#//Head/headTitle"/>
     </genClasses>
     <genClasses ecoreClass="mvcmetamodel.ecore#//Title">

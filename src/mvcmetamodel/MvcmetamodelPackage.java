@@ -559,22 +559,13 @@ public interface MvcmetamodelPackage extends EPackage {
 	int BODY_FEATURE_COUNT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HEAD__COMPONENTS = 0;
-
-	/**
 	 * The feature id for the '<em><b>Head Title</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HEAD__HEAD_TITLE = 1;
+	int HEAD__HEAD_TITLE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Head</em>' class.
@@ -583,7 +574,7 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HEAD_FEATURE_COUNT = 2;
+	int HEAD_FEATURE_COUNT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
@@ -1220,17 +1211,6 @@ public interface MvcmetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getHead();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link mvcmetamodel.Head#getComponents <em>Components</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Components</em>'.
-	 * @see mvcmetamodel.Head#getComponents()
-	 * @see #getHead()
-	 * @generated
-	 */
-	EReference getHead_Components();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link mvcmetamodel.Head#getHeadTitle <em>Head Title</em>}'.
@@ -1902,14 +1882,6 @@ public interface MvcmetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass HEAD = eINSTANCE.getHead();
-
-		/**
-		 * The meta object literal for the '<em><b>Components</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference HEAD__COMPONENTS = eINSTANCE.getHead_Components();
 
 		/**
 		 * The meta object literal for the '<em><b>Head Title</b></em>' containment reference feature.

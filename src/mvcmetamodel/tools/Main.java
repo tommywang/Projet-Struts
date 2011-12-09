@@ -1,14 +1,11 @@
 package mvcmetamodel.tools;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Map;
 import mvcmetamodel.*;
-import mvcmetamodel.impl.*;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -17,9 +14,6 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 public class Main {
 
-	/**
-	* @param args
-	*/
 	public static WebApp load(File f) {
 		ResourceSet rs = new ResourceSetImpl();
 		Resource.Factory.Registry registry = rs.getResourceFactoryRegistry();
@@ -66,9 +60,7 @@ public class Main {
     
 	public static void main(String[] args) { 
 		File f = new File("model/WebApp2.xmi");
-		WebApp appli=load(f);	
-		MvcmetamodelFactoryImpl fac=new MvcmetamodelFactoryImpl();
-		
+		WebApp appli=load(f);			
 		JSPVisitor jspVisitor=new JSPVisitor();
 		
 		//create the index
@@ -134,6 +126,7 @@ public class Main {
 			System.out.println("Impossible de créer le fichier resource");
 		}
 		
+		//create web.xml
 		String result=new WebXMLVisitor().visit(appli);
 		File webXMLFile;
 		try
@@ -149,6 +142,7 @@ public class Main {
 			System.out.println("Impossible de creer le fichier");
 		}
 		
+		//create action and validationForm
 		String resultAction="";
 		String resultActionForm="";
 		for (Page p :appli.getPages()){

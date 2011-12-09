@@ -12,7 +12,6 @@ import mvcmetamodel.Cell;
 import mvcmetamodel.CheckBox;
 import mvcmetamodel.Component;
 import mvcmetamodel.Content;
-import mvcmetamodel.EClass0;
 import mvcmetamodel.Final;
 import mvcmetamodel.Form;
 import mvcmetamodel.Head;
@@ -541,17 +540,8 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getHead_Components() {
-		return (EReference)headEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getHead_HeadTitle() {
-		return (EReference)headEClass.getEStructuralFeatures().get(1);
+		return (EReference)headEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -960,7 +950,6 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		createEReference(bodyEClass, BODY__CONTENTS);
 
 		headEClass = createEClass(HEAD);
-		createEReference(headEClass, HEAD__COMPONENTS);
 		createEReference(headEClass, HEAD__HEAD_TITLE);
 
 		titleEClass = createEClass(TITLE);
@@ -1098,7 +1087,6 @@ public class MvcmetamodelPackageImpl extends EPackageImpl implements Mvcmetamode
 		initEReference(getBody_Contents(), this.getContent(), null, "contents", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(headEClass, Head.class, "Head", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getHead_Components(), this.getComponent(), null, "components", null, 0, -1, Head.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getHead_HeadTitle(), this.getHeadTitle(), null, "headTitle", null, 1, 1, Head.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(titleEClass, Title.class, "Title", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

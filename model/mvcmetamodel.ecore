@@ -44,8 +44,6 @@
         eType="#//Content" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Head">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
-        eType="#//Component" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="headTitle" lowerBound="1"
         eType="#//HeadTitle" containment="true"/>
   </eClassifiers>

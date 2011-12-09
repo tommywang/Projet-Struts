@@ -21,18 +21,10 @@ final AddContactValidationForm lForm=(AddContactValidationForm)pForm;
 
 String lError = "ok";
 
-final String firstName= lForm.getFirstName();
-if (firstName.equals("")){
-lError=null;
-}
+final String toto= lForm.getToto();
 final String lastName= lForm.getLastName();
-if (lastName.equals("")){
-lError=null;
-}
 final String email= lForm.getEmail();
-if (email.equals("")){
-lError=null;
-}
+final String password= lForm.getPassword();
 if (lError != null) {
 return pMapping.findForward("success");
 }

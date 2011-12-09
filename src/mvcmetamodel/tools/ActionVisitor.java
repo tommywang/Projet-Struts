@@ -150,10 +150,7 @@ public class ActionVisitor implements Visitor {
 	@Override
 	public String visit(Password password) {
 		String s="";
-		s+="final String "+ password.getName() +"= lForm.get"+ UsefulFunctions.setFirstCharToUpper(password.getName())+"();\n" +
-		"if (" + password.getName() +".equals(\"\")){\n" +
-		"lError=null;\n" +
-		"}\n";
+		s+="final String "+ password.getName() +"= lForm.get"+ UsefulFunctions.setFirstCharToUpper(password.getName())+"();\n";
 		return s;
 	}
 
@@ -186,11 +183,9 @@ public class ActionVisitor implements Visitor {
 
 	@Override
 	public String visit(TextField textField) {
+		
 		String s="";
-		s+="final String "+ textField.getName() +"= lForm.get"+ UsefulFunctions.setFirstCharToUpper(textField.getName())+"();\n" +
-		"if (" + textField.getName() +".equals(\"\")){\n" +
-		"lError=null;\n" +
-		"}\n";
+		s+="final String "+ textField.getName() +"= lForm.get"+ UsefulFunctions.setFirstCharToUpper(textField.getName())+"();\n" ;
 		return s;
 	}
 
